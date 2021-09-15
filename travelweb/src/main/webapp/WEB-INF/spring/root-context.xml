@@ -17,8 +17,8 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->	
 	<bean id= "hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/turedb?useUnicode=true&amp;characterEncoding=utf8&amp;vallowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=Asia/Seoul"/>
-		<property name="username" value="tureid"/>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/team?useUnicode=true&amp;characterEncoding=utf8&amp;vallowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=Asia/Seoul"/>
+		<property name="username" value="tourid"/>
 		<property name="password" value="1234"/>
 	</bean>
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
