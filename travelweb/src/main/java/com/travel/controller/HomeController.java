@@ -23,9 +23,4 @@ public class HomeController {
 		System.out.println("home()호출됨2");
 		return "index";
 	}		
-	@GetMapping("/")
-	public String home2() {
-		System.out.println("index2 호출");
-		return "index2";
-	}
 }
