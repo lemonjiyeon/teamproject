@@ -22,7 +22,12 @@ public class HomeController {
 	public String home() {
 		System.out.println("home()호출됨2");
 		return "home";
-	}		
+	}
+	
+	@GetMapping("/login")
+	public String login() {
+		return "/member/login";
+	}
 	
 //	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 //	
