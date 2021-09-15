@@ -6,7 +6,7 @@
   <title>여행을 가볍게 노랑풍선 -계정 관리</title>
   
     <!-- css resources -->
-     <link href="./resources/css/teampro.css" rel="stylesheet">
+     <link href="${pageContext.request.contextPath}/resources/css/teampro.css" rel="stylesheet">
 </head>
  
 <body>
@@ -14,7 +14,7 @@
 		<div class="container">
 			<div class="content">
 				<h1 class="logo">
-					<a href="/"><img src="./resources/images/고양이.png"
+					<a href="/"><img src="${pageContext.request.contextPath}/resources/images/고양이.png"
 						alt="노랑풍선"></a>
 				</h1>
 				<form id="frmSignIn" class="yb-validation" method="post"
