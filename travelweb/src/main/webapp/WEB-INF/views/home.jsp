@@ -7,6 +7,9 @@
 	<title>Home</title>
 </head>
 <body>
+<div>
+<a href="/member/login" class="mx-2">로그인</a>
+</div>
 <h1>
 	Hello world! 는 개뿔 테스트 6
 </h1>
