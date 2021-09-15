@@ -1,8 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+
+	<!-- Root Context: defines shared resources visible to all other web components -->	
+	<bean id= "hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/teamproject?useUnicode=true&amp;characterEncoding=utf8&amp;vallowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=Asia/Seoul"/>
+		<property name="username" value="tourid"/>
+		<property name="password" value="1234"/>
+	</bean>
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig"/>
+	</bean>	
+	<!-- mybatis 연계 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:/mybatis-config.xml" />
+	</bean>
+	<!-- 트랜잭션 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 트랜잭션을 가동시키겠다 -->
+	<tx:annotation-driven/>
 	
-	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+	<!-- mybatis가 읽음 -->
+	<mybatis-spring:scan base-package="com.travel.mapper"/>
+	
+	<context:component-scan base-package="com.travle.service"/>
+	
+	<!-- <context:component-scan base-package="com.example.sample"/>	-->
+	
+	<context:component-scan base-package="com.travel.aop"/>
+	
+	<!-- @Aspect 애노테이션 기능 활성화 -->
+	<aop:aspectj-autoproxy/>
+	
+	<context:component-scan base-package="com.example.task"/>
+	<!-- @Scheduled 애노테이션 기능 활성화 -->
+	<task:annotation-driven/>	
 </beans>
