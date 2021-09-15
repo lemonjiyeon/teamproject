@@ -10,6 +10,5 @@
 	Hello world! 는 개뿔 테스트 6
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
