@@ -31,7 +31,7 @@
 							placeholder="비밀번호" title="비밀번호 입력" required="" minlength="8"
 							maxlength="20">
 							<button type="button" class="btn_pw_swich">
-								<span>비밀번호 보이기</span>
+								<span>비밀번호 보이기s</span>
 							</button>
 					</span>
 					</span>
