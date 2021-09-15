@@ -972,54 +972,6 @@ var bnrViewAll = {
 }
 
 
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<div class="main_section" style="margin-top: -80px;">
 					<div class="prm_area">
 						<!-- 홈쇼핑 -->
@@ -1229,46 +1181,6 @@ var bnrViewAll = {
 
 									</div>
 									<!-- // 베스트 후기 -->
-									<!-- 상품 -->
-									<div class="col prod">
-										<ul class="pdt_catalog">
-
-
-
-
-
-
-											<li><a
-												href="/product/localList.yb?menu=DMT&dspSid=ADBO000&goodsCd=KSP2002">
-													<span class="thumb_pic"> <span class='tag'><span
-															class='tag_square dmt'><span>국내여행</span></span></span> <img
-														src="https://dimgcdn.ybtour.co.kr/TN/3c/3c59a544ecf8756f7d1862f3c959b4c9.tn.410x280.jpg"
-														alt="상품 이미지" onerror="YBUtil.noImage(this)">
-												</span>
-													<div class="pdt_list_info">
-														<h5 class="tit_list_block">[울릉도 묵호/강릉]아름답고 맛있는섬
-															2박3일!!(셔틀포함)</h5>
-													</div>
-											</a></li>
-
-
-
-											<li><a
-												href="/product/localList.yb?menu=DMT&dspSid=ADBF000&goodsCd=KSP5003">
-													<span class="thumb_pic"> <span class='tag'><span
-															class='tag_square dmt'><span>국내여행</span></span></span> <img
-														src="https://dimgcdn.ybtour.co.kr/TN/b2/b28ce118daf829755813e4f7d085c8c2.tn.410x280.JPG"
-														alt="상품 이미지" onerror="YBUtil.noImage(this)">
-												</span>
-													<div class="pdt_list_info">
-														<h5 class="tit_list_block">[백령도/대청도] 힐링여행 2박3일</h5>
-													</div>
-											</a></li>
-
-
-										</ul>
-									</div>
-									<!-- // 상품 -->
 								</div>
 
 							</div>
