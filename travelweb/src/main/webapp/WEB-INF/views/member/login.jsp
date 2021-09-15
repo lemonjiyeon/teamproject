@@ -6,7 +6,7 @@
   <title>여행을 가볍게 노랑풍선 -계정 관리</title>
   
     <!-- css resources -->
-    <link href="/resources/css/teampro.css" rel="stylesheet">
+    <link href="./resources/css/teampro.css" rel="stylesheet">
 </head>
  
 <body>
