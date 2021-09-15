@@ -23,6 +23,9 @@ public class HomeController {
 		System.out.println("home()호출됨2");
 		return "index";
 	}		
-	
+	@GetMapping("/login")
+	public String login() {
+		return "member/login";
+	}
 	
 }
