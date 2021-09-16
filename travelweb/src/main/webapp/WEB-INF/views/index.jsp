@@ -303,8 +303,6 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="./resources/js/scripts.js"></script>
-	<<<<<<< HEAD ======= <<<<<<< HEAD
-	<script src="./resources/js/jquery-3.6.0.js"></script>
 	<script>
 		$(document).ready(function() {
 			$("#secondbar").hide();
@@ -314,8 +312,5 @@
 			});
 		});
 	</script>
-	======= >>>>>>> branch 'main' of
-	https://github.com/lemonjiyeon/teamproject.git >>>>>>> branch 'main' of
-	https://github.com/lemonjiyeon/teamproject
 </body>
 </html>
