@@ -181,15 +181,21 @@
 					<col>
 				</colgroup>
 				<tr>
-					<th scope="row"><label>이메일아이디<span
+					<th scope="row"><label>아이디<span
 							class="ico_tbl_must" title="필수입력"></span></label></th>
-					<td colspan="3">
+					<td colspan="1">
 						<div class="tbl_line">
 							<input type="number" name="mobileTel" id="mobileTel"
-								value="" title="휴대폰 번호 입력">
+								value="" title="아이디 입력">
 						</div>
 					</td>		
-					<th scope="row"><label>비밀번호</label></th>
+					<th scope="row"><label>비밀번호<span
+							class="ico_tbl_must" title="필수입력"></span></label></th>
+					<td colspan="1">
+						<div class="tbl_line">
+							<input type="number" name="mobileTel" id="mobileTel"
+								value="" title="비밀번호 입력">
+						</div>
 				</tr>
 				<tr>
 					<th scope="row"><label>이름(실명)<span
@@ -199,9 +205,9 @@
 					<th scope="row"><label>성별</label></th>
 					<td>
 						<ul class="list_one_category">
-							<li><span class="form_block"><input type="radio"
+							<li><input type="radio"
 									id="gender1" name="gender"><label for="gender1"><span></span>남</label></span></li>
-							<li><span class="form_block"><input type="radio"
+							<li><input type="radio"
 									id="gender2" name="gender"><label for="gender2"><span></span>여</label></span></li>
 						</ul>
 					</td>
