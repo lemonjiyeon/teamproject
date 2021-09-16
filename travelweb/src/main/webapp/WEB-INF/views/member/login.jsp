@@ -14,7 +14,7 @@
 		<div class="container">
 			<div class="content">
 				<h1 class="logo">
-					<a href="/"><img src="${pageContext.request.contextPath}/resources/images/고양이.png"
+					<img src="../resources/assets/images/고양이.png"
 						alt="노랑풍선"></a>
 				</h1>
 				<form id="frmSignIn" class="yb-validation" method="post"
