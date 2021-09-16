@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="container">
+	<img class="img-fluid" src="./resources/assets/images/portfolio-2.jpg" alt="..." />
+</div>
 
 </body>
 </html>
