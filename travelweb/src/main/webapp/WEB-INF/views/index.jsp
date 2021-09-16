@@ -29,11 +29,27 @@
    
 	<!-- end second nav bar -->
     <body id="page-top">
-    
+ 
+
     
      </head>
-    <!-- menu nav bar -->         	  
+    <!-- menu nav bar -->  
+         	  
 	  <div class="navarea">
+	  
+	  <div class="container">
+
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+		<img alt="Brand" src="...">
+	      </a>
+	    </div>
+	  </div>
+	</nav>
+
+</div>  
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light my-2 my-sm-0 p-3 mb-2">
 	  <a class="navbar-brand" href="#">노랑풍선</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
