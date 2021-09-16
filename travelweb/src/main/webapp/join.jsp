@@ -11,7 +11,7 @@
 
 
 <!-- css resources -->
-<link href="/static/css/user.css" rel="stylesheet">
+<link href="../resources/css/user.css" rel="stylesheet">
 
 </head>
 <body>
