@@ -17,10 +17,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController {
-	
+
 	@GetMapping("/")
 	public String home() {
 		System.out.println("home()호출됨2");
 		return "index";
 	}		
+
 }
