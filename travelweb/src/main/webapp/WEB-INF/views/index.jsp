@@ -19,6 +19,13 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/styles.css" rel="stylesheet" />
+        <!-- bxslider슬라이더 -->
+        <script src="./resources/js/jquery.1.12.4.js" type="text/javascript"></script>
+        <script src="/resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
+        <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>
+        
+        
+        
     </head>
     <!-- menu nav bar -->         	  
 	  <div class="navarea">
@@ -77,13 +84,26 @@
             </ul>
         </nav>
         <!-- Header-->
-        <header class="masthead d-flex align-items-center">
-            <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">Stylish Portfolio</h1>
-                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
-                <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-            </div>
-        </header>
+        <div class="slider">
+	        <header class="masthead1 d-flex align-items-center">
+	            <div class="container px-4 px-lg-5 text-center">
+	                <h1 class="mb-1">welcome to 경주 its your world</h1>
+	                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
+	            </div>
+	        </header>
+	        <header class="masthead2 d-flex align-items-center">
+	            <div class="container px-4 px-lg-5 text-center">
+	                <h1 class="mb-1">hello nice to meet ya</h1>
+	                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
+	            </div>
+	        </header>
+	        <header class="masthead3 d-flex align-items-center">
+	            <div class="container px-4 px-lg-5 text-center">
+	                <h1 class="mb-1">와 여기 정말 좋은 곳이구나 </h1>
+	                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
+	            </div>
+	        </header>
+        </div>
         <!-- About-->
         <section class="content-section bg-light" id="about">
             <div class="container px-4 px-lg-5 text-center">
@@ -239,6 +259,8 @@
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <script src="./resources/js/jquery-3.6.0.js"></script>
         <script>
         	$(document).ready(function(){
@@ -251,5 +273,6 @@
         </script>
 =======
 >>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
     </body>
 </html>
