@@ -21,12 +21,17 @@
         <link href="./resources/css/styles.css" rel="stylesheet" />
         <!-- bxslider슬라이더 -->
         <script src="./resources/js/jquery.1.12.4.js" type="text/javascript"></script>
-        <script src="/resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
+        <script src="./resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
         <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>
         
         
         
-    </head>
+   
+	<!-- end second nav bar -->
+    <body id="page-top">
+    
+    
+     </head>
     <!-- menu nav bar -->         	  
 	  <div class="navarea">
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light my-2 my-sm-0 p-3 mb-2">
@@ -69,8 +74,8 @@
   	</div>  	
 	</nav>
 	</div>
-	<!-- end second nav bar -->
-    <body id="page-top">
+	
+	
         <!-- Navigation-->
         <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
         <nav id="sidebar-wrapper">
@@ -258,10 +263,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <script src="./resources/js/jquery-3.6.0.js"></script>
+        <!-- <script src="./resources/js/jquery-3.6.0.js"></script> -->
         <script>
         	$(document).ready(function(){
         		$("#secondbar").hide();
@@ -271,8 +273,5 @@
         		});
         	});
         </script>
-=======
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
     </body>
 </html>
