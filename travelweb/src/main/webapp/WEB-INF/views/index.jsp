@@ -14,6 +14,9 @@
 <link rel="shortcut icon" type="image/x-icon"
 	href="/static/images/common/ico_yb.ico">
 
+
+
+
 <!--[if lt IE 9]>
 <script>
 	location.href = "/static/views/MAIN/requiredBrowserUpdate.html";
@@ -21,7 +24,6 @@
 <![endif]-->
 
 <!-- SEO START -->
-
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="여행을 가볍게! 노랑풍선" />
