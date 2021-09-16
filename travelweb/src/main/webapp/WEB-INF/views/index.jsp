@@ -20,15 +20,58 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/styles.css" rel="stylesheet" />
     </head>
+    <!-- menu nav bar -->         	  
+	  <div class="navarea">
+	  <nav class="navbar navbar-expand-lg navbar-light bg-light my-2 my-sm-0 p-3 mb-2">
+	  <a class="navbar-brand" href="#">노랑풍선</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse my-sm-0" id="navbarNav">
+	    <ul class="navbar-nav">	           
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">국내여행 <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">테마여행</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">여행 후기</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="member/login">로그인</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">회원가입</a>
+	      </li>
+	    </ul>
+	  </div>
+		</nav>
+	</div>	
+	<!-- end nav bar -->
+	<!-- second nav bar -->
+	<div id="secondbar">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    
+	    <div class="navbar-nav">
+	      <a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
+	      <a class="nav-link" href="#">제주도</a>
+	      <a class="nav-link" href="#">내륙/섬</a>
+	    </div>
+  	</div>  	
+	</nav>
+	</div>
+	<!-- end second nav bar -->
     <body id="page-top">
         <!-- Navigation-->
         <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#page-top">Start Bootstrap</a></li>
+                <li class="sidebar-brand"><a href="#page-top">노랑 풍선</a></li>
                 <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
                 <li class="sidebar-nav-item"><a href="#about">About</a></li>
-                <li class="sidebar-nav-item"><a href="#services">Services</a></li>
+                <li class="sidebar-nav-item"><a href="#services">예약</a></li>
                 <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
                 <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
             </ul>
@@ -195,5 +238,18 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
+<<<<<<< HEAD
+        <script src="./resources/js/jquery-3.6.0.js"></script>
+        <script>
+        	$(document).ready(function(){
+        		$("#secondbar").hide();
+        		
+        		$(".navarea").click(function(){
+        			$("#secondbar").show()
+        		});
+        	});
+        </script>
+=======
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
     </body>
 </html>
