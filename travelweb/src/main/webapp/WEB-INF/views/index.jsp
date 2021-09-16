@@ -14,13 +14,7 @@
 <link rel="shortcut icon" type="image/x-icon"
 	href="/static/images/common/ico_yb.ico">
 
-<script src="/resources/js/common.js" rel="stylesheet"></script>
-<script src="/resources/js/commonConfirm.js" rel="stylesheet"></script>
-<script src="/resources/js/core.min.js" rel="stylesheet"></script>
-<script src="/resources/js/date.min.js" rel="stylesheet"></script>
-<script src="/resources/js/datepicker.min.js" rel="stylesheet"></script>
-<script src="/resources/js/popup.min.js" rel="stylesheet"></script>
-<script src="/resources/js/select.min.js" rel="stylesheet"></script>
+
 
 
 <!--[if lt IE 9]>
