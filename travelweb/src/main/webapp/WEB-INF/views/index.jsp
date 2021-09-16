@@ -22,10 +22,7 @@
         <!-- bxslider슬라이더 -->
         <script src="./resources/js/jquery.1.12.4.js" type="text/javascript"></script>
         <script src="/resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
-        <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>
-        
-        
-        
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>                          
     </head>
     <!-- menu nav bar -->         	  
 	  <div class="navarea">
@@ -258,10 +255,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <script src="./resources/js/jquery-3.6.0.js"></script>
+<!--    <script src="./resources/js/jquery-3.6.0.js"></script> -->
         <script>
         	$(document).ready(function(){
         		$("#secondbar").hide();
@@ -271,8 +265,5 @@
         		});
         	});
         </script>
-=======
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
     </body>
 </html>
