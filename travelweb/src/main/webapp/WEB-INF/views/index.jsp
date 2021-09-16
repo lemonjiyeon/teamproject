@@ -24,6 +24,10 @@
         <script src="/resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>                          
     </head>
+        <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>                           
+	<!-- end second nav bar -->
+    <body id="page-top">        
+     </head>
     <!-- menu nav bar -->         	  
 	  <div class="navarea">
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light my-2 my-sm-0 p-3 mb-2">
@@ -33,9 +37,9 @@
 	  </button>
 	  <div class="collapse navbar-collapse my-sm-0" id="navbarNav">
 	    <ul class="navbar-nav">	           
-	      <li class="nav-item active">
+	      <li class="nav-item active" id="action">
 	        <a class="nav-link" href="#">국내여행 <span class="sr-only">(current)</span></a>
-	      </li>
+	      </li>	    
 	      <li class="nav-item">
 	        <a class="nav-link" href="#">테마여행</a>
 	      </li>
@@ -66,8 +70,8 @@
   	</div>  	
 	</nav>
 	</div>
-	<!-- end second nav bar -->
-    <body id="page-top">
+	
+	
         <!-- Navigation-->
         <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
         <nav id="sidebar-wrapper">
@@ -255,12 +259,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
-<!--    <script src="./resources/js/jquery-3.6.0.js"></script> -->
+
         <script>
         	$(document).ready(function(){
-        		$("#secondbar").hide();
-        		
-        		$(".navarea").click(function(){
+        		$("#secondbar").hide();        		
+        		$("#action").click(function(){
         			$("#secondbar").show()
         		});
         	});
