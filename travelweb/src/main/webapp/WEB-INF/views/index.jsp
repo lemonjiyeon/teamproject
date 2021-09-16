@@ -39,75 +39,50 @@
 		});
 	});
 </script>
-
-
-
 </head>
 
-<body id="page-top">
-<!-- menu nav bar -->
-<div class="navarea">
-	<nav
-		class="navbar navbar-expand-lg navbar-light bg-light my-2 my-sm-0 p-3 mb-2">
-		<a class="navbar-brand" href="#">노랑풍선</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse my-sm-0" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="#">국내여행
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">테마여행</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">여행 후기</a></li>
-				<li class="nav-item"><a class="nav-link" href="member/login">로그인</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="#">회원가입</a></li>
-			</ul>
-		</div>
-	</nav>
-</div>
-<!-- end nav bar -->
-<!-- second nav bar -->
-<div id="secondbar">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
-			<div class="navbar-nav">
-				<a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
-				<a class="nav-link" href="#">제주도</a> <a class="nav-link" href="#">내륙/섬</a>
-			</div>
-		</div>
-	</nav>
-</div>
 <!-- end second nav bar -->
+<body id="page-top">
 
-	<!-- Navigation-->
-	<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-	<nav id="sidebar-wrapper">
-		<ul class="sidebar-nav">
-			<li class="sidebar-brand"><a href="#page-top">노랑 풍선</a></li>
-			<li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-			<li class="sidebar-nav-item"><a href="#about">About</a></li>
-			<li class="sidebar-nav-item"><a href="#services">예약</a></li>
-			<li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-			<li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
-		</ul>
-	</nav>
-	<!-- Header-->
-	<<<<<<< HEAD
-	<header class="masthead d-flex align-items-center">
-		<div class="container px-4 px-lg-5 text-center">
-			<h1 class="mb-1">Stylish Portfolio</h1>
-			<h3 class="mb-5">
-				<em>A Free Bootstrap Theme by Start Bootstrap</em>
-			</h3>
-			<a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-		</div>
-	</header>
-	=======
+	<!-- menu nav bar -->
+	<div class="navarea">
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light my-2 my-sm-0 p-3 mb-2">
+			<a class="navbar-brand" href="#">노랑풍선</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse my-sm-0" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active" id="action"><a class="nav-link" href="#">국내여행
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">테마여행</a></li>
+					<li class="nav-item"><a class="nav-link" href="board/write">여행 후기</a></li>
+					<li class="nav-item"><a class="nav-link" href="member/login">로그인</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="member/join">회원가입</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- end nav bar -->
+	<!-- second nav bar -->
+	<div id="secondbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+				<div class="navbar-nav">
+					<a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#">제주도</a> <a class="nav-link" href="#">내륙/섬</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- end nav bar -->
+
 	<div class="slider">
 		<header class="masthead1 d-flex align-items-center">
 			<div class="container px-4 px-lg-5 text-center">
@@ -134,81 +109,7 @@
 			</div>
 		</header>
 	</div>
-	<!-- About-->
-	<section class="content-section bg-light" id="about">
-		<div class="container px-4 px-lg-5 text-center">
-			<div class="row gx-4 gx-lg-5 justify-content-center">
-				<div class="col-lg-10">
-					<h2>Stylish Portfolio is the perfect theme for your next
-						project!</h2>
-					<p class="lead mb-5">
-						This theme features a flexible, UX friendly sidebar menu and stock
-						photos from our friends at <a href="https://unsplash.com/">Unsplash</a>
-						!
-					</p>
-					<a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Services-->
-	<section class="content-section bg-primary text-white text-center"
-		id="services">
-		<div class="container px-4 px-lg-5">
-			<div class="content-section-heading">
-				<h3 class="text-secondary mb-0">Services</h3>
-				<h2 class="mb-5">What We Offer</h2>
-			</div>
-			<div class="row gx-4 gx-lg-5">
-				<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-					<span class="service-icon rounded-circle mx-auto mb-3"><i
-						class="icon-screen-smartphone"></i></span>
-					<h4>
-						<strong>Responsive</strong>
-					</h4>
-					<p class="text-faded mb-0">Looks great on any screen size!</p>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-					<span class="service-icon rounded-circle mx-auto mb-3"><i
-						class="icon-pencil"></i></span>
-					<h4>
-						<strong>Redesigned</strong>
-					</h4>
-					<p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-					<span class="service-icon rounded-circle mx-auto mb-3"><i
-						class="icon-like"></i></span>
-					<h4>
-						<strong>Favorited</strong>
-					</h4>
-					<p class="text-faded mb-0">
-						Millions of users <i class="fas fa-heart"></i> Start Bootstrap!
-					</p>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<span class="service-icon rounded-circle mx-auto mb-3"><i
-						class="icon-mustache"></i></span>
-					<h4>
-						<strong>Question</strong>
-					</h4>
-					<p class="text-faded mb-0">I mustache you a question...</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Callout-->
-	<section class="callout">
-		<div class="container px-4 px-lg-5 text-center">
-			<h2 class="mx-auto mb-5">
-				Welcome to <em>your</em> next website!
-			</h2>
-			<a class="btn btn-primary btn-xl"
-				href="https://startbootstrap.com/theme/stylish-portfolio/">Download
-				Now!</a>
-		</div>
-	</section>
-	>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
+	
 	<!-- Portfolio-->
 	<section class="content-section" id="portfolio">
 		<div class="container px-4 px-lg-5">
@@ -268,14 +169,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- Call to Action-->
-	<section class="content-section bg-primary text-white">
-		<div class="container px-4 px-lg-5 text-center">
-			<h2 class="mb-4">The buttons below are impossible to resist...</h2>
-			<a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a> <a
-				class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
-		</div>
-	</section>
 
 	<!-- Footer-->
 	<footer class="footer text-center">
@@ -304,13 +197,12 @@
 	<!-- Core theme JS-->
 	<script src="./resources/js/scripts.js"></script>
 	<script>
-		$(document).ready(function() {
-			$("#secondbar").hide();
-
-			$(".navarea").click(function() {
-				$("#secondbar").show()
-			});
-		});
+	   $(document).ready(function(){
+           $("#secondbar").hide();              
+           $("#action").click(function(){
+              $("#secondbar").show()
+           });
+        });
 	</script>
 </body>
 </html>

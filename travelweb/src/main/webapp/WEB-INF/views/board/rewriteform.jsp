@@ -10,27 +10,27 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
 <link href="../resources/css/styles.css" rel="stylesheet">
+<link href="../resources/css/user.css" rel="stylesheet">
 </head>
 <body>
-	<section class="content-section bg-primary text-white
+	<section class="content-section text-black
 		text-center" id="services">
-		<div class="container px-4 px-lg-5">
-			<div class="content-section-heading">
-				<h2 class="mb-5">여행 후기</h2>
-			</div>
+			<h1 class="tit_head">
+				<strong>여행 후기</strong>
+			</h1>
 
 			<div class="container">
 
 				<form action="/board/write" method="POST">
+					<div class="input-group mt-3 mb-2">
+						<label class="p-3" for="subject">제목</label> <input type="text"
+							class="form-control in" id="subject" name="subject" autofocus>
+					</div>
+					
 					<div class="input-group mb-2">
 						<label class="p-2" for="id">아이디</label> 
 						<input type="text" class="form-control in" id="id" name="mid"
 							value="${ sessionScope.id }" readonly>
-					</div>
-
-					<div class="input-group mb-2">
-						<label class="p-3" for="subject">제목</label> <input type="text"
-							class="form-control in" id="subject" name="subject" autofocus>
 					</div>
 
 					<div class="input-group mb-2">
@@ -52,8 +52,7 @@
 						<div class="my-2" align="left">
 							<input type="file" name="files" multiple>
 							<button type="button" class="btn btn-warning btn-sm delete-file">
-								<i class="material-icons align-middle">clear</i> <span
-									class="align-middle">삭제</span>
+								<i class="material-icons align-middle">clear</i> 삭제
 							</button>
 						</div>
 
@@ -62,17 +61,14 @@
 
 					<div class="my-4 text-center">
 						<button type="submit" class="btn btn-primary">
-							<i class="material-icons align-middle">create</i> <span
-								class="align-middle">새글등록</span>
+							<i class="material-icons align-middle">create</i> 새글등록
 						</button>
 						<button type="reset" class="btn btn-primary ml-3">
-							<i class="material-icons align-middle">clear</i> <span
-								class="align-middle">초기화</span>
+							<i class="material-icons align-middle">clear</i> 초기화
 						</button>
 						<button type="button" class="btn btn-primary ml-3"
 							onclick="location.href = '/board/list?pageNum=${ pageNum }';">
-							<i class="material-icons align-middle">list</i> <span
-								class="align-middle">글목록</span>
+							<i class="material-icons align-middle">list</i> 글목록
 						</button>
 					</div>
 				</form>
