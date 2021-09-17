@@ -1,5 +1,60 @@
 @charset "utf-8";
-body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button,  figure, figcaption {margin:0;padding:0;font-weight:normal;}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th,  form, fieldset, legend, input, textarea, button,  figure, figcaption {margin:0;padding:0;font-weight:normal;}
+
+
+/* 추가 중요 */
+td{
+	padding: 10px;
+	border: 1px solid #666666;
+}
+.board {
+    position: relative;
+    min-height: 400px;
+}
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    min-height: 540px;
+    width: 70%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+.tit_head {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    border-bottom: 1px solid #000;
+    font-size: 21px;
+    font-weight: bold;
+    color: #222;
+}
+strong {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.text-center {
+    text-align: center !important;
+}
+/* 중요 end */
+
+
+
 
 tr {}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -88,15 +143,7 @@ input::-moz-clear {display:none}
 .basic_block:after {display:block; clear:both; content:''}
 .full_block {padding:60px 0; background:#f3f3f3}
 
-.container {
-    position: relative;
-    min-height: 540px;
-    width: 100%;
-    padding-right: var(--bs-gutter-x, 0.75rem);
-    padding-left: var(--bs-gutter-x, 0.75rem);
-    margin-right: auto;
-    margin-left: auto;
-}
+
 
 /****************** [HEADER 헤더] ******************/
 .logo {position:absolute; top:85px; left:0}

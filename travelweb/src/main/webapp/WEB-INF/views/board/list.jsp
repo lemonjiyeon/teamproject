@@ -33,10 +33,18 @@ int total_page = ((Integer) request.getAttribute("total_page")).intValue();
       <%-- location.href = "./BoardWriteForm.do?id=<%=sessionId%>" --%>
    }
 </script>
+
+<%-- header --%>
+<jsp:include page="/WEB-INF/views/include/head.jsp"/>
+
 </head>
 
 
 <body>
+<%-- nabvar --%>
+<jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
+
+<br><br><br><br>
 	<%-- <jsp:include page="../menu.jsp" /> --%>
 	<section class="page-section cta">
 		<div class="container">
@@ -154,7 +162,10 @@ int total_page = ((Integer) request.getAttribute("total_page")).intValue();
 			</div>
 		</div>
 	</section>
-	<%-- <jsp:include page="../footer.jsp" /> --%>
+	
+	<%-- footer --%>
+<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+
 </body>
 </html>
 
