@@ -6,14 +6,19 @@
 <head>
 <meta charset="utf-8">
 
+<%-- header --%>
+<jsp:include page="/WEB-INF/views/include/head.jsp"/>
+
 <!-- css resources -->
 
 <link href="../resources/css/common.css" rel="stylesheet">
-<link href="../resources/css/popup.css" rel="stylesheet">
 <link href="../resources/css/content.css" rel="stylesheet">
 
+<<<<<<< HEAD
 <%-- header --%>
 <jsp:include page="/WEB-INF/views/include/head.jsp" />
+=======
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 
 </head>
 <body>
@@ -59,6 +64,7 @@
 										placeholder="'-'제외 숫자만 입력" value=""></td>
 								</tr>
 
+<<<<<<< HEAD
 								<tr>
 									<th><label>이메일<span class="ico_tbl_must"
 											title="필수입력"></span></label></th>
@@ -70,8 +76,30 @@
 										<div class="select normal yb_select" style="width: 150px">
 											<select title="이메일 도메인 선택" name="cstEmail3" id="cstEmail3">
 												<option value="">직접입력</option>
+=======
+				<tr>
+					<th scope="row"><label>여행기간<span class="ico_tbl_must"
+							title="필수입력"></span></label></th>
+					<td><span class="txt_at">출발일</span> <input type="date"
+						title="출발일선택" class="insert_calendar" value="" id="startDt"
+						name="startDt" > <span class="txt_at">~&nbsp;&nbsp;
+							도착일</span> <input type="date" title="도착일 선택" class="insert_calendar"
+						value="" id="endDt" name="endDt" ></td>
+				</tr>
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 
+<<<<<<< HEAD
 												<option value="naver.com">naver.com</option>
+=======
+				<tr id="tr_Item_FDMI_3"
+					class="tr_Item tr_Item_FDMI tr_Item_trafficServ" style="">
+					<th scope="row"><label>교통</label> <in3put type="hidden"
+						class="item_korName" name="trafficServNm" id="trafficServNm"
+						value="교통"> <input type="hidden" class="item_title"
+						name="trafficServ" id="trafficServ" value=""> <input
+						type="hidden" class="item_other" name="trafficServOther"
+						id="trafficServOther" value=""></th>
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 
 												<option value="nate.com">nate.com</option>
 
