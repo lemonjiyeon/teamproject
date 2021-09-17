@@ -12,4 +12,10 @@ public class BoardController {
 	public String write() {
 		return "board/rewriteform";
 	}
+	
+	@GetMapping("/list")
+	public String list() {
+		return "board/list";
+	}
+	
 }

@@ -4,7 +4,6 @@
 
 
  <!-- menu nav bar -->         	  
-  <div class="navarea">
 	  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
        <img alt="Brand" src="...">
 	  <a class="navbar-brand" href="#" style="color:white;">노랑풍선</a>

@@ -5,28 +5,19 @@
 <html lang="en">
 <head>
 
-
 <%-- header --%>
 <jsp:include page="/WEB-INF/views/include/head.jsp"/>
-
-<!-- bxslider슬라이더 -->
-<script src="./resources/js/jquery.1.12.4.js" type="text/javascript"></script>
-<script src="/resources/plugins/bxslider/js/jquery.bxslider.js"
-	type="text/javascript"></script>
-<script>
-	$(document).ready(function() {
-		$('.slider').bxSlider({
-			controls : false,
-			pager : false,
-			auto : true
-		});
-	});
-</script>
+   
+        <!-- bxslider슬라이더 -->
+        <script src="./resources/js/jquery.1.12.4.js" type="text/javascript"></script>
+        <script src="./resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
+        <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>
 </head>
+
+
 
 <body id="page-top">
 
-<div class="up">
 <%-- nabvar --%>
 <jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
 	
