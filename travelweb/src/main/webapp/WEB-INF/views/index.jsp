@@ -36,28 +36,11 @@
     <!-- menu nav bar -->  
          	  
 <head>
-<meta charset="utf-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="" />
-<meta name="author" content="" />
-<title>Stylish Portfolio - Start Bootstrap Template</title>
-<!-- Favicon-->
-<link rel="icon" type="image/x-icon"
-	href="./resources/assets/favicon.ico" />
-<!-- Font Awesome icons (free version)-->
-<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
-	crossorigin="anonymous"></script>
-<!-- Simple line icons-->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-	rel="stylesheet" />
-<!-- Google fonts-->
-<link
-	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-	rel="stylesheet" type="text/css" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="./resources/css/styles.css" rel="stylesheet" />
+
+
+<%-- header --%>
+<jsp:include page="/WEB-INF/views/include/head.jsp"/>
+
 <!-- bxslider슬라이더 -->
 <script src="./resources/js/jquery.1.12.4.js" type="text/javascript"></script>
 <script src="/resources/plugins/bxslider/js/jquery.bxslider.js"
@@ -73,9 +56,9 @@
 </script>
 </head>
 
-<!-- end second nav bar -->
 <body id="page-top">
 
+<<<<<<< HEAD
     <!-- menu nav bar -->         	  
 	  <div class="navarea">
 	  
@@ -125,6 +108,12 @@
 	</div>
 	<!-- end nav bar -->
 
+=======
+<div class="up">
+<%-- nabvar --%>
+<jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
+	
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 	<div class="slider">
 		<header class="masthead1 d-flex align-items-center">
 			<div class="container px-4 px-lg-5 text-center">
@@ -151,7 +140,7 @@
 			</div>
 		</header>
 	</div>
-	
+	</div>
 	<!-- Portfolio-->
 	<section class="content-section" id="portfolio">
 		<div class="container px-4 px-lg-5">
@@ -212,24 +201,9 @@
 		</div>
 	</section>
 
-	<!-- Footer-->
-	<footer class="footer text-center">
-		<div class="container px-4 px-lg-5">
-			<ul class="list-inline mb-5">
-				<li class="list-inline-item"><a
-					class="social-link rounded-circle text-white mr-3" href="#!"><i
-						class="icon-social-facebook"></i></a></li>
-				<li class="list-inline-item"><a
-					class="social-link rounded-circle text-white mr-3" href="#!"><i
-						class="icon-social-twitter"></i></a></li>
-				<li class="list-inline-item"><a
-					class="social-link rounded-circle text-white" href="#!"><i
-						class="icon-social-github"></i></a></li>
-			</ul>
-			<p class="text-muted small mb-0">Copyright &copy; Your Website
-				2021</p>
-		</div>
-	</footer>
+<%-- footer --%>
+<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+
 	<!-- Scroll to Top Button-->
 	<a class="scroll-to-top rounded" href="#page-top"><i
 		class="fas fa-angle-up"></i></a>
@@ -246,6 +220,7 @@
            });
         });
 	</script>
+	
 </body>
     
 </html>
