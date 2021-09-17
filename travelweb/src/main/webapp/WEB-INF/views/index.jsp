@@ -58,7 +58,6 @@
 
 <body id="page-top">
 
-<<<<<<< HEAD
     <!-- menu nav bar -->         	  
 	  <div class="navarea">
 	  
@@ -108,12 +107,10 @@
 	</div>
 	<!-- end nav bar -->
 
-=======
 <div class="up">
 <%-- nabvar --%>
 <jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
 	
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 	<div class="slider">
 		<header class="masthead1 d-flex align-items-center">
 			<div class="container px-4 px-lg-5 text-center">
