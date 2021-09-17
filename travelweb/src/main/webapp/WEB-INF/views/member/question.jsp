@@ -9,8 +9,6 @@
 <!-- css resources -->
 <link href="/static/css/common.css?20210916" rel="stylesheet">
 <link href="/static/css/popup.css" rel="stylesheet">
-
-
 <link href="/static/css/content.css" rel="stylesheet">
 
 
@@ -21,21 +19,7 @@
 		type="hidden" name="venueDt" id="venueDt" value="">
 	<div class="content" id="content">
 		<h3 class="tit_con_title">견적문의</h3>
-		<div class="con_page_info">
-			<h4 class="tit_time_info">운영시간</h4>
-			<ul class="con_info_list">
-				<li>문의주신 내용의 답변은 업무일(평일)기준으로 순차적으로 메일이 발송되며, 카카오 알림톡으로 처리 결과를
-					발송해 드립니다.</li>
-				<li>노랑풍선 회원이신 경우, 로그인 후 사용하시면 더욱 편리하게 마이페이지에서도 답변을 확인하실 수 있습니다.</li>
-				<li>주말, 공휴일의 경우는 평일 업무시간 개시 이후 순차적으로 답변 진행해드립니다.</li>
-				<li>항공권 문의는 <a href="/cs/qnaGuide.yb" class="btn_go_page">1:1
-						문의</a>를 이용해주세요.
-				</li>
-			</ul>
-
-
-
-		</div>
+		<div class="con_page_info"></div>
 		<p class="txt_tbl_info">
 			<span class="ico_tbl_must" title="필수입력 아이콘"></span> 는 필수입력 정보입니다.
 		</p>
