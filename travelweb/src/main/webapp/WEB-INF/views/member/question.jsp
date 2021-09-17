@@ -6,14 +6,14 @@
 <head>
 <meta charset="utf-8">
 
+<%-- header --%>
+<jsp:include page="/WEB-INF/views/include/head.jsp"/>
+
 <!-- css resources -->
 
 <link href="../resources/css/common.css" rel="stylesheet">
-<link href="../resources/css/popup.css" rel="stylesheet">
 <link href="../resources/css/content.css" rel="stylesheet">
 
-<%-- header --%>
-<jsp:include page="/WEB-INF/views/include/head.jsp"/>
 
 </head>
 <body>
@@ -142,16 +142,16 @@
 				<tr>
 					<th scope="row"><label>여행기간<span class="ico_tbl_must"
 							title="필수입력"></span></label></th>
-					<td><span class="txt_at">출발일</span> <input type="text"
+					<td><span class="txt_at">출발일</span> <input type="date"
 						title="출발일선택" class="insert_calendar" value="" id="startDt"
-						name="startDt" readonly> <span class="txt_at">~&nbsp;&nbsp;
-							도착일</span> <input type="text" title="도착일 선택" class="insert_calendar"
-						value="" id="endDt" name="endDt" readonly></td>
+						name="startDt" > <span class="txt_at">~&nbsp;&nbsp;
+							도착일</span> <input type="date" title="도착일 선택" class="insert_calendar"
+						value="" id="endDt" name="endDt" ></td>
 				</tr>
 
 				<tr id="tr_Item_FDMI_3"
 					class="tr_Item tr_Item_FDMI tr_Item_trafficServ" style="">
-					<th scope="row"><label>교통</label> <input type="hidden"
+					<th scope="row"><label>교통</label> <in3put type="hidden"
 						class="item_korName" name="trafficServNm" id="trafficServNm"
 						value="교통"> <input type="hidden" class="item_title"
 						name="trafficServ" id="trafficServ" value=""> <input
