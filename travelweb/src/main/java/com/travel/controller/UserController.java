@@ -12,4 +12,9 @@ public class UserController {
 		System.out.println("가고있는겐가 자네?");
 		return "member/login";
 	}
+	
+	@GetMapping("/join")
+	public String join() {
+		return "member/join";
+	}
 }

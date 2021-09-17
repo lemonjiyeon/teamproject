@@ -356,6 +356,7 @@ select {
   text-transform: none;
 }
 
+
 [role=button] {
   cursor: pointer;
 }
@@ -2204,6 +2205,11 @@ h1.tit_logo img {vertical-align:top} 로고 */
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+.form-control.in{
+	border-radius:8px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .form-control {
     transition: none;
@@ -2809,8 +2815,6 @@ textarea.form-control-lg {
 }
 .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: -1px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 .valid-feedback {
@@ -3030,13 +3034,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #1D809F;
-  border-color: #1D809F;
+  background-color: #ecb807;
+  border-color: #ecb807;
 }
 .btn-primary:hover {
   color: #fff;
   background-color: #196d87;
-  border-color: #17667f;
+  border-color: #196d87;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -3149,9 +3153,9 @@ textarea.form-control-lg {
 }
 
 .btn-warning {
-  color: #000;
-  background-color: #ecb807;
-  border-color: #ecb807;
+  color: #ffffff;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 .btn-warning:hover {
   color: #000;

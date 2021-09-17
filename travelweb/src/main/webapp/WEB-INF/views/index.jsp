@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-   
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,259 +35,217 @@
      </head>
     <!-- menu nav bar -->  
          	  
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Stylish Portfolio - Start Bootstrap Template</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon"
+	href="./resources/assets/favicon.ico" />
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+	crossorigin="anonymous"></script>
+<!-- Simple line icons-->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+	rel="stylesheet" />
+<!-- Google fonts-->
+<link
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+	rel="stylesheet" type="text/css" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="./resources/css/styles.css" rel="stylesheet" />
+<!-- bxslider슬라이더 -->
+<script src="./resources/js/jquery.1.12.4.js" type="text/javascript"></script>
+<script src="/resources/plugins/bxslider/js/jquery.bxslider.js"
+	type="text/javascript"></script>
+<script>
+	$(document).ready(function() {
+		$('.slider').bxSlider({
+			controls : false,
+			pager : false,
+			auto : true
+		});
+	});
+</script>
+</head>
+
+<!-- end second nav bar -->
+<body id="page-top">
+
+    <!-- menu nav bar -->         	  
 	  <div class="navarea">
 	  
-	  <div class="container">
 
-	<nav class="navbar navbar-default" role="navigation">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">
-		<img alt="Brand" src="...">
-	      </a>
-	    </div>
-	  </div>
-	</nav>
+	
 
-</div>  
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light my-2 my-sm-0 p-3 mb-2">
+	  
+
 	  <a class="navbar-brand" href="#">노랑풍선</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse my-sm-0" id="navbarNav">
 	    <ul class="navbar-nav">	           
-	      <li class="nav-item active">
+	      <li class="nav-item active" id="action">
 	        <a class="nav-link" href="#">국내여행 <span class="sr-only">(current)</span></a>
-	      </li>
+	      </li>	    
 	      <li class="nav-item">
 	        <a class="nav-link" href="#">테마여행</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">여행 후기</a>
+	        <a class="nav-link" href="board/write">여행 후기</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="member/login">로그인</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">회원가입</a>
+	        <a class="nav-link" href="member/join">회원가입</a>
 	      </li>
 	    </ul>
 	  </div>
 		</nav>
-	</div>	
+	</div>
 	<!-- end nav bar -->
 	<!-- second nav bar -->
 	<div id="secondbar">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-	    
-	    <div class="navbar-nav">
-	      <a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
-	      <a class="nav-link" href="#">제주도</a>
-	      <a class="nav-link" href="#">내륙/섬</a>
-	    </div>
-  	</div>  	
-	</nav>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+				<div class="navbar-nav">
+					<a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#">제주도</a> <a class="nav-link" href="#">내륙/섬</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- end nav bar -->
+
+	<div class="slider">
+		<header class="masthead1 d-flex align-items-center">
+			<div class="container px-4 px-lg-5 text-center">
+				<h1 class="mb-1">welcome to 경주 its your world</h1>
+				<h3 class="mb-5">
+					<em>A Free Bootstrap Theme by Start Bootstrap</em>
+				</h3>
+			</div>
+		</header>
+		<header class="masthead2 d-flex align-items-center">
+			<div class="container px-4 px-lg-5 text-center">
+				<h1 class="mb-1">hello nice to meet ya</h1>
+				<h3 class="mb-5">
+					<em>A Free Bootstrap Theme by Start Bootstrap</em>
+				</h3>
+			</div>
+		</header>
+		<header class="masthead3 d-flex align-items-center">
+			<div class="container px-4 px-lg-5 text-center">
+				<h1 class="mb-1">와 여기 정말 좋은 곳이구나</h1>
+				<h3 class="mb-5">
+					<em>A Free Bootstrap Theme by Start Bootstrap</em>
+				</h3>
+			</div>
+		</header>
 	</div>
 	
-	
-        <!-- Navigation-->
-        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#page-top">노랑 풍선</a></li>
-                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-                <li class="sidebar-nav-item"><a href="#about">About</a></li>
-                <li class="sidebar-nav-item"><a href="#services">예약</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-                <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Header-->
-        <div class="slider">
-	        <header class="masthead1 d-flex align-items-center">
-	            <div class="container px-4 px-lg-5 text-center">
-	                <h1 class="mb-1">welcome to 경주 its your world</h1>
-	                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
-	            </div>
-	        </header>
-	        <header class="masthead2 d-flex align-items-center">
-	            <div class="container px-4 px-lg-5 text-center">
-	                <h1 class="mb-1">hello nice to meet ya</h1>
-	                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
-	            </div>
-	        </header>
-	        <header class="masthead3 d-flex align-items-center">
-	            <div class="container px-4 px-lg-5 text-center">
-	                <h1 class="mb-1">와 여기 정말 좋은 곳이구나 </h1>
-	                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
-	            </div>
-	        </header>
-        </div>
-        <!-- About-->
-        <section class="content-section bg-light" id="about">
-            <div class="container px-4 px-lg-5 text-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-10">
-                        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                        <p class="lead mb-5">
-                            This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-                            <a href="https://unsplash.com/">Unsplash</a>
-                            !
-                        </p>
-                        <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services-->
-        <section class="content-section bg-primary text-white text-center" id="services">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Services</h3>
-                    <h2 class="mb-5">What We Offer</h2>
-                </div>
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
-                        <h4><strong>Responsive</strong></h4>
-                        <p class="text-faded mb-0">Looks great on any screen size!</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
-                        <h4><strong>Redesigned</strong></h4>
-                        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
-                        <h4><strong>Favorited</strong></h4>
-                        <p class="text-faded mb-0">
-                            Millions of users
-                            <i class="fas fa-heart"></i>
-                            Start Bootstrap!
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
-                        <h4><strong>Question</strong></h4>
-                        <p class="text-faded mb-0">I mustache you a question...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Callout-->
-        <section class="callout">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mx-auto mb-5">
-                    Welcome to
-                    <em>your</em>
-                    next website!
-                </h2>
-                <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
-            </div>
-        </section>
-        <!-- Portfolio-->
-        <section class="content-section" id="portfolio">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="mb-5">Recent Projects</h2>
-                </div>
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./resources/assets/images/portfolio-1.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./resources/assets/images/portfolio-2.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strawberries</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./resources/assets/images/portfolio-3.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./resources/assets/images/portfolio-4.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Call to Action-->
-        <section class="content-section bg-primary text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-                <a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a>
-                <a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
-            </div>
-        </section>
-        <!-- Map-->
-        <div class="map" id="contact">
-            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-            <br />
-            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
-        </div>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container px-4 px-lg-5">
-                <ul class="list-inline mb-5">
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
-                    </li>
-                </ul>
-                <p class="text-muted small mb-0">Copyright &copy; Your Website 2021</p>
-            </div>
-        </footer>
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="./resources/js/scripts.js"></script>
-        <!-- <script src="./resources/js/jquery-3.6.0.js"></script> -->
-        <script>
-        	$(document).ready(function(){
-        		$("#secondbar").hide();
-        		
-        		$(".navarea").click(function(){
-        			$("#secondbar").show()
-        		});
-        	});
-        </script>
-    </body>
+	<!-- Portfolio-->
+	<section class="content-section" id="portfolio">
+		<div class="container px-4 px-lg-5">
+			<div class="content-section-heading text-center">
+				<h3 class="text-secondary mb-0">Portfolio</h3>
+				<h2 class="mb-5">Recent Projects</h2>
+			</div>
+			<div class="row gx-0">
+				<div class="col-lg-6">
+					<a class="portfolio-item" href="#!">
+						<div class="caption">
+							<div class="caption-content">
+								<div class="h2">Stationary</div>
+								<p class="mb-0">A yellow pencil with envelopes on a clean,
+									blue backdrop!</p>
+							</div>
+						</div> <img class="img-fluid"
+						src="./resources/assets/images/portfolio-1.jpg" alt="..." />
+					</a>
+				</div>
+				<div class="col-lg-6">
+					<a class="portfolio-item" href="#!">
+						<div class="caption">
+							<div class="caption-content">
+								<div class="h2">Ice Cream</div>
+								<p class="mb-0">A dark blue background with a colored
+									pencil, a clip, and a tiny ice cream cone!</p>
+							</div>
+						</div> <img class="img-fluid"
+						src="./resources/assets/images/portfolio-2.jpg" alt="..." />
+					</a>
+				</div>
+				<div class="col-lg-6">
+					<a class="portfolio-item" href="#!">
+						<div class="caption">
+							<div class="caption-content">
+								<div class="h2">Strawberries</div>
+								<p class="mb-0">Strawberries are such a tasty snack,
+									especially with a little sugar on top!</p>
+							</div>
+						</div> <img class="img-fluid"
+						src="./resources/assets/images/portfolio-3.jpg" alt="..." />
+					</a>
+				</div>
+				<div class="col-lg-6">
+					<a class="portfolio-item" href="#!">
+						<div class="caption">
+							<div class="caption-content">
+								<div class="h2">Workspace</div>
+								<p class="mb-0">A yellow workspace with some scissors,
+									pencils, and other objects.</p>
+							</div>
+						</div> <img class="img-fluid"
+						src="./resources/assets/images/portfolio-4.jpg" alt="..." />
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer-->
+	<footer class="footer text-center">
+		<div class="container px-4 px-lg-5">
+			<ul class="list-inline mb-5">
+				<li class="list-inline-item"><a
+					class="social-link rounded-circle text-white mr-3" href="#!"><i
+						class="icon-social-facebook"></i></a></li>
+				<li class="list-inline-item"><a
+					class="social-link rounded-circle text-white mr-3" href="#!"><i
+						class="icon-social-twitter"></i></a></li>
+				<li class="list-inline-item"><a
+					class="social-link rounded-circle text-white" href="#!"><i
+						class="icon-social-github"></i></a></li>
+			</ul>
+			<p class="text-muted small mb-0">Copyright &copy; Your Website
+				2021</p>
+		</div>
+	</footer>
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top"><i
+		class="fas fa-angle-up"></i></a>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="./resources/js/scripts.js"></script>
+	<script>
+	   $(document).ready(function(){
+           $("#secondbar").hide();              
+           $("#action").click(function(){
+              $("#secondbar").show()
+           });
+        });
+	</script>
+</body>
+    
 </html>
