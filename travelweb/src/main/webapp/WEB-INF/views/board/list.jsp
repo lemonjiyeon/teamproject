@@ -54,6 +54,7 @@ int total_page = ((Integer) request.getAttribute("total_page")).intValue();
 										</span>
 									</div>
 								</div>
+								
 								<div style="padding-top: 50px">
 									<table class="table table-hover">
 										<thead>
