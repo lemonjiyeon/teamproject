@@ -9,6 +9,8 @@
 	<script src="../resources/js/jquery-3.6.0.js" type="text/javascript"></script>
 	<script src="../resources/js/bootstrap.js"></script>
 </head>
+<jsp:include page="/WEB-INF/views/include/head.jsp"/>
+<jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
