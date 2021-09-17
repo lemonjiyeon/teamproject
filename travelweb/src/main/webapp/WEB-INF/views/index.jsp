@@ -79,7 +79,7 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
 				<div class="navbar-nav">
-					<a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
+					<a class="nav-link active" href="tour/intour">국내여행<span class="sr-only">(current)</span></a>
 					<a class="nav-link" href="#">제주도</a> <a class="nav-link" href="#">내륙/섬</a>
 				</div>
 			</div>
