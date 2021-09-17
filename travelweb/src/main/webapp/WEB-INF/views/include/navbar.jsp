@@ -38,11 +38,20 @@
 
 				<div class="navbar-nav">
 					<a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
-					<a class="nav-link" href="#">제주도</a> <a class="nav-link" href="#">내륙/섬</a>
+					<a class="nav-link" href="#">제주도</a> 
+					<a class="nav-link" href="tour/intour">내륙/섬</a>
 				</div>
 			</div>
 		</div>
 		</nav>
 	</div>
 	<!-- end nav bar -->
-	
+	<script src="/resources/js/jquery.1.12.4.js" type="text/javascript"></script>
+	<script>
+	   $(document).ready(function(){
+           $("#secondbar").hide();              
+           $("#action").click(function(){
+              $("#secondbar").show()
+           });
+        });
+	</script>
