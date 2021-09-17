@@ -420,9 +420,9 @@ textarea {width:700px; height:200px; padding:10px;border:1px solid #ddd; box-siz
 textarea:focus {border: 1px solid #ffc72c}
 
 /********** [calendar] **********/
-.insert_calendar {width:150px; height:38px;line-height:38px; padding:0 10px; border:1px solid #ddd;box-sizing:border-box;background:url(/static/images/content/ico/ico_calendar.png) no-repeat right 10px top 50%; vertical-align:middle; cursor:pointer}
+.insert_calendar {width:150px; height:38px;line-height:38px; padding:0 10px; border:1px solid #ddd;box-sizing:border-box;background:url(../resources/assets/images/ico_calendar.png) no-repeat right 10px top 50%; vertical-align:middle; cursor:pointer}
 .insert_calendar:focus {background:url(/static/images/content/ico/ico_calendar_focus.png) no-repeat right 10px top 50%}
-:disabled.insert_calendar {width:150px; height:38px;line-height:38px; padding:0 10px; border:1px solid #ddd;box-sizing:border-box;background:#f7f7f7 url(/static/images/content/ico/ico_calendar.png) no-repeat right 10px top 50%; vertical-align:middle; cursor:pointer}
+:disabled.insert_calendar {width:150px; height:38px;line-height:38px; padding:0 10px; border:1px solid #ddd;box-sizing:border-box;background:#f7f7f7 url(../resources/assets/images/ico_calendar.png) no-repeat right 10px top 50%; vertical-align:middle; cursor:pointer}
 
 /******************** [공통 버튼 BUTTON] ********************/
 /* 버튼 정렬 */

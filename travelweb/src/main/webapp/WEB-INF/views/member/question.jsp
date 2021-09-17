@@ -7,19 +7,32 @@
 <meta charset="utf-8">
 
 <!-- css resources -->
+
 <link href="../resources/css/common.css" rel="stylesheet">
 <link href="../resources/css/popup.css" rel="stylesheet">
 <link href="../resources/css/content.css" rel="stylesheet">
 
+<%-- header --%>
+<jsp:include page="/WEB-INF/views/include/head.jsp"/>
 
+</head>
+<body>
+
+<%-- nabvar --%>
+<jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
+
+<div id="container">
+<div class="content_block">
 <form name="form" id="form" method="post">
 	<input type="hidden" name="regType" id="regType" value="H" /> <input
 		type="hidden" name="statCd" id="statCd" value="UCF" /> <input
 		type="hidden" name="cstEmail" id="cstEmail" value="" /> <input
 		type="hidden" name="venueDt" id="venueDt" value="">
 	<div class="content" id="contit_con_titletent">
+		<div id="question">
 		<h1 class="">견적문의</h1>
-		<div class="con_page_info"></div>
+		<br>
+		</div>
 
 		<h4 class="stit_con_title">문의고객 정보</h4>
 		<table class="tbl_basic">
@@ -186,16 +199,12 @@
 		</div>
 	</div>
 </form>
+</div>
+</div>
 
+<%-- footer --%>
+<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 
-<!-- //고객센터 -->
-
-
-
-
-<script>
-	
-</script>
 </body>
 
 <!--  =========================================================================================== -->
