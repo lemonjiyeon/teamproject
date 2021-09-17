@@ -18,4 +18,8 @@ public class BoardController {
 		return "board/list";
 	}
 	
+	@GetMapping("/booking")
+	public String booking() {
+		return "board/booking";
+	}
 }
