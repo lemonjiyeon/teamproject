@@ -30,11 +30,14 @@
 		width:380px;
 		height:300px;	
 	}
+	#thememap img{
+		
+	}
 </style>
 <body id="page-top">
 <%-- nabvar --%>
 <jsp:include page="/WEB-INF/views/include/navbar.jsp"/>	
-	<div id="themecontainer">
+<div id="themecontainer">
 	<div class="slider">
 		<header class="masthead4 d-flex align-items-center">
 			<div class="container px-4 px-lg-5 text-center">
@@ -61,7 +64,7 @@
 			</div>
 		</header>
 	</div>
-	<p>
+	<p><br>
 	<div class="content-section-heading text-center">
 				<h3 class="text-secondary mb-0">테마별 여행지</h3>
 				<h2 class="mb-5">테마별 여행지</h2>
@@ -72,9 +75,24 @@
   		<div><img src="../resources/assets/images/gaya1.jpg"></div>
   		<div><img src="../resources/assets/images/gaya2.jpg"></div>
   		<div><img src="../resources/assets/images/backje.png"></div>
-  		<div><img src="../resources/assets/images/backje2.jpg"></div> 		
+  		<div><img src="../resources/assets/images/backje2.jpg"></div>
 	</div>
-</div>		
+	<p><br>
+	<div class="content-section-heading text-center">
+				<h3 class="text-secondary mb-0">테마 여행 클릭</h3>
+				<h2 class="mb-5">그림을 눌러보세요!</h2>
+			</div>
+	<div id="thememap">
+		<div><img src="../resources/assets/images/thememap.png" usemap="#Map"></div>
+		<map name="Map">
+			<area shape="rect" coords="588,282,736,492" href="신라약사">
+			<area shape="rect" coords="405,440,593,626" href="가야역사">
+			<area shape="rect" coords="156,115,312,337" href="백제역사">
+											
+		</map>	
+	</div>
+</div>
+	
 	<script src="../resources/js/slick.min.js"></script>	
 	<script>
 	$(document).ready(function(){

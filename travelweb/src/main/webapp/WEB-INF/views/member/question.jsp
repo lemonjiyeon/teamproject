@@ -78,26 +78,6 @@
                   </div></td>
             </tr>
 
-            <tr>
-               <th><label>통화가능시간<span class="ico_tbl_must"
-                     title="필수입력"></span></label></th>
-               <td colspan="3">
-                  <ul class="list_one_category">
-                     <li><span class="form_block"><input type="radio"
-                           id="callDiviCd02" name="callDiviCd" value="" checked="checked"
-                           onclick="clickCallTmButton('');"><label
-                           for="callDiviCd02"><span></span>상관없음</label></span></li>
-                     <li><span class="form_block"><input type="radio"
-                           id="callDiviCd01" name="callDiviCd" value="X"
-                           onclick="clickCallTmButton('X');"><label
-                           for="callDiviCd01"><span></span>안함</label></span></li>
-                     <li><span class="form_block"><input type="radio"
-                           id="callDiviCd03" name="callDiviCd" value="C"
-                           onclick="clickCallTmButton('C');"><label
-                           for="callDiviCd03"><span></span>선택</label></span></li>
-                  </ul>
-               </td>
-            </tr>
          </tbody>
       </table>
 
