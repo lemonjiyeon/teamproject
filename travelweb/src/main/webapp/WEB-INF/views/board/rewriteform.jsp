@@ -9,10 +9,17 @@
 <!-- Google Fonts and Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-<link href="../resources/css/styles.css" rel="stylesheet">
+    
+<%-- header --%>
+<jsp:include page="/WEB-INF/views/include/head.jsp"/>
 <link href="../resources/css/user.css" rel="stylesheet">
+
 </head>
 <body>
+<%-- nabvar --%>
+<jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
+
+
 	<section class="content-section text-black
 		text-center" id="services">
 			<h1 class="tit_head">
@@ -73,7 +80,18 @@
 					</div>
 				</form>
 			</div>
-		</div>
 	</section>
+	
+	<%-- footer --%>
+<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+	
+	<script>
+	   $(document).ready(function(){
+           $("#secondbar").hide();              
+           $("#action").click(function(){
+              $("#secondbar").show()
+           });
+        });
+	</script>
 </body>
 </html>
