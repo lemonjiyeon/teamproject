@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 
 <!-- css resources -->
-<link href="/static/css/common.css?20210916" rel="stylesheet">
+<link href="/static/css/common.css" rel="stylesheet">
 <link href="/static/css/popup.css" rel="stylesheet">
 <link href="/static/css/content.css" rel="stylesheet">
 
