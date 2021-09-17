@@ -13,7 +13,7 @@
 	  <div class="collapse navbar-collapse my-sm-0" id="navbarNav">
 	    <ul class="navbar-nav">	           
 	      <li class="nav-item active" id="action">
-	        <a class="nav-link" href="#" >국내여행 <span class="sr-only">(current)</span></a>
+	        <a class="nav-link">국내여행 <span class="sr-only">(current)</span></a>
 	      </li>	    
 	      <li class="nav-item">
 	        <a class="nav-link" href="#" >테마여행</a>
@@ -45,7 +45,6 @@
 		</nav>
 	</div>
 	<!-- end nav bar -->
-	<script src="/resources/js/jquery.1.12.4.js" type="text/javascript"></script>
 	<script>
 	   $(document).ready(function(){
            $("#secondbar").hide();              
