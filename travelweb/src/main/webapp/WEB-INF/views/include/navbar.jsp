@@ -4,8 +4,9 @@
 
 
  <!-- menu nav bar -->         	  
+  <div class="navarea">
 	  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-       <img alt="Brand" src="...">
+        <img alt="Brand" src="...">
 	  <a class="navbar-brand" href="#" style="color:white;">노랑풍선</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
