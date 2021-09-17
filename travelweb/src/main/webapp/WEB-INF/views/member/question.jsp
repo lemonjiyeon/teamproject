@@ -1046,8 +1046,6 @@
 						</div></td>
 				</tr>
 
-
-
 				<tr>
 					<th scope="row"><label>여행경비(1인당)<span
 							class="ico_tbl_must" title="필수입력"></span></label></th>
