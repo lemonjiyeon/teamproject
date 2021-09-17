@@ -26,23 +26,10 @@
 
 <body id="page-top">
 
-
-<<<<<<< HEAD
-				<div class="navbar-nav">
-					<a class="nav-link active" href="tour/intour">국내여행<span class="sr-only">(current)</span></a>
-					<a class="nav-link" href="#">제주도</a> <a class="nav-link" href="#">내륙/섬</a>
-				</div>
-			</div>
-		</nav>
-	</div>
-	<!-- end nav bar -->
-
-=======
 <div class="up">
 <%-- nabvar --%>
 <jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
 	
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 	<div class="slider">
 		<header class="masthead1 d-flex align-items-center">
 			<div class="container px-4 px-lg-5 text-center">
