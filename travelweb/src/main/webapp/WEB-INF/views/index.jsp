@@ -26,7 +26,6 @@
 
 <body id="page-top">
 
-
 <div class="up">
 <%-- nabvar --%>
 <jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
