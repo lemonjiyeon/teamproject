@@ -51,7 +51,7 @@
 
             <div class="navbar-nav">
                <a class="nav-link active" href="#">국내여행<span class="sr-only">(current)</span></a>
-               <a class="nav-link" href="#">제주도</a> 
+               <a class="nav-link" href="tour/jejutour">제주도</a> 
                <a class="nav-link" href="tour/intour">내륙/섬</a>
             </div>
          </div>

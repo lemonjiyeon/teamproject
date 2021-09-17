@@ -5,37 +5,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-	<script src="../resources/js/jquery-3.6.0.js" type="text/javascript"></script>
-	<script src="../resources/js/bootstrap.js"></script>
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">			
 </head>
 <jsp:include page="/WEB-INF/views/include/head.jsp"/>
 <jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
+<style>
+	#intourcontainer{
+		margin:auto;
+		text-align: center;
+		width:1200px;
+	}
+	.multiple-items{
+		width:1200px;
+	}
+	
+	.multiple-items img{
+		width:590px;
+		height:430px;
+	}
+</style>
 <body>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../resources/assets/images/tour1.jpg" height="600" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../resources/assets/images/tour2.jpg" height="600" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../resources/assets/images/tour3.jpg" height="600" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Nexttesting</span>
-  </a>
-</div>
+	<div id="intourcontainer">
+	<div class="multiple-items" align="center">
+		<div><img src="../resources/assets/images/tour4.jpg"></div>
+  		<div><img src="../resources/assets/images/tour5.jpg"></div>
+  		<div><img src="../resources/assets/images/tour6.jpg"></div>
+  		<div><img src="../resources/assets/images/tour7.jpg"></div>
+	</div>
 <!-- Portfolio-->
 	<section class="content-section" id="portfolio">
 		<div class="container px-4 px-lg-5">
@@ -86,8 +83,21 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</div>	
 	</section>
-</body>
-
+	</div>	
+	<script src="../resources/js/slick.min.js"></script>
+	<script>
+	$(document).ready(function(){				
+		$('.multiple-items').slick({
+			  infinite: true,
+			  autoplay:true,
+			  slidesToShow: 2,
+			  slidesToScroll: 2
+			});
+	});
+	</script>
+	<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+	
+</body>	
 </html>
