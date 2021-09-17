@@ -17,77 +17,10 @@
 		type="hidden" name="statCd" id="statCd" value="UCF" /> <input
 		type="hidden" name="cstEmail" id="cstEmail" value="" /> <input
 		type="hidden" name="venueDt" id="venueDt" value="">
-	<div class="content" id="content">
-		<h3 class="tit_con_title">견적문의</h3>
+	<div class="content" id="contit_con_titletent">
+		<h1 class="">견적문의</h1>
 		<div class="con_page_info"></div>
-		<p class="txt_tbl_info">
-			<span class="ico_tbl_must" title="필수입력 아이콘"></span> 는 필수입력 정보입니다.
-		</p>
-		<table class="tbl_basic" id="travelType">
-			<caption>선택하신 상품</caption>
-			<colgroup>
-				<col style="width: 170px">
-				<col>
-			</colgroup>
-			<tbody>
-				<tr>
-					<th><label>여행타입<span class="ico_tbl_must" title="필수입력"></span></label></th>
-					<td>
-						<div class="tbl_line">
-							<ul class="list_align_category">
 
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD1" name="travrvTypeCd" value="FFC"
-										onclick="fn_setTravrvType('FFC');"> <label
-										for="rdo_TRAVRV_TYPE_CD1"><span></span>자유여행[해외]</label></span></li>
-
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD2" name="travrvTypeCd" value="HYM"
-										onclick="fn_setTravrvType('HYM');"> <label
-										for="rdo_TRAVRV_TYPE_CD2"><span></span>허니문</label></span></li>
-
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD3" name="travrvTypeCd" value="GOLF"
-										onclick="fn_setTravrvType('GOLF');" checked="checked">
-
-
-
-										<label for="rdo_TRAVRV_TYPE_CD3"><span></span>골프</label></span></li>
-
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD4" name="travrvTypeCd" value="HYL"
-										onclick="fn_setTravrvType('HYL');"> <label
-										for="rdo_TRAVRV_TYPE_CD4"><span></span>성지순례</label></span></li>
-
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD5" name="travrvTypeCd"
-										value="COMP_GROUP" onclick="fn_setTravrvType('COMP_GROUP');">
-
-
-										<label for="rdo_TRAVRV_TYPE_CD5"><span></span>기업/단체</label></span></li>
-
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD6" name="travrvTypeCd" value="FDMA"
-										onclick="fn_setTravrvType('FDMA');"> <label
-										for="rdo_TRAVRV_TYPE_CD6"><span></span>국내여행[제주]-단체</label></span></li>
-
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD7" name="travrvTypeCd" value="FDMI"
-										onclick="fn_setTravrvType('FDMI');"> <label
-										for="rdo_TRAVRV_TYPE_CD7"><span></span>국내여행[내륙]-단체</label></span></li>
-
-								<li><span class="form_block"> <input type="radio"
-										id="rdo_TRAVRV_TYPE_CD8" name="travrvTypeCd" value="TREK"
-										onclick="fn_setTravrvType('TREK');"> <label
-										for="rdo_TRAVRV_TYPE_CD8"><span></span>트레킹/산악회</label></span></li>
-
-							</ul>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<!-- 라디오버튼에 따라 변경되는 내용 들어가는 자리 -->
 		<h4 class="stit_con_title">문의고객 정보</h4>
 		<table class="tbl_basic">
 			<caption>문의고객 정보</caption>
@@ -102,12 +35,13 @@
 					<th><label for="cstNm">이름<span class="ico_tbl_must"
 							title="필수입력"></span></label></th>
 					<td><input type="text" name="cstNm" id="cstNm" maxlength="40"
-						placeholder="이름을 입력하세요." value="" readonly="readonly"></td>
+						placeholder="이름을 입력하세요." value=""></td>
 					<th><label for="cstTel">휴대폰 번호<span
 							class="ico_tbl_must" title="필수입력"></span></label></th>
 					<td><input type="number" name="cstTel" id="cstTel"
 						placeholder="'-'제외 숫자만 입력" value=""></td>
 				</tr>
+
 				<tr>
 					<th><label>이메일<span class="ico_tbl_must" title="필수입력"></span></label></th>
 					<td colspan="3"><input type="text" title="이메일 아이디 입력"
@@ -131,7 +65,6 @@
 						</div></td>
 				</tr>
 
-
 				<tr>
 					<th><label>통화가능시간<span class="ico_tbl_must"
 							title="필수입력"></span></label></th>
@@ -150,33 +83,6 @@
 									onclick="clickCallTmButton('C');"><label
 									for="callDiviCd03"><span></span>선택</label></span></li>
 						</ul>
-
-
-						<div class="select disabled yb_select" id="callTmDiv"
-							style="width: 150px">
-							<select title="시간선택" name="callTm" id="callTm">
-								<option value="">시간선택</option>
-
-								<option value="TM1">09:00~10:00</option>
-
-								<option value="TM2">10:00~11:00</option>
-
-								<option value="TM3">11:00~12:00</option>
-
-								<option value="TM4">12:00~13:00</option>
-
-								<option value="TM5">13:00~14:00</option>
-
-								<option value="TM6">14:00~15:00</option>
-
-								<option value="TM7">15:00~16:00</option>
-
-								<option value="TM8">16:00~17:00</option>
-
-								<option value="TM9">17:00~18:00</option>
-
-							</select>
-						</div>
 					</td>
 				</tr>
 			</tbody>
@@ -189,6 +95,35 @@
 				<col style="width: 170px">
 				<col>
 			</colgroup>
+
+			<tbody>
+				<tr>
+					<th><label>여행타입<span class="ico_tbl_must" title="필수입력"></span></label></th>
+					<td>
+						<div class="tbl_line">
+							<ul class="list_align_category">
+
+								<li><span class="form_block"> <input type="radio"
+										id="tourjeju" name="tourjeju" value="jeju"
+										onclick="fn_setTravrvType('FDMA');"> <label
+										for="tourjeju"><span></span>국내여행[제주]</label></span></li>
+
+								<li><span class="form_block"> <input type="radio"
+										id="tourdomestic" name="tourdomestic" value="domestic"
+										onclick="fn_setTravrvType('FDMI');"> <label
+										for="tourdomestic"><span></span>국내여행[내륙/섬]</label></span></li>
+
+								<li><span class="form_block"> <input type="radio"
+										id="tourtheme" name="tourtheme" value="theme"
+										onclick="fn_setTravrvType('TREK');"> <label
+										for="tourtheme"><span></span>테마여행</label></span></li>
+
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+
 			<tbody>
 
 				<tr>
@@ -196,7 +131,7 @@
 							title="필수입력"></span></label></th>
 					<td><span class="txt_at">출발일</span> <input type="text"
 						title="출발일선택" class="insert_calendar" value="" id="startDt"
-						name="startDt" readonly> <span class="txt_at">~&nbsp;&nbsp;(한국)
+						name="startDt" readonly> <span class="txt_at">~&nbsp;&nbsp;
 							도착일</span> <input type="text" title="도착일 선택" class="insert_calendar"
 						value="" id="endDt" name="endDt" readonly></td>
 				</tr>
@@ -251,12 +186,12 @@
 		</div>
 	</div>
 </form>
-</div>
-</div>
+
+
 <!-- //고객센터 -->
-</div>
-</div>
-</div>
+
+
+
 
 <script>
 	
