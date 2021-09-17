@@ -22,4 +22,8 @@ public class BoardController {
 	public String booking() {
 		return "board/booking";
 	}
+	@GetMapping("/confirm")
+	public String confirm() {
+		return "board/confirm";
+	}
 }

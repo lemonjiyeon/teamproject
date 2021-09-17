@@ -53,7 +53,7 @@
 									<thead>
 										<tr>
 											<th scope="col" colspan="2">출발/도착 일시</th>
-											<th scope="col">항공</th>
+											<th scope="col">교통</th>
 											<th scope="col">기간</th>
 											<th scope="col">상품명</th>
 											<th scope="col">가격</th>
