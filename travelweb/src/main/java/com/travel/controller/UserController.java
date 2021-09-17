@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/member/*")
 public class UserController {
-	@GetMapping("/login")
+	@GetMapping("/modify")
 	public String login() {
 		System.out.println("가고있는겐가 자네?");
-		return "member/login";
+		return "member/modify";
 	}
 	
-	@GetMapping("/join")
+	@GetMapping("/question")
 	public String join() {
-		return "member/join";
+		return "member/question";
 	}
 }

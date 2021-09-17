@@ -18,4 +18,9 @@ public class TourController {
 		System.out.println("제주로 가고 있는가? 자네?");
 		return "tour/jejutour";
 	}
+	
+	@GetMapping("/theme")
+	public String theme() {
+		return "tour/theme";
+	}
 }

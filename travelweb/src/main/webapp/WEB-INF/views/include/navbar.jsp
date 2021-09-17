@@ -6,8 +6,8 @@
 <!-- menu nav bar -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
    <img alt="Brand" src="../resources/assets/열기구.png"> <a
-      class="navbar-brand" href="#" style="color: white;">Tour rainbow</a> <a
-      class="navbar-brand" href="#" style="color: white; font-size: 0.5em">in
+      class="navbar-brand" href="/" style="color: white;">Tour rainbow</a> <a
+      class="navbar-brand" href="/" style="color: white; font-size: 0.5em">in
       korea</a>
    <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbarNav" aria-controls="navbarNav"
@@ -18,7 +18,7 @@
       <ul class="navbar-nav">
          <li class="nav-item active" id="action"><a class="nav-link"
             href="#">국내여행 <span class="sr-only">(current)</span></a></li>
-         <li class="nav-item"><a class="nav-link" href="#">테마여행</a></li>
+         <li class="nav-item"><a class="nav-link" href="tour/theme">테마여행</a></li>
          <li class="nav-item"><a class="nav-link" href="board/write">여행
                후기</a></li>
       </ul>
