@@ -28,7 +28,6 @@
 
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="../resources/css/styles.css" rel="stylesheet" />
-<link href="../resources/css/style1.css" rel="stylesheet" />
 
 <!-- jquery -->
 <script src="../resources/js/jquery.1.12.4.js" type="text/javascript"></script>
