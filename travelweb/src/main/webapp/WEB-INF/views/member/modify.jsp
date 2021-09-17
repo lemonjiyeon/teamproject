@@ -67,10 +67,8 @@
 					<th scope="row"><label>성별</label></th>
 					<td>
 						<ul class="list_one_category">
-							<li><span class="form_block"><input type="radio" id="gender1" name="gender"><label
-								for="gender1"><span></span>남</label></span></li>
-							<li><span class="form_block"><input type="radio" id="gender2" name="gender"><label
-								for="gender2"><span></span>여</label></span></li>
+							<li><span class="form_block"><input type="radio" id="gender1" name="gender" ><label for="gender1"><span></span>남</label></span></li>
+							<li><span class="form_block"><input type="radio" id="gender2" name="gender" ><label for="gender2"><span></span>여</label></span></li>
 						</ul>
 					</td>
 				</tr>

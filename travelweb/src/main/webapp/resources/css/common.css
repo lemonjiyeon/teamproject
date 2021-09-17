@@ -313,7 +313,7 @@ ul.sel_site_list li {height:30px; line-height:30px; border-top:1px solid #606060
 ul.sel_site_list li:first-child {border-top:none}
 ul.sel_site_list li:hover {background:#555}
 ul.sel_site_list li label {display:block;width: 100%; height: 30px; font-size:14px;cursor:pointer; color:#fff}
-ul.sel_site_list li input[type="radio"] {position: absolute; width: 1px;height: 1px !important;padding: 0; margin:-1px; border: none; clip: rect(0 0 0 0);visibility:hidden; overflow: hidden}
+ul.sel_site_list li input[type="radio"] {position: absolute; width: 1px;height: 1px !important;padding: 0; margin:-1px; border: none; clip: rect(0 0 0 0); overflow: hidden}
 
 .btn_gosite {float:left;width:38px; height:38px;line-height:38px; border:1px solid #999; background:#333; font-size:13px;color:#fff; vertical-align:top}
 
@@ -371,8 +371,8 @@ ul.cert_list li button {background:transparent}
 /****************** [라디오/체크박스/인풋] ******************/
 input[type="radio"] {opacity:0; position:absolute; top:0; left:0; width:18px; height:18px}
 input[type="radio"]+label {cursor:pointer}
-input[type="radio"]+label span {display:inline-block; width:18px; height:18px; margin-right:10px; box-sizing:border-box; background:url(/static/images/content/bl/bl_radio.png) no-repeat 0 0; vertical-align:sub;cursor:pointer}
-input[type="radio"]:checked+label span {display:inline-block;  width:18px; height:18px; margin-right:10px;box-sizing:border-box; background:url(/static/images/content/bl/bl_radio.png) no-repeat 0 100%; cursor:pointer}
+input[type="radio"]+label span {display:inline-block; width:18px; height:18px; margin-right:10px; box-sizing:border-box; background:url(/resources/assets/images/bl_radio.png) no-repeat 0 0; vertical-align:sub;cursor:pointer}
+input[type="radio"]:checked+label span {display:inline-block;  width:18px; height:18px; margin-right:10px;box-sizing:border-box; background:url(/resources/assets/images/bl_radio.png) no-repeat 0 100%; cursor:pointer}
 input[type="radio"]:disabled+label span {display:inline-block; width:18px; height:18px; margin-right:10px;box-sizing:border-box; background:url(/static/images/content/bl/bl_input_dis.png) no-repeat 0 0; cursor: unset;}
 input[type="radio"].read+label span {display:inline-block; width:18px; height:18px;margin-right:10px; box-sizing:border-box; background:url(/static/images/content/bl/bl_input_dis.png) no-repeat 0 0; cursor: unset;}
 input[type="radio"].read:checked+label span {display:inline-block; width:18px; height:18px;margin-right:10px; box-sizing:border-box;background:url(/static/images/content/bl/bl_input_read.png) no-repeat 0 0; cursor: unset;}
@@ -1729,3 +1729,4 @@ ul.def_reviews li em+.tit_reviews {padding-left:0}
   }
 
 /* 임시 말풍선 △  */
+}

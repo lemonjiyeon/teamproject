@@ -13,8 +13,8 @@ public class UserController {
 		return "member/modify";
 	}
 	
-	@GetMapping("/join")
+	@GetMapping("/question")
 	public String join() {
-		return "member/join";
+		return "member/question";
 	}
 }

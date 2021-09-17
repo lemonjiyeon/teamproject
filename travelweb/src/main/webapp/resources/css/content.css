@@ -4,7 +4,7 @@
 .content_block{position:relative; width:1200px; min-height:600px}
 .content_block:after { display:block; content:' '; clear:both}
 .content_block>.lnb_block{width:240px; padding:30px 0 16px 0; box-sizing: border-box; border:1px solid #222; float:left ; background:#fff; z-index:10}
-.content { float:right; width:910px; min-height:800px}
+.content {text-align:center ; width:910px; min-height:800px; margin:20%; }
 
 /******************** [LNB] ********************/
 .tit_lnb_title{ line-height:1; margin-bottom:7px; padding:0 30px 22px 30px; background:#fff url(/static/images/content/bl/bl_lnb_line.png) no-repeat 30px 100%; font-size:26px; font-family: 'Noto_m';color:#222 }
@@ -1336,7 +1336,7 @@ table.tbl_pw_certify tr:first-child th,
 table.tbl_pw_certify tr:first-child td {padding-top: 0}
 table.tbl_pw_certify th {color: #222}
 table.tbl_pw_certify td {color: #555}
-.box_line.pw_info_con .btn_pw_certify {float:right; margin-left:}
+.box_line.pw_info_con .btn_pw_certify {float:left; margin-left:1}
 .btn_pw_certify .pw_confirm {width: 140px; height: 86px; background: #ffc72c; color: #222; font-size: 18px; font-family: 'Noto_m'}
 
 /* 비밀번호 변경 */
