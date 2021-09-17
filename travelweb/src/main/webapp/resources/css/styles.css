@@ -492,6 +492,12 @@ progress {
 [hidden] {
   display: none !important;
 }
+/* .logo {
+    position: absolute;
+    top: 85px;
+    left: 0;
+}
+h1.tit_logo img {vertical-align:top} 로고 */
 
 .lead {
   font-size: 1.25rem;
