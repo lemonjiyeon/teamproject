@@ -12,7 +12,6 @@
     
 <%-- header --%>
 <jsp:include page="/WEB-INF/views/include/head.jsp"/>
-<link href="../resources/css/user.css" rel="stylesheet">
 
 </head>
 <body>
