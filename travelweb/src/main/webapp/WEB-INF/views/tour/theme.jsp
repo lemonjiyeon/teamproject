@@ -12,15 +12,32 @@
         <script src="../resources/js/jquery.1.12.4.js" type="text/javascript"></script>
         <script src="../resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
         <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>
+        
+        <!-- slick -->
+        <link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+		<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">
 </head>
-
-
-
+<style>
+	#themecontainer{
+		margin:auto;
+		text-align: center;
+		width:1200px;
+	}
+	.autoplay{
+		width:1200px;
+	}
+	.autoplay img{
+		width:380px;
+		height:300px;	
+	}
+	#thememap img{
+		
+	}
+</style>
 <body id="page-top">
-
 <%-- nabvar --%>
-<jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
-	
+<jsp:include page="/WEB-INF/views/include/navbar.jsp"/>	
+<div id="themecontainer">
 	<div class="slider">
 		<header class="masthead4 d-flex align-items-center">
 			<div class="container px-4 px-lg-5 text-center">
@@ -47,66 +64,53 @@
 			</div>
 		</header>
 	</div>
+	<p><br>
+	<div class="content-section-heading text-center">
+				<h3 class="text-secondary mb-0">테마별 여행지</h3>
+				<h2 class="mb-5">테마별 여행지</h2>
+			</div>
+	<div class="autoplay">
+  		<div><img src="../resources/assets/images/geyu1.jpg"></div>
+  		<div><img src="../resources/assets/images/geyu2.jpg"></div>
+  		<div><img src="../resources/assets/images/gaya1.jpg"></div>
+  		<div><img src="../resources/assets/images/gaya2.jpg"></div>
+  		<div><img src="../resources/assets/images/backje.png"></div>
+  		<div><img src="../resources/assets/images/backje2.jpg"></div>
 	</div>
-	<!-- Portfolio-->
-	<section class="content-section" id="portfolio">
-		<div class="container px-4 px-lg-5">
-			<div class="content-section-heading text-center">
-				<h3 class="text-secondary mb-0">Portfolio</h3>
-				<h2 class="mb-5">Recent Projects</h2>
+	<p><br>
+	<div class="content-section-heading text-center">
+				<h3 class="text-secondary mb-0">테마 여행 클릭</h3>
+				<h2 class="mb-5">그림을 눌러보세요!</h2>
 			</div>
-			<div class="row gx-0">
-				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">Stationary</div>
-								<p class="mb-0">A yellow pencil with envelopes on a clean,
-									blue backdrop!</p>
-							</div>
-						</div> <img class="img-fluid"
-						src="../resources/assets/images/portfolio-1.jpg" alt="..." />
-					</a>
-				</div>
-				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">Ice Cream</div>
-								<p class="mb-0">A dark blue background with a colored
-									pencil, a clip, and a tiny ice cream cone!</p>
-							</div>
-						</div> <img class="img-fluid"
-						src="../resources/assets/images/portfolio-2.jpg" alt="..." />
-					</a>
-				</div>
-				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">Strawberries</div>
-								<p class="mb-0">Strawberries are such a tasty snack,
-									especially with a little sugar on top!</p>
-							</div>
-						</div> <img class="img-fluid"
-						src="../resources/assets/images/portfolio-3.jpg" alt="..." />
-					</a>
-				</div>
-				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
-						<div class="caption">
-							<div class="caption-content">
-								<div class="h2">Workspace</div>
-								<p class="mb-0">A yellow workspace with some scissors,
-									pencils, and other objects.</p>
-							</div>
-						</div> <img class="img-fluid"
-						src="../resources/assets/images/portfolio-4.jpg" alt="..." />
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+	<div id="thememap">
+		<div><img src="../resources/assets/images/thememap.png" usemap="#Map"></div>
+		<map name="Map">
+			<area shape="rect" coords="588,282,736,492" href="신라약사">
+			<area shape="rect" coords="405,440,593,626" href="가야역사">
+			<area shape="rect" coords="156,115,312,337" href="백제역사">
+											
+		</map>	
+	</div>
+</div>
+	
+	<script src="../resources/js/slick.min.js"></script>	
+	<script>
+	$(document).ready(function(){
+		$('.autoplay').slick({
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 1000
+			});
+		
+		$('.multiple-items').slick({
+			  infinite: true,
+			  autoplay:true,
+			  slidesToShow: 2,
+			  slidesToScroll: 2
+			});
+	});
+	</script>
 
 <%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
