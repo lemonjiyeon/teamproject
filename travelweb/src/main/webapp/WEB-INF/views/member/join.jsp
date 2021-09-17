@@ -9,15 +9,12 @@
 <title>여행을 가볍게 노랑풍선 -계정 관리</title>
 <!-- SEO END -->
 
-
 <!-- css resources -->
 <link href="../resources/css/user.css" rel="stylesheet">
 
 </head>
 <body>
 	<div id="wrap">
-
-		<script src="/js/yb.mobileCert.js"></script>
 
 		<div class="container">
 			<div class="top_block">
@@ -888,43 +885,6 @@
 <script src="https://cdn.megadata.co.kr/js/enliple_min2.js" async="true"
 	onload="mobRf()"></script>
 <!-- Withpang Tracker v3.0 [공용] end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
