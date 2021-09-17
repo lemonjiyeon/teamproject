@@ -72,8 +72,7 @@
   		<div><img src="../resources/assets/images/gaya1.jpg"></div>
   		<div><img src="../resources/assets/images/gaya2.jpg"></div>
   		<div><img src="../resources/assets/images/backje.png"></div>
-  		<div><img src="../resources/assets/images/backje2.jpg"></div>
-  		
+  		<div><img src="../resources/assets/images/backje2.jpg"></div> 		
 	</div>
 </div>		
 	<script src="../resources/js/slick.min.js"></script>	
