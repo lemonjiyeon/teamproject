@@ -6,6 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- Google Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     
 <%-- header --%>
 <jsp:include page="/WEB-INF/views/include/head.jsp"/>
@@ -19,7 +22,7 @@
 	<section class="content-section text-black
 		text-center" id="services">
 			<h1 class="tit_head">
-				<strong>여행 후기</strong>
+				<strong>패키지 상품등록</strong>
 			</h1>
 
 			<div class="container">
@@ -60,6 +63,7 @@
 						</div>
 
 					</div>
+
 
 					<div class="my-4 text-center">
 						<button type="submit" class="btn btn-primary">

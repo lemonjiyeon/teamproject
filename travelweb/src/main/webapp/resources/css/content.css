@@ -1,7 +1,7 @@
 @charset "utf-8";
 /**************** [레이아웃/LAYOUT] ****************/
 #wide {position:relative; width:100%}
-.content_block{position:relative; width:1200px; min-height:600px}
+.content_block{margin-left:10%; position:relative; width:1200px; min-height:600px}
 .content_block:after { display:block; content:' '; clear:both}
 .content_block>.lnb_block{width:240px; padding:30px 0 16px 0; box-sizing: border-box; border:1px solid #222; float:left ; background:#fff; z-index:10}
 .content {

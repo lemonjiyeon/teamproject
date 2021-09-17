@@ -26,6 +26,9 @@
 	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
 	rel="stylesheet" type="text/css" />
 
+<!-- Google Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="../resources/css/styles.css" rel="stylesheet" />
 

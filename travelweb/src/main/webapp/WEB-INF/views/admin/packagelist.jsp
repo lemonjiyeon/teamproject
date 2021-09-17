@@ -45,7 +45,17 @@
 							</div>
 						</div>
 					</div>
+					<!-- product -->
+						<div class="mt-2">
+							<button type="submit" class="btn btn-primary">
+							<i class="material-icons align-middle">create</i> 수정
+							</button>
+							<button type="button" class="btn btn-warning delete-file">
+								<i class="material-icons align-middle">clear</i> 삭제
+							</button>
+						</div>	
 				</div>
+									
 				<div class="col mb-5">
 					<div class="card h-100">
 						<!-- Sale badge-->
@@ -138,7 +148,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col mb-5">
+				<div class="col mt-2 mb-5">
 					<div class="card h-100">
 						<!-- Sale badge-->
 						<div class="badge bg-dark text-white position-absolute"
@@ -164,7 +174,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col mb-5">
+				<div class="col mt-2 mb-5">
 					<div class="card h-100">
 						<!-- Product image-->
 						<img class="card-img-top"
@@ -187,7 +197,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col mb-5">
+				<div class="col mt-2 mb-5">
 					<div class="card h-100">
 						<!-- Sale badge-->
 						<div class="badge bg-dark text-white position-absolute"
@@ -222,7 +232,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col mb-5">
+				<div class="col mt-2 mb-5">
 					<div class="card h-100">
 						<!-- Product image-->
 						<img class="card-img-top"
