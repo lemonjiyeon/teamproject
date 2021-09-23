@@ -815,7 +815,7 @@ table.tbl_basic th.high {height:80px}
 table.tbl_basic th.letter {padding-right:0; background:#fff}
 table.tbl_basic td {height:50px; padding:5px 20px; border-right:none; border-bottom:1px solid #ddd; vertical-align:middle;text-align:left}
 table.tbl_basic td.right_line {border-right:1px solid #ddd}
-table.tbl_basic.margin{margin-left: 10px;}
+table.tbl_basic.margin{margin-left: 50px;}
 td.tbl_space {padding:10px 20px}
 td.no_padding {padding:0 !important}
 .tbl_line {padding:10px 0}
