@@ -17,7 +17,7 @@
 		text-center">
 
 		<h1 class="tit_head">
-			<strong>패키지상품 목록</strong>
+			<strong>여행 후기</strong>
 		</h1>
 
 		<div class="container px-4 px-lg-5 mt-5">
@@ -34,7 +34,6 @@
 								<!-- Product name-->
 								<h5 class="fw-bolder">Fancy Product</h5>
 								<!-- Product price-->
-								$40.00 - $80.00
 							</div>
 						</div>
 						<!-- Product actions-->
@@ -45,15 +44,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- product -->
-						<div class="mt-2">
-							<button type="submit" class="btn btn-primary">
-							<i class="material-icons align-middle">create</i> 수정
-							</button>
-							<button type="button" class="btn btn-warning delete-file">
-								<i class="material-icons align-middle">clear</i> 삭제
-							</button>
-						</div>	
 				</div>
 									
 				<div class="col mb-5">
@@ -78,9 +68,6 @@
 									<div class="bi-star-fill"></div>
 									<div class="bi-star-fill"></div>
 								</div>
-								<!-- Product price-->
-								<span class="text-muted text-decoration-line-through">$20.00</span>
-								$18.00
 							</div>
 						</div>
 						<!-- Product actions-->
@@ -104,9 +91,6 @@
 							<div class="text-center">
 								<!-- Product name-->
 								<h5 class="fw-bolder">Sale Item</h5>
-								<!-- Product price-->
-								<span class="text-muted text-decoration-line-through">$50.00</span>
-								$25.00
 							</div>
 						</div>
 						<!-- Product actions-->
@@ -136,8 +120,6 @@
 									<div class="bi-star-fill"></div>
 									<div class="bi-star-fill"></div>
 								</div>
-								<!-- Product price-->
-								$40.00
 							</div>
 						</div>
 						<!-- Product actions-->
@@ -161,9 +143,6 @@
 							<div class="text-center">
 								<!-- Product name-->
 								<h5 class="fw-bolder">Sale Item</h5>
-								<!-- Product price-->
-								<span class="text-muted text-decoration-line-through">$50.00</span>
-								$25.00
 							</div>
 						</div>
 						<!-- Product actions-->
@@ -184,8 +163,6 @@
 							<div class="text-center">
 								<!-- Product name-->
 								<h5 class="fw-bolder">Fancy Product</h5>
-								<!-- Product price-->
-								$120.00 - $280.00
 							</div>
 						</div>
 						<!-- Product actions-->
@@ -219,9 +196,6 @@
 									<div class="bi-star-fill"></div>
 									<div class="bi-star-fill"></div>
 								</div>
-								<!-- Product price-->
-								<span class="text-muted text-decoration-line-through">$20.00</span>
-								$18.00
 							</div>
 						</div>
 						<!-- Product actions-->
@@ -251,8 +225,6 @@
 									<div class="bi-star-fill"></div>
 									<div class="bi-star-fill"></div>
 								</div>
-								<!-- Product price-->
-								$40.00
 							</div>
 						</div>
 						<!-- Product actions-->

@@ -10,8 +10,8 @@
 <link href="../resources/css/booking2.css" rel="stylesheet">
 
 <%-- header --%>
- <jsp:include page="/WEB-INF/views/include/head.jsp" />
- 
+<jsp:include page="/WEB-INF/views/include/head.jsp" />
+
 
 </head>
 <body>
@@ -36,12 +36,42 @@
 
 							<br> <br>
 
+							<h4 class="stit_con_title">예약자 정보</h4>
+							<table class="tbl_basic">
+								<caption>문의고객 정보</caption>
+								<colgroup>
+									<col style="width: 170px">
+									<col>
+									<col style="width: 170px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><label for="cstNm">이름<span
+												class="ico_tbl_must" title="필수입력"></span></label></th>
+										<td><input type="text" name="cstNm" id="cstNm"
+											maxlength="40" placeholder="이름을 입력하세요." value=""></td>
+										<th><label for="cstTel">휴대폰 번호<span
+												class="ico_tbl_must" title="필수입력"></span></label></th>
+										<td><input type="number" name="cstTel" id="cstTel"
+											placeholder="'-'제외 숫자만 입력" value=""></td>
+									</tr>
 
-							<div class="board">
-								<table class="tbl_dpt_list">
-									<caption>출발일 목록</caption>
-									<colgroup>
+									<tr>
+										<th><label>이메일<span class="ico_tbl_must"
+												title="필수입력"></span></label></th>
+										<td colspan="3"><input type="text" title="이메일 아이디 입력"
+											name="cstEmail1" id="cstEmail1" maxlength="40"
+											placeholder="이메일 아이디" value=""><span class="txt_at">@</span><input
+											type="text" title="이메일 도메인 입력" name="cstEmail2"
+											id="cstEmail2" maxlength="40" value="" placeholder="이메일 도메인">
+											<div class="select normal yb_select" style="width: 150px">
+												<select title="이메일 도메인 선택" name="cstEmail3" id="cstEmail3">
+													<option value="">직접입력</option>
 
+<<<<<<< HEAD
+													<option value="naver.com">naver.com</option>
+=======
 										<col style="width: 28px">
 										<col style="width: 170px">
 										<col style="width: 100px">
@@ -142,81 +172,78 @@
 									</tbody>
 								</table>
 							</div>
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 
+													<option value="nate.com">nate.com</option>
+
+													<option value="hanmail.net">hanmail.net</option>
+
+													<option value="gmail.com">gmail.com</option>
+
+												</select>
+											</div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 					<br>
 
-					<h4 class="stit_con_title">문의고객 정보</h4>
-					<table class="tbl_basic">
-						<caption>문의고객 정보</caption>
-						<colgroup>
-							<col style="width: 170px">
-							<col>
-							<col style="width: 170px">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-								<th><label for="cstNm">이름<span class="ico_tbl_must"
-										title="필수입력"></span></label></th>
-								<td><input type="text" name="cstNm" id="cstNm"
-									maxlength="40" placeholder="이름을 입력하세요." value=""></td>
-								<th><label for="cstTel">휴대폰 번호<span
-										class="ico_tbl_must" title="필수입력"></span></label></th>
-								<td><input type="number" name="cstTel" id="cstTel"
-									placeholder="'-'제외 숫자만 입력" value=""></td>
-							</tr>
+					<div class="container">
+						<div class="board mt-4">
+							<h4 class="stit_con_title">예약 정보</h4>
 
-							<tr>
-								<th><label>이메일<span class="ico_tbl_must"
-										title="필수입력"></span></label></th>
-								<td colspan="3"><input type="text" title="이메일 아이디 입력"
-									name="cstEmail1" id="cstEmail1" maxlength="40"
-									placeholder="이메일 아이디" value=""><span class="txt_at">@</span><input
-									type="text" title="이메일 도메인 입력" name="cstEmail2" id="cstEmail2"
-									maxlength="40" value="" placeholder="이메일 도메인">
-									<div class="select normal yb_select" style="width: 150px">
-										<select title="이메일 도메인 선택" name="cstEmail3" id="cstEmail3">
-											<option value="">직접입력</option>
+							<div class="d-inline-block">
+								<img class="packageimg" src="../resources/assets/images/신라_문화재.jpg" alt="노랑풍선">
+							</div>
+							<div class="d-inline-block">
+								<table class="tbl_basic margin">
+									<tr>
+										<th>패키지명</th>
+										<td>
+											<span>[제주버스패키지/신라스테이]노팁노옵션 전일정식사포함 3일</span>
+										</td>
+									</tr>
+									<tr>
+										<th>여행날짜</th>
+										<td><span class="txt_at">출발일</span> <input type="date"
+											title="출발일선택" class="insert_calendar" value="" id="startDt"
+											name="startDt"> <span class="txt_at">~&nbsp;&nbsp;
+												도착일</span> <input type="date" title="도착일 선택"
+											class="insert_calendar" value="" id="endDt" name="endDt"></td>
+									</tr>
+									<tr>
+										<th>항공</th>
+										<td><span class="txt_at">버스</span> </td>
+									</tr>
+									<tr>
+										<th>패키지 상품</th>
+										<td><span class="txt_at">출발일</span> 1. 왕복 항공료 2. 신라스테이 호텔
+										</td>
+									</tr>
+									<tr>
+										<th>가격</th>
+										<td><span class="txt_at">190,000</span></td>
+									</tr>
+								</table>
+							</div>
 
-											<option value="naver.com">naver.com</option>
+						</div>
 
-											<option value="nate.com">nate.com</option>
 
-											<option value="hanmail.net">hanmail.net</option>
+						<div align="center">
+							<button type="submit" class="btn btn-primary">
+								<i class="material-icons align-middle">done</i> 예약하기
+							</button>
+							
+						</div>
 
-											<option value="gmail.com">gmail.com</option>
-
-										</select>
-									</div></td>
-							</tr>
-
-							<tr>
-								<th><label>통화가능시간<span class="ico_tbl_must"
-										title="필수입력"></span></label></th>
-								<td colspan="3">
-									<ul class="list_one_category">
-										<li><span class="form_block"><input type="radio"
-												id="callDiviCd02" name="callDiviCd" value=""
-												checked="checked" onclick="clickCallTmButton('');"><label
-												for="callDiviCd02"><span></span>상관없음</label></span></li>
-										<li><span class="form_block"><input type="radio"
-												id="callDiviCd01" name="callDiviCd" value="X"
-												onclick="clickCallTmButton('X');"><label
-												for="callDiviCd01"><span></span>안함</label></span></li>
-										<li><span class="form_block"><input type="radio"
-												id="callDiviCd03" name="callDiviCd" value="C"
-												onclick="clickCallTmButton('C');"><label
-												for="callDiviCd03"><span></span>선택</label></span></li>
-									</ul>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					</div>
 				</div>
 			</div>
 		</div>
+
+
 	</section>
 
 

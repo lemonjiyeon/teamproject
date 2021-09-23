@@ -12,4 +12,9 @@ public class AdminController {
 	public String packagelist() {
 		return "admin/packagelist";
 	}
+	
+	@GetMapping("/packageadd")
+	public String packageadd(){
+		return "admin/packageadd";
+	}
 }
