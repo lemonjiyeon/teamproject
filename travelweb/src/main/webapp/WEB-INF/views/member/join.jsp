@@ -86,10 +86,10 @@
 						<div class="mt-4">
 
 							<span class="rio_circle"><input type="radio" id="reten1"
-								name="reten" value="Y3"><label for="reten1"><span></span>3년</label></span>
+								name="reten" value="female"><label for="reten1"><span></span>여</label></span>
 
 							<span class="rio_circle"><input type="radio" id="reten2"
-								name="reten" value="Y5"><label for="reten2"><span></span>5년</label></span>
+								name="reten" value="male"><label for="reten2"><span></span>남</label></span>
 
 							<span class="rio_circle"><input type="radio" id="reten3"
 								name="reten" value="Y0"><label for="reten3"
