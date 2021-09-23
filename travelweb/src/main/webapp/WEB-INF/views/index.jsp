@@ -13,6 +13,50 @@
         <script src="./resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
         <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>
 </head>
+<style>
+	.img-fluid{
+		width:650px;
+		height:400px;
+	}
+	#menucontainer{
+		margin:0 auto;
+	}
+	#menuwrap{
+		color:blue;
+	
+	}
+	.tab-content{
+		margin:0 auto;
+	}
+	.card{
+		float:left;
+		margin:0 auto;
+	}
+	#cardwrap{
+		width:1200px;
+		height:400px;
+		margin:0 auto;
+		padding:5px;
+	}
+	#menuwrap .nav-link{
+		color:black;
+		margin:0 auto;
+		width:600px;
+	}	
+	.nav-tabs {
+    width:1200px;
+    border-bottom: 1px solid #ecb807;
+    margin:0 auto;
+}
+	#dang{
+		width:1200px;
+		margin:0 auto;
+	}
+	#dang ul li button{
+		width:600px;
+		margin:0 auto;
+	}
+</style>
 <body id="page-top">
 
    
