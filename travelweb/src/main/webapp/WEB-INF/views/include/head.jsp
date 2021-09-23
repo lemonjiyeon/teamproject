@@ -33,4 +33,5 @@
 <link href="../resources/css/styles.css" rel="stylesheet" />
 
 <!-- jquery -->
-<script src="../resources/js/jquery.1.12.4.js" type="text/javascript"></script>
+<!-- <script src="../resources/js/jquery.1.12.4.js" type="text/javascript"></script> -->
+<script src="../resources/js/jquery-3.6.0.js" type="text/javascript"></script>

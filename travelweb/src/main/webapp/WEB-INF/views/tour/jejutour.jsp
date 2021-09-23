@@ -5,24 +5,91 @@
 <head>
 <meta charset="UTF-8">
 <title>줴주도 여해애애앵</title>
+ <jsp:include page="/WEB-INF/views/include/head.jsp"/> 
 <jsp:include page="/WEB-INF/views/include/navbar.jsp"/>
-<script src="./resources/js/slick.js"></script>
-<script src="./resources/js/slick.css"></script>
-<script src="./resources/js/slick-theme.css"></script>
-<script src="./resources/js/jquery-3.6.0.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">
+<style>
+	#jejucontainer{
+		margin:auto;
+		text-align: center;
+		width:1200px;
+	}
+	.multiple-items{
+		width:1200px;
+	}
+	
+	.multiple-items img{
+		width:590px;
+		height:430px;
+	}
+	.autoplay{
+		width:1200px;
+	}
+	.autoplay img{
+		width:380px;
+		height:300px;	
+	}
+</style>
 </head>
 <body>
-	<div class=".multiple-items">
-  		<div>your content</div>
-  		<div>your content</div>
-  		<div>your content</div>
+	<div id="jejucontainer">
+	<div class="multiple-items" align="center">
+		<div><img src="../resources/assets/images/tour1.jpg"></div>
+  		<div><img src="../resources/assets/images/tour2.jpg"></div>
+  		<div><img src="../resources/assets/images/tour3.jpg"></div>
+  		<div><img src="../resources/assets/images/tourj1.jpg"></div>
 	</div>
-</body>
-<script>
-$('.multiple-items').slick({
-	  infinite: true,
-	  slidesToShow: 3,
-	  slidesToScroll: 3
+	<p>	
+	<div class="content-section-heading text-center">
+				<h3 class="text-secondary mb-0">제주여행</h3>
+				<h2 class="mb-5">제주도시 여행상품 보기</h2>
+			</div>
+	<div class="autoplay">
+  		<div><img src="../resources/assets/images/tour1.jpg"></div>
+  		<div><img src="../resources/assets/images/tour2.jpg"></div>
+  		<div><img src="../resources/assets/images/tour3.jpg"></div>
+  		<div><img src="../resources/assets/images/tour4.jpg"></div>
+  		<div><img src="../resources/assets/images/tour5.jpg"></div>
+  		<div><img src="../resources/assets/images/tour6.jpg"></div>
+	</div>
+	<p>
+	<div class="content-section-heading text-center">
+				<h3 class="text-secondary mb-0">제주도 여행 클릭</h3>
+				<h2 class="mb-5">그림을 눌러보세요!</h2>
+			</div>
+	<div id="jejumap">
+		<div><img src="../resources/assets/images/jeju_map.jpg" usemap="#Map"></div>
+		<map name="Map">
+			<area shape="rect" coords="319,74,396,127" href="제주 국제공항">
+			<area shape="rect" coords="347,165,440,264" href="한라산">
+			<area shape="rect" coords="204,247,265,307" href="카멜리아힐">
+			<area shape="rect" coords="686,133,822,181" href="성산일출봉">
+			<area shape="rect" coords="655,177,731,220" href="섭지코지">									
+		</map>	
+	</div>
+	</div>
+  	<script src="../resources/js/slick.min.js"></script>	
+	<script>
+	$(document).ready(function(){
+		$('.autoplay').slick({
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 1000
+			});
+		
+		$('.multiple-items').slick({
+			  infinite: true,
+			  autoplay:true,
+			  slidesToShow: 2,
+			  slidesToScroll: 2
+			});
 	});
-</script>
+	</script>
+<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+
+
+</body>
 </html>

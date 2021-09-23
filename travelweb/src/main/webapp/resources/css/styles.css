@@ -6788,6 +6788,12 @@ textarea.form-control-lg {
   display: inline-block !important;
 }
 
+.d-inline-block > .packageimg{
+	float:left;
+	width:200px;
+	height:300px;
+}
+
 .d-block {
   display: block !important;
 }

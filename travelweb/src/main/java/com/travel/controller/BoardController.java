@@ -22,4 +22,9 @@ public class BoardController {
 	public String booking() {
 		return "board/booking";
 	}
+	
+	@GetMapping("/reboard")
+	public String reboard() {
+		return "board/reboard";
+	}
 }
