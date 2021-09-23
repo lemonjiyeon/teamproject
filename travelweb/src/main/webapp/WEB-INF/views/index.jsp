@@ -38,7 +38,7 @@
 		margin:0 auto;
 		padding:5px;
 	}
-	.nav-link{
+	#menuwrap .nav-link{
 		color:black;
 		margin:0 auto;
 		width:600px;
