@@ -700,7 +700,7 @@ ul.page_nav li a:hover {text-decoration:underline; color:#222}
 .tit_loc_title.line {padding-bottom:20px; margin-bottom:40px; border-bottom:1px solid #ddd}
 .tit_con_title {margin-bottom:20px; line-height:1; font-size:32px; font-family: 'Noto_m'; color:#222 } /* 컨텐츠 메인 타이틀 */
 .tit_con_title.line {padding:10px 0 20px 0; margin-bottom:40px; border-bottom:2px solid #222}
-.stit_con_title {margin-bottom:20px; line-height:1; font-size:24px; font-family: 'Noto_m';color:#222 } /* 서브 타이틀 */
+.stit_con_title {text-align:left; margin-bottom:20px; line-height:1; font-size:24px; font-family: 'Noto_m';color:#222 } /* 서브 타이틀 */
 .stit_con_title.mid {margin-top:10px; font-size:26px} /* 추천상품 */
 .stit_con_title span.count {padding:0 10px; font-family: 'Noto_r'; font-size:15px; color:#555}
 .stit_con_title span.people {padding:0 10px; font-size:16px; font-family: 'Noto_r';color:#777 }
@@ -815,6 +815,7 @@ table.tbl_basic th.high {height:80px}
 table.tbl_basic th.letter {padding-right:0; background:#fff}
 table.tbl_basic td {height:50px; padding:5px 20px; border-right:none; border-bottom:1px solid #ddd; vertical-align:middle;text-align:left}
 table.tbl_basic td.right_line {border-right:1px solid #ddd}
+table.tbl_basic.margin{margin-left: 10px;}
 td.tbl_space {padding:10px 20px}
 td.no_padding {padding:0 !important}
 .tbl_line {padding:10px 0}

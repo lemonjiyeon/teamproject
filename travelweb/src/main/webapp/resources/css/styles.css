@@ -366,6 +366,7 @@ th {
 }
 
 label {
+	width: 100px;
   display: inline-block;
 }
 
@@ -6785,6 +6786,12 @@ textarea.form-control-lg {
 
 .d-inline-block {
   display: inline-block !important;
+}
+
+.d-inline-block > .packageimg{
+	float:left;
+	width:200px;
+	height:300px;
 }
 
 .d-block {

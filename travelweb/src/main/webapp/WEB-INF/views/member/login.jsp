@@ -5,19 +5,34 @@
 <meta charset="utf-8">
 <title>여행을 가볍게 노랑풍선 -계정 관리</title>
 
-
 <!-- css resources -->
 <link
 	href="${pageContext.request.contextPath}/resources/css/teampro.css"
 	rel="stylesheet">
+
+<link href="../resources/css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>
-
 	<div class="container">
 
 		<div id="wrap">
 			<div class="container">
+				<div class="top_block">
+					<a href="/"><img src="../resources/assets/열기구.png" alt="노랑풍선"
+						class="top_logo"></a>
+				</div>
+				
+				<ul class="nav justify-content-end">
+					<li class="nav-item"><a class="nav-link active" href="#">Active</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#" style="color: black">Link</a></li>
+					<li class="nav-item"><a class="nav-link" href="#" style="color: black" >Link</a></li>
+					
+				</ul>
+				
+				
 				<div class="content">
 					<h1 class="logo">
 						<a href="/"><img src="../resources/assets/열기구.png" alt="노랑풍선"></a>
@@ -66,5 +81,7 @@
 
 
 	</div>
+
+
 </body>
 </html>
