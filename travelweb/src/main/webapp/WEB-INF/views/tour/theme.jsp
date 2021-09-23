@@ -85,9 +85,9 @@
 	<div id="thememap">
 		<div><img src="../resources/assets/images/thememap.png" usemap="#Map"></div>
 		<map name="Map">
-			<area shape="rect" coords="588,282,736,492" href="신라약사">
-			<area shape="rect" coords="405,440,593,626" href="가야역사">
-			<area shape="rect" coords="156,115,312,337" href="백제역사">
+			<area shape="rect" coords="507,304,705,430" href="신라약사">
+			<area shape="rect" coords="371,449,586,576" href="가야역사">
+			<area shape="rect" coords="186,252,371,392" href="백제역사">
 											
 		</map>	
 	</div>
