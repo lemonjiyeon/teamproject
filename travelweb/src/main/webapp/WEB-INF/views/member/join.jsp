@@ -6,8 +6,8 @@
 <head>
 <meta charset="utf-8">
 
-<%-- header --%>
-<jsp:include page="/WEB-INF/views/include/head.jsp" />
+
+
 <link
 	href="${pageContext.request.contextPath}/resources/css/teampro.css"
 	rel="stylesheet">
@@ -15,6 +15,7 @@
 
 </head>
 <body>
+
 	<div id="wrap">
 
 		<div class="container">
@@ -37,6 +38,14 @@
 							class="input_grp email_grp"> <input type="text" placeholder="아이디 입력"
 							class="item_lft" title="이메일 아이디" id="txtId" value="" tabindex="1"
 							autocomplete="email" autofocus="autofocus" minlength="2" required>
+<<<<<<< HEAD
+
+							<button type="button" class="btn_nor item_last"
+								id="btnDoubleCheck" tabindex="3">중복확인</button>
+
+
+						</span> <span class="input_row"> <span class="input_grp"> <input
+=======
 						
 						<button type="button" class="btn_nor item_last"
 							id="btnDoubleCheck" tabindex="3">중복확인</button>
@@ -44,6 +53,7 @@
 						</span>
 		
 						<span class="input_row"> <span class="input_grp"> <input
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 								type="password" class="inp_pw"
 								placeholder="비밀번호(영문 숫자 특수문자 조합, 8~16자리) " title="비밀번호 입력"
 								onkeyup="custPw1_onkeyup(this);" tabindex="4" name="custPw1"
@@ -695,6 +705,8 @@
 			}
 		};
 	</script>
+
+	
 
 </body>
 <!-- ============================================================ -->
