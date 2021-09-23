@@ -46,12 +46,12 @@
 
 						<input type="hidden" name="loginType" value="M"> <span
 							class="input_row"> <span class="input_grp"> <input
-								type="text" id="txtId" name="id" class="txt" placeholder="ID"
+								type="text" id="id" name="id" class="txt" placeholder="ID"
 								title="ID 입력" value="" autofocus="autofocus" maxlength="50"
 								required>
 						</span>
 						</span> <span class="input_row"> <span class="input_grp"> <input
-								type="password" id="txtPw" name="passwd" class="inp_pw"
+								type="password" id="passwd" name="passwd" class="inp_pw"
 								placeholder="비밀번호" title="비밀번호 입력" required minlength="8"
 								maxlength="20">
 								<button type="button" class="btn_pw_swich">
