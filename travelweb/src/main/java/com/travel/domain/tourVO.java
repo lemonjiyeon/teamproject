@@ -5,8 +5,6 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-
-
 public class tourVO {
 	private String tourid;
 	private String totitle;

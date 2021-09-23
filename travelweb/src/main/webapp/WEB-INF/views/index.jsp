@@ -53,6 +53,7 @@
 		margin:0 auto;
 	}
 	#dang ul li button{
+		color:black;
 		width:600px;
 		margin:0 auto;
 	}
@@ -361,8 +362,6 @@
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
-	<script src="./resources/js/scripts.js"></script>
-	
-</body>
-    
+	<script src="./resources/js/scripts.js"></script>	
+</body>    
 </html>
