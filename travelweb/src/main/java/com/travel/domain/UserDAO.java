@@ -2,7 +2,7 @@ package com.travel.domain;
 
 import org.apache.ibatis.jdbc.SQL;
 
-public class userDAO {
+public class UserDAO {
 
 	//아이디 중복체크
 	

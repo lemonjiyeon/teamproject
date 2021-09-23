@@ -3,7 +3,7 @@ package com.travel.domain;
 import lombok.Data;
 
 @Data
-public class attachVO {
+public class AttachVO {
 
 	private String uuid; //첨부번호
 	private int boardnum; 

@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 
-public class boardVO {
+public class BoardVO {
 	
 	private int boardnum;  
 	private String userid;

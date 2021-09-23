@@ -36,7 +36,7 @@
 						<li class="nav-item"><span>관리자</span> <a
 						class="nav-link" href="member/logout">로그아웃</a></li>
 					</c:if>
-					<li class="nav-item"><span>${ sessionScope.id } 님</span> <a
+					<li class="nav-item" id="user"><span>${ sessionScope.id } 님</span> <a
 						class="nav-link" href="member/logout">로그아웃</a></li>
 				</c:when>
 				<c:otherwise>
@@ -51,6 +51,8 @@
 	<!-- end login navbar -->
 
 </nav>
+
+<!-- secondbar-main -->
 <div id="secondbar">
 	<nav
 		class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-second">
@@ -66,12 +68,43 @@
 		</div>
 	</nav>
 </div>
+<!-- end secondbar-main -->
+
+
+<!-- thirdbar-main -->
+<div id="thirdbar">
+	<nav
+		class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-second">
+		<div class="collapse navbar-collapse my-sm-0">
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+				<div class="navbar-nav">
+					<a class="nav-link active" href="#">내정보 수정<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="tour/jejutour">여행후기 작성</a> <a
+						class="nav-link" href="tour/intour">회원탈퇴</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- end thirdbar-main -->
+
+
+
 <!-- end nav bar -->
 <script>
 	$(document).ready(function() {
 		$("#secondbar").hide();
 		$("#action").click(function() {
 			$("#secondbar").show()
+		});
+	});
+	
+	$(document).ready(function() {
+		$("#thirdbar").hide();
+		$("#user").click(function() {
+			$("#thirdbar").show()
+			.$("#secondbar").hide();
 		});
 	});
 </script>

@@ -11,7 +11,7 @@ import lombok.ToString;
 
 @Data
 
-public class userVO {
+public class UserVO {
 	
 	private String userid;
 	private String upwd;
