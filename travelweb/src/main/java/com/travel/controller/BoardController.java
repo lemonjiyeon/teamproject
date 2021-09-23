@@ -27,4 +27,9 @@ public class BoardController {
 	public String reboard() {
 		return "board/reboard";
 	}
+	
+	@GetMapping("/confirm")
+	public String confirm() {
+		return "board/confirm";
+	}
 }

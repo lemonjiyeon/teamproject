@@ -69,7 +69,110 @@
 												<select title="이메일 도메인 선택" name="cstEmail3" id="cstEmail3">
 													<option value="">직접입력</option>
 
+<<<<<<< HEAD
 													<option value="naver.com">naver.com</option>
+=======
+										<col style="width: 28px">
+										<col style="width: 170px">
+										<col style="width: 100px">
+										<col style="width: 110px">
+										<col>
+										<col style="width: 110px">
+										<col style="width: 110px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">출발/도착 일시</th>
+											<th scope="col">교통</th>
+											<th scope="col">기간</th>
+											<th scope="col">상품명</th>
+											<th scope="col">가격</th>
+											<th scope="col">예약상태</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><span class="form_block"> <input
+													type="checkbox" id="index0" name="h" title="선택"> <label
+													for="index0"><span></span></label>
+											</span></td>
+											<td><span class="date">2021.09.26(일) </span><br>2021.09.27(월)
+											</td>
+											<td>버스</td>
+											<td>1박2일</td>
+											<td class="pdt_name"><span class="tag"></span> <a
+												href="#">[라한셀렉트경주숙박]경주라한호텔1박+경주시티투어까지한번에!!</a></td>
+											<td class="price">190,000</td>
+											<td><button type="button" class="btn_nor cfrm">예약접수</button></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td><span class="form_block"> <input
+													type="checkbox" id="index1" name="h" title="선택"> <label
+													for="index1"><span></span></label>
+											</span></td>
+											<td><span class="date">2021.09.27(월) </span><br>2021.09.28(화)
+											</td>
+											<td>버스</td>
+											<td>1박2일</td>
+											<td class="pdt_name"><span class="tag"></span> <a
+												href="#">[라한셀렉트경주숙박]경주라한호텔1박+경주시티투어까지한번에!!</a></td>
+											<td class="price">190,000</td>
+											<td><button type="button" class="btn_nor cfrm">예약접수</button></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td><span class="form_block"> <input
+													type="checkbox" id="index2" name="h" title="선택"> <label
+													for="index2"><span></span></label>
+											</span></td>
+											<td><span class="date">2021.09.28(화) </span><br>2021.09.29(수)
+											</td>
+											<td>버스</td>
+											<td>1박2일</td>
+											<td class="pdt_name"><span class="tag"></span> <a
+												href="#">[라한셀렉트경주숙박]경주라한호텔1박+경주시티투어까지한번에!!</a></td>
+											<td class="price">190,000</td>
+											<td><button type="button" class="btn_nor cfrm">예약접수</button></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td><span class="form_block"> <input
+													type="checkbox" id="index3" name="h" title="선택"> <label
+													for="index3"><span></span></label>
+											</span></td>
+											<td><span class="date">2021.09.29(수) </span><br>2021.09.30(목)
+											</td>
+											<td>버스</td>
+											<td>1박2일</td>
+											<td class="pdt_name"><span class="tag"></span> <a
+												href="#">[라한셀렉트경주숙박]경주라한호텔1박+경주시티투어까지한번에!!</a></td>
+											<td class="price">190,000</td>
+											<td><button type="button" class="btn_nor cfrm">예약접수</button></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td><span class="form_block"> <input
+													type="checkbox" id="index4" name="h" title="선택"> <label
+													for="index4"><span></span></label>
+											</span></td>
+											<td><span class="date">2021.09.30(목) </span><br>2021.10.01(금)
+											</td>
+											<td>버스</td>
+											<td>1박2일</td>
+											<td class="pdt_name"><span class="tag"></span> <a
+												href="#">[라한셀렉트경주숙박]경주라한호텔1박+경주시티투어까지한번에!!</a></td>
+											<td class="price">190,000</td>
+											<td><button type="button" class="btn_nor cfrm">예약접수</button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 
 													<option value="nate.com">nate.com</option>
 
