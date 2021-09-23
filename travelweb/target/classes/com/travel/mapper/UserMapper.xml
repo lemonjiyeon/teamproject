@@ -4,20 +4,20 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.travel.mapper.UserMapper">
 
-	<insert id="insert">
+	<!-- <insert id="insert">
 	<![CDATA[
 		INSERT INTO user (userid, upwd, uname, ugender, uemail, utel, ubirth)
 		VALUES (#{userid}, #{upwd}, #{uname}, #{ugender}, #{uemail}, #{utel}, #{ubirth} )
 	]]>
 	</insert>
 
-	<!-- 아이디 중복 체크 -->
+	아이디 중복 체크
 	<select id="idChk" resultType="int">
 	<![CDATA[
 		SELECT COUNT(*) FROM USER
 		WHERE USERID = #{userId}
 	]]>
 	</select>
-
+ -->
 
 </mapper>	
