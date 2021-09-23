@@ -13,9 +13,6 @@
         <script src="./resources/plugins/bxslider/js/jquery.bxslider.js" type="text/javascript"></script>
         <script> $(document).ready(function(){$('.slider').bxSlider({controls:false,pager:false,auto:true});}); </script>
 </head>
-
-
-
 <body id="page-top">
 
    
@@ -51,12 +48,209 @@
 		</header>
 	</div>
 	</div>
+	<p>
+	<div class="content-section-heading text-center">
+		<h3 class="text-secondary mb-0">Portfolio</h3>
+		<h2 class="mb-5">내륙/섬 AND 제주도</h2>
+	</div>
+
+<nav>
+  <div id="menuwrap">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link1 active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">내륙/섬</button>
+    <button class="nav-link1" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">제주도</button>
+  </div>
+  </div>
+</nav>
+<div class="tab-content1" id="nav-tabContent">
+<div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile">
+<!-- 내륙시작 -->
+<div id="cardwrap">
+ <div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/in1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/in2.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/in3.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/in4.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div> <!-- end cardwrap --> 
+  </div><!-- 내륙카드 끝-->
+  <!-- 섬시작 -->
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact">
+  <div id="cardwrap">
+ <div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/jeju1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/jeju2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/jeju3.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/jeju4.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div> <!-- end cardwrap -->   
+  </div>
+</div><!-- end tabcontent -->
+<p>
+<div class="content-section-heading text-center">
+		<h3 class="text-secondary mb-0">Portfolio</h3>
+		<h2 class="mb-5">당일치기 vs 1박2일</h2>
+	</div>
+<!-- 당일치기과 1박이일 영역 -->
+<div id="dang">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link1 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">당일치기</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link1" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">1박2일</button>
+  </li>
+</ul>
+</div>
+<div class="tab-content1" id="myTabContent">
+  <!-- 당일치기카드 -->
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  <!-- 당일시자악 -->
+<div id="cardwrap">
+ <div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/anja1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/anja2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/anja3.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/anja4.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div> <!-- end cardwrap -->   
+  </div>
+<!-- 1박2일카드 -->  
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  	<div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile">
+<div id="cardwrap">
+ <div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/ja1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/ja2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/ja3.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./resources/assets/images/ja4.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div> <!-- end cardwrap --> 
+  </div>  
+  </div>
+</div>		
 	<!-- Portfolio-->
 	<section class="content-section" id="portfolio">
 		<div class="container px-4 px-lg-5">
 			<div class="content-section-heading text-center">
 				<h3 class="text-secondary mb-0">Portfolio</h3>
-				<h2 class="mb-5">Recent Projects</h2>
+				<h2 class="mb-5">테마 여행지</h2>
 			</div>
 			<div class="row gx-0">
 				<div class="col-lg-6">
@@ -67,8 +261,8 @@
 								<p class="mb-0">A yellow pencil with envelopes on a clean,
 									blue backdrop!</p>
 							</div>
-						</div> <img class="img-fluid"
-						src="./resources/assets/images/portfolio-1.jpg" alt="..." />
+						</div> <img class="img-fluid1"
+						src="./resources/assets/images/gaya2.jpg" alt="..." />
 					</a>
 				</div>
 				<div class="col-lg-6">
@@ -79,8 +273,8 @@
 								<p class="mb-0">A dark blue background with a colored
 									pencil, a clip, and a tiny ice cream cone!</p>
 							</div>
-						</div> <img class="img-fluid"
-						src="./resources/assets/images/portfolio-2.jpg" alt="..." />
+						</div> <img class="img-fluid1"
+						src="./resources/assets/images/geyu1.jpg" alt="..." />
 					</a>
 				</div>
 				<div class="col-lg-6">
@@ -91,8 +285,8 @@
 								<p class="mb-0">Strawberries are such a tasty snack,
 									especially with a little sugar on top!</p>
 							</div>
-						</div> <img class="img-fluid"
-						src="./resources/assets/images/portfolio-3.jpg" alt="..." />
+						</div> <img class="img-fluid1"
+						src="./resources/assets/images/backje.png" alt="..." />
 					</a>
 				</div>
 				<div class="col-lg-6">
@@ -103,14 +297,16 @@
 								<p class="mb-0">A yellow workspace with some scissors,
 									pencils, and other objects.</p>
 							</div>
-						</div> <img class="img-fluid"
-						src="./resources/assets/images/portfolio-4.jpg" alt="..." />
+						</div> <img class="img-fluid1"
+						src="./resources/assets/images/backje2.jpg" alt="..." />
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
-
+	<nav>
+  
+</nav>
 <%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 
