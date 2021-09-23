@@ -29,21 +29,12 @@
 				<strong>회원가입</strong>
 			</h1>
 			<div class="content">
-				<input type="hidden" id="custPassChk" /> <input type="hidden"
-					id="smsCertChk" /> <input type="hidden" id="smsCertChkVal" />
+				
 				<div class="block">
 
 					<form id="frm" method="post" action="" autocomplete="on">
-						<input type="hidden" id="custId" name="custId" value="" required>
-						<input type="hidden" id="joinType" name="joinType" value="" /> <input
-							type="hidden" id="webCustNo" name="webCustNo" value="" /> <input
-							type="hidden" name="returnUrl" value="" /> <input type="hidden"
-							name="snsId" value="" /> <input type="hidden" name="snsType"
-							value="" /> <input type="hidden" name="snsName" value="" /> <input
-							type="hidden" name="snsEmail" value="" /> <input type="hidden"
-							name="oldId" value="" /> <input type="hidden"
-							name="agreePointYN" value="" /> <span
-							class="input_grp email_grp"> <input type="text"
+						 <span
+							class="input_grp email_grp"> <input type="text" placeholder="아이디 입력"
 							class="item_lft" title="이메일 아이디" id="txtId" value="" tabindex="1"
 							autocomplete="email" autofocus="autofocus" minlength="2" required>
 						
@@ -93,13 +84,15 @@
 							oninput="maxLengthCheck(this)" maxlength="11">
 
 						<div class="mt-4">
-							<div>성별
-							<span class="rio_circle"><input type="radio" id="gender1"
+							
+							<label for="reten3" style="font-size:20px;"><span>성별</label></span>
+							
+							<input type="hidden" id="memberReten" name="memberReten" />
+							<span class="rio_circle"><input type="radio" id="reten1"
 								name="reten" value="M"><label for="reten1"><span></span>남</label></span>
 
-							<span class="rio_circle"><input type="radio" id="gender2"
+							<span class="rio_circle"><input type="radio" id="reten2"
 								name="reten" value="W"><label for="reten2"><span></span>여</label></span>
-							</div>
 						</div>
 					</form>
 				</div>
