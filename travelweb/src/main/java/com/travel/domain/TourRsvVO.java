@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 
-public class tourRsvVO {
+public class TourRsvVO {
 	
 	private String tourid;//내륙관광지 번호
 	private String userid;//아이디

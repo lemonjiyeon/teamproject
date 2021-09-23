@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 
 
-public class tourVO {
+public class TourVO {
 	private String tourid;
 	private String totitle;
 	private String toprice;
