@@ -21,7 +21,7 @@
 				<div class="content">
 					<h1 class="logo">
 						<a href="/"><img src="../resources/assets/열기구.png" alt="노랑풍선"></a>
-						 <span>TOUR	RAINBOW</span>
+						<span>TOUR RAINBOW</span>
 					</h1>
 				</div>
 
@@ -52,9 +52,7 @@
 					</span>
 					<ul class="list_bar">
 						<li><a href="/accounts/accountFindMain.yb">아이디/비밀번호 찾기</a></li>
-						<li><a
-							href="/">비회원
-								예약조회</a></li>
+						<li><a href="/">비회원 예약조회</a></li>
 					</ul>
 
 					<h2 class="tit_line">
