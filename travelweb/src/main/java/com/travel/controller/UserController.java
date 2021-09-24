@@ -1,6 +1,7 @@
 package com.travel.controller;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -113,6 +114,30 @@ public class UserController {
       // 리다이렉트일 경우 HttpStatus.FOUND 로 지정해야 함
       return new ResponseEntity<String>(headers, HttpStatus.FOUND);
    }//login
+   
+   @GetMapping("/logout")
+	public String logout(HttpSession session, HttpServletRequest request, HttpServletResponse response) {
+		// 세션 비우기
+		session.invalidate();
+		
+		// 로그인 상태유지용 쿠키 있으면 삭제하기
+		 Cookie[] cookies = request.getCookies();
+		 
+		 if(cookies != null) {
+			 for(Cookie cookie : cookies) {
+				 if(cookie.getName().equals("id")) {
+					 cookie.setMaxAge(0); // 브라우저가 삭제할 수 있도록 0초로 설정
+					 cookie.setPath("/");
+					 
+					 response.addCookie(cookie);
+				 }
+			 } //for
+		 }
+		
+		
+		// 홈 화면으로 리다이렉트 이동
+		return "redirect:/";
+	}
    
    @GetMapping("/modify")
    public String modify() {
