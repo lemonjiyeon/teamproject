@@ -50,7 +50,7 @@ int total_page = ((Integer) request.getAttribute("total_page")).intValue();
 				<div class="col-xl-9 mx-auto">
 					<div class="cta-inner bg-faded text-center rounded">
 						<h1 class="tit_head">
-							<strong>게시판</strong>
+							<strong>견적문의</strong>
 						</h1>
 						<div class="board">
 							<form action="<c:url value="./BoardListAction.do"/>"
