@@ -52,11 +52,8 @@
 						</span>
 						</span> <span class="input_row"> <span class="input_grp"> <input
 								type="password" id="passwd" name="passwd" class="inp_pw"
-								placeholder="비밀번호" title="비밀번호 입력" required minlength="8"
+								placeholder="비밀번호" title="비밀번호 입력" required minlength="1"
 								maxlength="20">
-								<button type="button" class="btn_pw_swich">
-									<span>비밀번호 보이기s</span>
-								</button>
 						</span>
 						</span>
 					</form>

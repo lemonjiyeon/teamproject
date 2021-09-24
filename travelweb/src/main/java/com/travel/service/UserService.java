@@ -21,7 +21,8 @@ public class UserService {
    
    //userid로 정보조회
    public UserVO getUserById(String id) {
-      return usermapper.getUserById(id);
-   }
+		UserVO userVO = usermapper.getUserById(id);
+		return userVO;
+	}
    
 }

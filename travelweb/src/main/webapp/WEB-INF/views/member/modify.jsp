@@ -50,14 +50,14 @@
 							title="필수입력"></span></label></th>
 					<td colspan="1">
 						<div class="tbl_line">
-							<input type="text" name="mid" id="mid" value="" title="아이디 입력">
+							<input type="text" name="mid" id="mid" value="${ id.userid }" title="아이디 입력">
 						</div>
 					</td>
 					<th scope="row"><label>비밀번호<span class="ico_tbl_must"
 							title="필수입력"></span></label></th>
 					<td colspan="1">
 						<div class="tbl_line">
-							<input type="password" name="password" id="password" value=""
+							<input type="password" name="password" id="password" value="${ userVO.uPwd }"
 								title="비밀번호 입력">
 						</div>
 				</tr>
@@ -95,13 +95,13 @@
 						onkeyup="keyUpInNumber(this);"></td>
 				</tr>
 			</table>
-		</form>
-
 		<div class="btn_area">
 			<button type="button" class="btn_cof" id="btncancel">수정</button>
 			<button type="button" class="btn_cof cfrm" id="btnok"
 				onclick="save();">탈퇴</button>
 		</div>
+		</form>
+
 	 </div> 
 
 
