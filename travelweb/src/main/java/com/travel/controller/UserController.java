@@ -48,7 +48,10 @@ public class UserController {
 		 */
      
      // 현재시점 날짜 객체 설정 userVO.setRegDate(new Date());
-     
+		
+		  String birthday = userVO.getUBirth(); birthday = birthday.replace("-","");
+		  userVO.setUBirth(birthday);
+		 
      System.out.println(userVO); 
      userService.register(userVO); // 회원등록 처리
      

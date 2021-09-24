@@ -25,4 +25,7 @@ public class UserService {
 		return userVO;
 	}
    
+   public int getCountById(String id) {
+		return usermapper.getCountById(id);
+	}
 }
