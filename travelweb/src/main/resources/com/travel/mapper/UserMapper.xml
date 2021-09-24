@@ -19,7 +19,7 @@
 		SELECT COUNT(*) FROM USER
 		WHERE USERID = #{userId}
 	]]>
-	</select>
- -->
+	</select> -->
+ 
 
 </mapper>	

@@ -27,6 +27,37 @@ public class UserController {
       this.userService = userService;
    }
    
+   @GetMapping("/join")
+   public String join() {
+      return "member/join";
+   }
+
+   @PostMapping("/join") 
+   public ResponseEntity<String> join(UserVO userVO) {
+     
+     // 비밀번호 암호화 하기 String passwd = userVO.getPasswd(); String hashedPw =
+     String passwd = userVO.getUPwd();
+     String hashedPw = BCrypt.hashpw(passwd, BCrypt.gensalt()); // 암호화된 비밀번호 리턴받음
+     userVO.setUPwd(hashedPw); // 암호화된 비밀번호로 재설정
+     
+     // 연월일 구분문자("-") 제거하기 String birthday = userVO.getBirthday(); // "2021-08-25"
+		/*
+		 * String birthday = userVO.getUBirth(); birthday = birthday.replace("-", "");
+		 * // "20210825" userVO.setUBirth(birthday);
+		 */
+     
+     // 현재시점 날짜 객체 설정 userVO.setRegDate(new Date());
+     
+     System.out.println(userVO); 
+     userService.register(userVO); // 회원등록 처리
+     
+     HttpHeaders headers = new HttpHeaders(); 
+     headers.add("Content-Type","text/html; charset=UTF-8");
+     
+     String str = Script.href("회원가입 성공!", "/member/login");
+     
+     return new ResponseEntity<String>(str, headers, HttpStatus.OK); }
+   
    @GetMapping("/question")
    public String question() {
       return "member/question";
@@ -47,7 +78,7 @@ public class UserController {
       String message = "";
       
       if(userVO != null) {
-         isPasswdSame = BCrypt.checkpw(passwd, userVO.getUpwd());
+         isPasswdSame = BCrypt.checkpw(passwd, userVO.getUPwd());
          
          if(isPasswdSame == false) { // 비밀번호 일치하지 않음 (=if(!isPasswdSame))
             message = "비밀번호가 일치하지 않습니다.";
@@ -89,32 +120,5 @@ public class UserController {
       return "member/modify";
    }
 
-   @GetMapping("/join")
-   public String join() {
-      return "member/join";
-   }
-
-   @PostMapping("/join") public ResponseEntity<String> join(UserVO userVO) {
-     
-     // 비밀번호 암호화 하기 String passwd = userVO.getPasswd(); String hashedPw =
-     String passwd = userVO.getUpwd();
-     String hashedPw = BCrypt.hashpw(passwd, BCrypt.gensalt()); // 암호화된 비밀번호 리턴받음
-     userVO.setUpwd(hashedPw); // 암호화된 비밀번호로 재설정
-     
-     // 연월일 구분문자("-") 제거하기 String birthday = userVO.getBirthday(); // "2021-08-25"
-     String birthday = userVO.getUbirth();
-     birthday = birthday.replace("-", ""); // "20210825"
-     userVO.setUbirth(birthday);
-     
-     // 현재시점 날짜 객체 설정 userVO.setRegDate(new Date());
-     
-     System.out.println(userVO); userService.register(userVO); // 회원등록 처리
-     
-     HttpHeaders headers = new HttpHeaders(); headers.add("Content-Type",
-     "text/html; charset=UTF-8");
-     
-     String str = Script.href("회원가입 성공!", "/member/login");
-     
-     return new ResponseEntity<String>(str, headers, HttpStatus.OK); }
 
 }
