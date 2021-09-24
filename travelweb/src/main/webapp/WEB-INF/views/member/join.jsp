@@ -32,10 +32,10 @@
             
             <div class="block">
 
-               <form id="frm" method="post" action="" autocomplete="on">
+               <form id="frm" method="post" action="/member/join" autocomplete="on">
                    <span
                      class="input_grp email_grp"> <input type="text" placeholder="아이디 입력"
-                     class="item_lft" title="이메일 아이디" id="txtId" value="" tabindex="1"
+                     class="item_lft" title="이메일 아이디" id="userid" name="userid" value="" tabindex="1"
                      autocomplete="email" autofocus="autofocus" minlength="2" required>
                   
                   <button type="button" class="btn_nor item_last"
@@ -46,11 +46,8 @@
                   <span class="input_row"> <span class="input_grp"> <input
                         type="password" class="inp_pw"
                         placeholder="비밀번호(영문 숫자 특수문자 조합, 8~16자리) " title="비밀번호 입력"
-                        onkeyup="custPw1_onkeyup(this);" tabindex="4" name="custPw1"
+                        onkeyup="custPw1_onkeyup(this);" tabindex="4" name="uPwd"
                         id="custPw1">
-                        <button type="button" class="btn_pw_swich">
-                           <span>비밀번호 보이기</span>
-                        </button>
                   </span>
                   </span> 
                   <span class="input_row"> <span class="input_grp"> <input
@@ -64,23 +61,23 @@
                   </span> 
                   <span class="input_row"> <span class="input_grp"> <input
                         type="text" class="txt" placeholder="이름(실명)" title="이름 입력"
-                        id="custNmKor" name="custNmKor" tabindex="6" value="" required>
+                        id="custNmKor" name="uName" tabindex="6" value="" required>
                   </span>
                   </span>
                   <span class="input_row"> <span class="input_grp"> <input
                         type="text" class="txt" placeholder="생년월일 예)20182013" title="생년월일"
-                        id="custBirth" name="custBirth" tabindex="7" oninput="maxLengthCheck(this)" maxlength="8">
+                        id="custBirth" name="uBirth" tabindex="7" oninput="maxLengthCheck(this)" maxlength="8">
                   </span>
                   </span>
                   <span class="input_row"> <span class="input_grp"> <input
                         type="text" class="txt" placeholder="이메일" title="이메일"
-                        id="custemail" name="custemail" tabindex="6" value="" required>
+                        id="custemail" name="uEmail" tabindex="6" value="" required>
                   </span>
                   </span>
                   <!-- 얼럿메시지 시 해당 엘리먼트에 wrong 클래스 추가-->
                   <span class="input_row"></span> <span class="input_grp item"></span>
                   <input type="number" class="item" placeholder="휴대폰번호(숫자만 입력)"
-                     name="custTel" id="custTel" tabindex="8"
+                     name="uTel" id="custTel" tabindex="8"
                      oninput="maxLengthCheck(this)" maxlength="11">
 
                   <div class="mt-4">
@@ -89,16 +86,15 @@
                      
                      <input type="hidden" id="memberReten" name="memberReten" />
                      <span class="rio_circle"><input type="radio" id="reten1"
-                        name="reten" value="M"><label for="reten1"><span></span>남</label></span>
+                        name="uGender" value="M"><label for="reten1"><span></span>남</label></span>
 
                      <span class="rio_circle"><input type="radio" id="reten2"
-                        name="reten" value="W"><label for="reten2"><span></span>여</label></span>
+                        name="uGender" value="W"><label for="reten2"><span></span>여</label></span>
                   </div>
+            	  <div class="btn_block">
+               		<button type="submit" class="btn_submit" id="btnJoinSubmit">가입완료</button>
+            	  </div>
                </form>
-            </div>
-            <div class="btn_block">
-               <button type="button" class="btn_submit" id="btnJoinSubmit">가입
-                  완료</button>
             </div>
          </div>
       </div>

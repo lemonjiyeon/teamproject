@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/board/*")
 public class BoardController {
 	
-	@GetMapping("/write")
+	@GetMapping("/rewriteform")
 	public String write() {
 		return "board/rewriteform";
 	}
@@ -32,4 +32,5 @@ public class BoardController {
 	public String confirm() {
 		return "board/confirm";
 	}
+	
 }
