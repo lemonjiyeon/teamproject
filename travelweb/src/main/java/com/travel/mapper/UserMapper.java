@@ -15,5 +15,7 @@ public interface UserMapper {
 	@Select("SELECT * FROM user WHERE userid = #{userid}")
 	UserVO getUserById(String id);
 	
+	@Select("SELECT COUNT(*) FROM user WHERE userid = #{userid}")
+	int getCountById(String id);
 	
 }

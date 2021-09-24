@@ -18,20 +18,6 @@
 	<div class="container">
 
 		<div id="wrap">
-			<div class="container">
-				<div class="top_block">
-					<a href="/"><img src="../resources/assets/열기구.png" alt="노랑풍선"
-						class="top_logo"></a>
-				</div>
-				
-				<ul class="nav justify-content-end">
-					<li class="nav-item"><a class="nav-link active" href="#">Active</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="#" style="color: black">Link</a></li>
-					<li class="nav-item"><a class="nav-link" href="#" style="color: black" >Link</a></li>
-					
-				</ul>
-				
 				
 				<div class="content">
 					<h1 class="logo">
@@ -52,7 +38,7 @@
 						</span>
 						</span> <span class="input_row"> <span class="input_grp"> <input
 								type="password" id="passwd" name="passwd" class="inp_pw"
-								placeholder="비밀번호" title="비밀번호 입력" required minlength="8"
+								placeholder="PASSWORD" title="비밀번호 입력" required minlength="8"
 								maxlength="20">
 								<button type="button" class="btn_pw_swich">
 									<span>비밀번호 보이기s</span>
@@ -78,8 +64,5 @@
 				</div>
 			</div>
 		</div>
-
-
-	</div>
 </body>
 </html>
