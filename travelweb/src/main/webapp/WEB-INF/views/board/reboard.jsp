@@ -17,7 +17,7 @@
 		text-center">
 
 		<h1 class="tit_head">
-			<strong>여행 후기</strong>
+			<strong>여행 후기 목록</strong>
 		</h1>
 
 		<div class="container px-4 px-lg-5 mt-5">
@@ -32,15 +32,14 @@
 						<div class="card-body p-4">
 							<div class="text-center">
 								<!-- Product name-->
-								<h5 class="fw-bolder">Fancy Product</h5>
+								<h5 class="fw-bolder">상품 내용</h5>
 								<!-- Product price-->
 							</div>
 						</div>
 						<!-- Product actions-->
 						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
 							<div class="text-center">
-								<a class="btn btn-outline-dark mt-auto" href="#">View
-									options</a>
+								<a class="btn btn-outline-dark mt-auto" href="/board/rewriteform">후기 보기</a>
 							</div>
 						</div>
 					</div>
@@ -58,7 +57,7 @@
 						<div class="card-body p-4">
 							<div class="text-center">
 								<!-- Product name-->
-								<h5 class="fw-bolder">Special Item</h5>
+								<h5 class="fw-bolder">상품내용</h5>
 								<!-- Product reviews-->
 								<div
 									class="d-flex justify-content-center small text-warning mb-2">
@@ -73,7 +72,7 @@
 						<!-- Product actions-->
 						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
 							<div class="text-center">
-								<a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+								<a class="btn btn-outline-dark mt-auto" href="#">후기 보기</a>
 							</div>
 						</div>
 					</div>
@@ -90,13 +89,13 @@
 						<div class="card-body p-4">
 							<div class="text-center">
 								<!-- Product name-->
-								<h5 class="fw-bolder">Sale Item</h5>
+								<h5 class="fw-bolder">상품내용</h5>
 							</div>
 						</div>
 						<!-- Product actions-->
 						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
 							<div class="text-center">
-								<a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+								<a class="btn btn-outline-dark mt-auto" href="#">후기 보기</a>
 							</div>
 						</div>
 					</div>
@@ -110,7 +109,7 @@
 						<div class="card-body p-4">
 							<div class="text-center">
 								<!-- Product name-->
-								<h5 class="fw-bolder">Popular Item</h5>
+								<h5 class="fw-bolder">상품내용</h5>
 								<!-- Product reviews-->
 								<div
 									class="d-flex justify-content-center small text-warning mb-2">
@@ -125,7 +124,7 @@
 						<!-- Product actions-->
 						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
 							<div class="text-center">
-								<a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+								<a class="btn btn-outline-dark mt-auto" href="#">후기 보기</a>
 							</div>
 						</div>
 					</div>

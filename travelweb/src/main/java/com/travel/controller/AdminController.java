@@ -121,6 +121,9 @@ public class AdminController {
 	public String packagecontent() {
 		return "admin/packagecontent";
 	}
-
-
+	
+	@RequestMapping()
+	public String contentview() {
+		return "";
+	}
 }
