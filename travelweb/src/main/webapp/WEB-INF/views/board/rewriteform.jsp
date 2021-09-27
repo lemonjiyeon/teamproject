@@ -24,7 +24,7 @@
 
 			<div class="container">
 
-				<form action="/board/write" method="POST">
+				<form action="/board/rewriteform" method="POST">
 					<div class="input-group mt-3 mb-2">
 						<label class="p-3" for="subject">제목</label> <input type="text"
 							class="form-control in" id="subject" name="subject" autofocus>
@@ -80,13 +80,5 @@
 	<%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	
-	<script>
-	   $(document).ready(function(){
-           $("#secondbar").hide();              
-           $("#action").click(function(){
-              $("#secondbar").show()
-           });
-        });
-	</script>
 </body>
 </html>
