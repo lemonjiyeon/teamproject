@@ -11,13 +11,7 @@ public class BoardController {
 	@GetMapping("/rewriteform")
 	public String write() {
 		return "board/rewriteform";
-	}
-	
-	@GetMapping("/list")
-	public String list() {
-		return "board/list";
-	}
-	
+	}			
 	@GetMapping("/booking")
 	public String booking() {
 		return "board/booking";

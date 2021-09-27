@@ -1,17 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
-<%-- <%@ page import="mvc.model.BoardDTO"%> --%>
-
-<%-- 
- <%
-String sessionId = (String) session.getAttribute("sessionId");
-List boardList = (List) request.getAttribute("list");
-int total_record = ((Integer) request.getAttribute("total_record")).intValue();
-int pageNum = ((Integer) request.getAttribute("pageNum")).intValue();
-int total_page = ((Integer) request.getAttribute("total_page")).intValue();
-%>
- --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 
 <html>
@@ -50,18 +40,15 @@ int total_page = ((Integer) request.getAttribute("total_page")).intValue();
 				<div class="col-xl-9 mx-auto">
 					<div class="cta-inner bg-faded text-center rounded">
 						<h1 class="tit_head">
-							<strong>게시판</strong>
+							<strong>문의 게시판</strong>
 						</h1>
-						<div class="board">
-							<form action="<c:url value="./BoardListAction.do"/>"
-								method="post">
-								<div>
-									<div class="text-right">
-										<span class="badge badge-success">전체 <%-- <%=total_record%> --%>건
-										</span>
-									</div>
-								</div>
-
+				<div class="board">
+					<form action="<c:url value="./BoardListAction.do"/>" method="post">
+						<div>
+							<div class="text-right">
+								<span class="badge badge-success">전체갯수(${pageMaker.totalCount})</span>
+							</div>
+						</div>
 								<div style="padding-top: 50px">
 									<table class="table table-hover">
 										<thead>
@@ -69,72 +56,50 @@ int total_page = ((Integer) request.getAttribute("total_page")).intValue();
 												<th scope="col">번호</th>
 												<th scope="col">제목</th>
 												<th scope="col">작성일</th>
-												<th scope="col">조회</th>
+												<th scope="col">교통수단</th>
 												<th scope="col">글쓴이</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<th scope="row">1</th>
-												<td>#</td>
-												<td>2021</td>
-												<td>5</td>
-												<td>@mdo</td>
-											</tr>
-											<tr>
-												<th scope="row">2</th>
-												<td>#</td>
-												<td>2020</td>
-												<td>7</td>
-												<td>@mdo1</td>
-											</tr>
-											<tr>
-												<th scope="row">3</th>
-												<td>#</td>
-												<td>2023</td>
-												<td>9</td>
-												<td>@mdo2</td>
-											</tr>
-											<tr>
-												<th scope="row">4</th>
-												<td>#</td>
-												<td>2023</td>
-												<td>9</td>
-												<td>@mdo2</td>
-											</tr>
-											<tr>
-												<th scope="row">5</th>
-												<td>#</td>
-												<td>2023</td>
-												<td>5</td>
-												<td>@mdo2</td>
-											</tr>
-											<tr>
-												<th scope="row">6</th>
-												<td>#</td>
-												<td>2023</td>
-												<td>46</td>
-												<td>@mdo2</td>
-											</tr>
+										<c:choose>
+											<c:when test="${pageMaker.totalCount gt 0 }">
+												<c:forEach var="list" items="${listBoard }">
+													<tr>
+														<th scope="row">${list.estnum }</th>
+														<td>${list.esttitle }</td>
+														<td>${list.estday }</td>
+														<td>${list.esttraffic }</td>
+														<td>${list.estname }</td>
+													</tr>
+												</c:forEach>
+											</c:when>
+										</c:choose>																														
 										</tbody>
 									</table>
 								</div>
 
 
 
-								<div class="row">
-									<div class="col">
-										<ul class="pagination">
-											<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-											<li class="page-item"><a class="page-link" href="#">1</a></li>
-											<li class="page-item"><a class="page-link" href="#">2</a></li>
-											<li class="page-item"><a class="page-link" href="#">3</a></li>
-											<li class="page-item"><a class="page-link" href="#">4</a></li>
-											<li class="page-item"><a class="page-link" href="#">5</a></li>
-											<li class="page-item"><a class="page-link" href="#">Next</a></li>
-										</ul>
-									</div>
-								</div>
+		<div class="row">
+				<div class="col">
+					<ul class="pagination">
+						<%--이전페이지 --%>
+						<li class="page-item ${(pageMaker.prev)?'':'disabled' }">
+						<a class="page-link" href="${(pageMaker.prev) ? '/board/list?pageNum=' +=(pageMaker.startPage -1) += '&type=' += pageMaker.cri.type += '&keyword=' +=pageMaker.cri.keyword:'' }#board">이전</a>						
+						</li>
+						
+						<%--시작 페이지 번호 --%>						
+						<c:forEach var = "i" begin="${pageMaker.startPage }" end="${pageMaker.endPage}" step="1">
+						<li class="page-item ${(pageMaker.cri.pageNum eq i) ? 'active':''}">
+							<a class="page-link" href="/board/list?pageNum=${i }&type=${pageMaker.cri.type}&keyword=${pageMaker.cri.keyword}#board">${i}</a>											
+						</li>
+						</c:forEach>											
+						<li class="page-item ${(pageMaker.next)?'':'disabled'}">
+							<a class="page-link" href="${(pageMaker.next)?'/board/list?pageNum=' += (pageMaker.endPage +1) +='&type=' += pageMaker.cri.type += '&keyword' }">다음</a>		
+						</li>
+					</ul>
+				</div>
+		</div>
 								<br>
 								<div align="left">
 									<table>
