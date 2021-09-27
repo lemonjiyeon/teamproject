@@ -19,77 +19,73 @@
 	<section class="content-section text-black
 		text-center" id="services">
 			<h1 class="tit_head">
-				<strong>문의 하기</strong>
+				<strong>문의 상세보기</strong>
 			</h1>
 
 			<div class="container">
-
-				<form action="/board/listform" method="POST">
-					
+									
 					<div class="input-group mb-2">
 						<label class="p-2" for="id">제목</label> 
 						<input type="text" class="form-control in" id="id" name="esttitle"
-							value="">
+							value="${listVO.esttitle }" readonly="readonly">
 					</div>	
 					<div class="input-group mb-2">
 						<label class="p-2" for="id">이름</label> 
 						<input type="text" class="form-control in" id="id" name="estname"
-							value="">
+							value="${listVO.estname }" readonly="readonly">
 					</div>
 					<div class="input-group mb-2">
 						<label class="p-2" for="id">전화번호</label> 
 						<input type="text" class="form-control in" id="id" name="esttel"
-							value="">
+							value="${listVO.esttel }"  readonly="readonly">
 					</div>
 					<div class="input-group mt-3 mb-2">
 						 <label class="p-2" for="id">이메일</label> 
 						 <input type="text"
-							class="form-control in" id="subject" name="estemail" autofocus>
+							class="form-control in" id="subject" name="estemail" autofocus
+							value="${listVO.estemail }"  readonly="readonly">
 					</div>
 					<div class="input-group mb-2">
 						<label class="p-2" for="id">출발일</label> 
 						<input type="date" class="form-control in" id="estday" name="estday"
-							value="estday">
+							value="${listVO.estday }"  readonly="readonly">
 					</div>
-					<div class="mt-4">
+					<div class="input-group mb-2">
 
-							<label for="reten3" style="font-size: 20px;"><span>교통편</span></label>
-
-							<input type="hidden" id="memberReten" name="memberReten" /> <span
-								class="rio_circle"><input type="radio" id="reten1"
-								name="esttraffic" value="버스"><label for="reten1"><span></span>버스</label></span>
-
-							<span class="rio_circle"><input type="radio" id="reten2"
-								name="esttraffic" value="배"><label for="reten2"><span></span>배</label></span>
+						<label for="reten3">교통편</label>
+						<input type="text" class="form-control in" id="esttraffic" name="esttraffic"
+							value="${listVO.esttraffic }"  readonly="readonly">		
 					</div>
 					<div class="input-group mb-2">
 						<label class="p-3" for="content">내용</label>
 						<textarea class="form-control in" id="content" rows="10"
-							name="estcontent"></textarea>
+							name="estcontent"  readonly="readonly">${listVO.estcontent }</textarea>
 					</div>							
 					<div class="my-4 text-center">
-						<button type="submit" class="btn btn-primary" id="listform">
-							<i class="material-icons align-middle">create</i> 문의등록
-						</button>
-						<button type="reset" class="btn btn-primary ml-3">
-							<i class="material-icons align-middle">clear</i> 초기화
+						<button type="submit" class="btn btn-primary" id="listform" onclick="location.href='/board/list?pageNum=${pageNum}';">
+							<i class="material-icons align-middle"></i>문의목록으로 돌아가기
 						</button>						
-<!-- 						<button type="button" class="btn btn-primary ml-3" -->
-<%-- 							onclick="location.href = '/board/list?pageNum=${ pageNum }';"> --%>
-<!-- 							<i class="material-icons align-middle">list</i> 글목록 -->
-<!-- 						</button> -->
+					<button type="button" class="btn btn-primary ml-3" 
+						onclick="deleteEst(event)"> 
+						<i class="material-icons align-middle"></i> 글삭제
+					</button>
 					</div>
-				</form>
 			</div>
 	</section>
 	
 	<%-- footer --%>
-<jsp:include page="/WEB-INF/views/include/footer.jsp"/>	
-</body>
+<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	<script>
-		$('#listform').on('click',function(event){
-			alert('문의가 등록되었습니다.');
-		})
+		function deleteEst(event){
+			event.preventDefault();
+			
+			let isRemove = confirm("이 글을 삭제하시겠습니까?")
+			if(isRemove == true){
+				location.href = '/board/deleteEst?num=${listVO.estnum}&pageNum=${pageNum}';
+			}			
+		}
 	
-	</script>
+	</script>	
+</body>
+	
 </html>

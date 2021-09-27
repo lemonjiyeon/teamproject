@@ -48,7 +48,7 @@
    <!-- @Aspect 애노테이션 기능 활성화 -->
    <aop:aspectj-autoproxy/>
    
-   <context:component-scan base-package="com.example.task"/>
+   <context:component-scan base-package="com.travel.task"/>
    <!-- @Scheduled 애노테이션 기능 활성화 -->
    <task:annotation-driven/>   
 </beans>

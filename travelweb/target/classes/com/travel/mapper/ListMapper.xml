@@ -28,7 +28,7 @@
 		<![CDATA[
 			SELECT *
 			from estimate
-			order by est_num
+			order by est_num desc
 			Limit #{startRow},#{amount};
 		]]>
 	
@@ -60,4 +60,20 @@
 			</if>
 		</where> 	
   </select>
+  
+  <select id="getList" resultType="listVO">
+  	<![CDATA[
+  		select *
+  		from estimate
+  		where est_num = #{estnum};
+  	]]>
+  </select>
+  
+  <delete id="deleteListByNum">
+  	<![CDATA[
+  		Delete
+  		from estimate
+  		where est_num = #{estnum};
+  	]]>	  
+  </delete>
 </mapper>	

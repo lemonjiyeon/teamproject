@@ -12,7 +12,7 @@ public class ListVO {
 	private String estemail;
 	private String esttel;
 	private String esttitle;
-	private Date estday;
+	private String estday;
 	private String esttraffic;
 	private String estcontent;
 }

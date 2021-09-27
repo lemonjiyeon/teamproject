@@ -42,13 +42,6 @@ public class UserController {
      String hashedPw = BCrypt.hashpw(passwd, BCrypt.gensalt()); // 암호화된 비밀번호 리턴받음
      userVO.setUPwd(hashedPw); // 암호화된 비밀번호로 재설정
      
-     // 연월일 구분문자("-") 제거하기 String birthday = userVO.getBirthday(); // "2021-08-25"
-		/*
-		 * String birthday = userVO.getUBirth(); birthday = birthday.replace("-", "");
-		 * // "20210825" userVO.setUBirth(birthday);
-		 */
-     
-     // 현재시점 날짜 객체 설정 userVO.setRegDate(new Date());
 		
 		  String birthday = userVO.getUBirth(); birthday = birthday.replace("-","");
 		  userVO.setUBirth(birthday);

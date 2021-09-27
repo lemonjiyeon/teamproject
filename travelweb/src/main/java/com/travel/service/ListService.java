@@ -30,6 +30,12 @@ public class ListService {
 	public int getTotalCountBySearch(Criteria cri) {
 		return listMapper.getTotalCountBySearch(cri);
 	}
+	public ListVO getList(int num) {
+		return listMapper.getList(num);
+	}
+	public int deleteListByNum(int num) {
+		return listMapper.deleteListByNum(num);
+	}
 	//페이징 글 가져오기
 	public List<ListVO> getlists(Criteria cri){
 		

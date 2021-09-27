@@ -33,7 +33,7 @@ public class ListMapperTest {
 			listVO.setEstemail("이메일번호@"+i);
 			listVO.setEsttel("010-2323-2323");
 			listVO.setEsttitle("제목은"+num);
-			listVO.setEstday( new Date());
+			listVO.setEstday("2021-09-21");
 			listVO.setEsttraffic("버스");
 			listVO.setEstcontent("기어서 갈수있나요?");
 			

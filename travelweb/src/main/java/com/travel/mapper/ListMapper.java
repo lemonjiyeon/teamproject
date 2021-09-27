@@ -9,7 +9,11 @@ public interface ListMapper {
 	
 	int insert(ListVO listVO); //문의 등록하기
 	
-	int nextNum();
+	int nextNum(); //다음 insert할 글번호 가져오기(auto Increament)
+	
+	int deleteListByNum(int num);
+	
+	ListVO getList(int num); //글번호에 해당하는글 가져오기
 	
 	List<ListVO> getLists(); //전체 게시글 내용 가져오기
 	
