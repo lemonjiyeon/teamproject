@@ -9,17 +9,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+@AllArgsConstructor
 @Data
 
 public class UserVO {
 	
 	private String userid;
-	private String upwd;
-	private String uname;
-	private String ubirth;
-	private String ugender;
-	private String uemail;
-	private String utel;
+	private String uPwd;
+	private String uName;
+	private String uGender;
+	private String uEmail;
+	private String uTel;
+	private String uBirth;
+	
 	
 
 }

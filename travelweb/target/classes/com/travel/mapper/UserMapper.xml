@@ -4,6 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.travel.mapper.UserMapper">
 
+
+
 	<!-- <insert id="insert">
 	<![CDATA[
 		INSERT INTO user (userid, upwd, uname, ugender, uemail, utel, ubirth)
@@ -17,7 +19,7 @@
 		SELECT COUNT(*) FROM USER
 		WHERE USERID = #{userId}
 	]]>
-	</select>
- -->
+	</select> -->
+ 
 
 </mapper>	

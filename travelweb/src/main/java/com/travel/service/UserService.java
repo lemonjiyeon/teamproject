@@ -9,8 +9,8 @@ import com.travel.mapper.UserMapper;
 public class UserService {
 
 	private UserMapper usermapper;
-	
-	public UserService(UserMapper usermapper){
+
+	public UserService(UserMapper usermapper) {
 		this.usermapper = usermapper;
 	}
 
@@ -18,10 +18,22 @@ public class UserService {
 	public void register(UserVO uservo) {
 		usermapper.insert(uservo);
 	}
-	
-	//userid로 정보조회
+
+	// userid로 정보조회
 	public UserVO getUserById(String id) {
 		return usermapper.getUserById(id);
 	}
+
+	public int getCountById(String id) {
+		return usermapper.getCountById(id);
+	}
 	
+	//회원정보수
+	public UserVO usermodifyGET(String userid) {
+		return usermapper.userModifyGET(userid);
+				
+	}
+	public void userModifyPOST(UserVO userVO)  {
+		usermapper.userModifyPOST(userVO);
+	}
 }
