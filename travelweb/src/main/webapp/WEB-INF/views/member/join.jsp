@@ -45,8 +45,8 @@
 
 						</span> <span class="input_row"> <span class="input_grp"> <input
 								type="password" class="txt"
-								placeholder="비밀번호(영문 숫자 특수문자 조합, 8~16자리) " name="custPw1"
-								id="custPw1" tabindex="6" value="" required>
+								placeholder="비밀번호(영문 숫자 특수문자 조합, 8~16자리) " name="uPwd"
+								id="custPw1" tabindex="6" required>
 						</span>
 						</span> <span class="input_row"> <span class="input_grp"> <input
 								type="password" class="txt" placeholder="비밀번호 확인" name="custPw2"

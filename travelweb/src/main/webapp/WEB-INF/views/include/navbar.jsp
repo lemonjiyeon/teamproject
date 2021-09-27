@@ -32,12 +32,16 @@
 		<ul class="navbar-nav ms-auto">
 			<c:choose>
 				<c:when test="${not empty sessionScope.id }">
-					<c:if test="${sessionScope.id eq 'admin' }">
-						<li class="nav-item"><span>관리자</span> <a
-						class="nav-link" href="/member/logout">로그아웃</a></li>
-					</c:if>
+				<c:choose>
+					<c:when test="${sessionScope.id eq 'admin' }">
+						<li class="nav-item" id="userid"><span class="nav-link">관리자님</span></li>
+					<li class="nav-item"><a class="nav-link" href="/member/logout">로그아웃</a></li>
+					</c:when>
+					<c:otherwise>
 					<li class="nav-item" id="userid"><span class="nav-link">${ sessionScope.id } 님</span></li>
 					<li class="nav-item"><a class="nav-link" href="/member/logout">로그아웃</a></li>
+					</c:otherwise>
+				</c:choose>
 				</c:when>
 				<c:otherwise>
 					<li class="nav-item"><a class="nav-link" href="/member/login">로그인</a>
@@ -77,11 +81,20 @@
 		class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-second">
 		<div class="collapse navbar-collapse my-sm-0">
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
+				<c:choose>
+				<c:when test="${sessionScope.id eq 'admin' }">
+				<div class="navbar-nav">
+					<a class="nav-link active" href="/admin/packageadd">패키지 등록<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="/admin/packagelist">패키지 관리</a>
+				</div>
+				</c:when>
+				<c:otherwise>
 				<div class="navbar-nav">
 					<a class="nav-link active" href="/member/modify">내정보 수정<span class="sr-only">(current)</span></a>
 					<a class="nav-link" href="/board/rewriteform">여행후기 작성</a>
 				</div>
+				</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</nav>

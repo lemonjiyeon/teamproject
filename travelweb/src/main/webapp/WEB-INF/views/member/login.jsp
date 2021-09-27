@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+
 <head>
 <meta charset="utf-8">
-<title>여행을 가볍게 노랑풍선 -계정 관리</title>
+<title>Tour rainbow - 로그인</title>
 
 <!-- css resources -->
 <link
