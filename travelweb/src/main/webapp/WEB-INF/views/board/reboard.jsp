@@ -17,7 +17,7 @@
 		text-center">
 
 		<h1 class="tit_head">
-			<strong>여행 후기</strong>
+			<strong>여행 후기 목록</strong>
 		</h1>
 
 		<div class="container px-4 px-lg-5 mt-5">
@@ -39,7 +39,7 @@
 						<!-- Product actions-->
 						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
 							<div class="text-center">
-								<a class="btn btn-outline-dark mt-auto" href="/board">후기 보기</a>
+								<a class="btn btn-outline-dark mt-auto" href="/board/rewriteform">후기 보기</a>
 							</div>
 						</div>
 					</div>
