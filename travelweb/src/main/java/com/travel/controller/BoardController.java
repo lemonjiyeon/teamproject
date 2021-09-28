@@ -35,6 +35,12 @@ public class BoardController {
 	@GetMapping("/rewriteform")
 	public String write(@ModelAttribute("pageNum") String pageNum) {
 		return "board/rewriteform";
+
+	}			
+	@GetMapping("/booking")
+	public String booking() {
+		return "board/booking";
+
 	}
 
 	private String getFolder() {
@@ -50,6 +56,7 @@ public class BoardController {
 
 		isImage = contentType.startsWith("images");
 		return isImage;
+
 	}
 
 	private List<AttachVO> uploadFilesAndGetAttachList(List<MultipartFile> files, int boardnum)
@@ -156,12 +163,6 @@ public class BoardController {
 		return "board/reboard";
 	}
 	
-
-	@GetMapping("/booking")
-	public String booking() {
-		return "board/booking";
-	}
-
 
 	@GetMapping("/confirm")
 	public String confirm() {

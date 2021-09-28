@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.mapper.ListMapper">
+	<insert id="insert">
+		<![CDATA[
+			INSERT INTO estimate(est_num, est_name,est_email,est_tel,est_title,est_day,est_traffic,est_content)
+			VALUES(#{estnum}, #{estname},#{estemail},#{esttel},#{esttitle},#{estday},#{esttraffic},#{estcontent})
+		]]>
+	</insert>
+
+	<select id="nextNum" resultType="int">
+		<![CDATA[
+			SELECT IFNULL(MAX(est_num),0) + 1 as e_num
+  			FROM estimate;
+		]]>
+	</select>
+ 
+	<select id="getLists" resultType="ListVO">
+		<![CDATA[
+			SELECT *
+			from estimate;
+		]]>	
+	</select>
+	
+	<select id="getListsWithPaging" resultType="ListVO">
+		<![CDATA[
+			SELECT *
+			from estimate
+			order by est_num desc
+			Limit #{startRow},#{amount};
+		]]>
+	
+		
+				
+	</select>
+	
+	 <select id="getTotalCount" resultType="int">
+  	<![CDATA[
+  		select COUNT(*)
+		from estimate;
+  	]]>
+  </select>
+  
+   <select id="getTotalCountBySearch" resultType="int">
+  	<![CDATA[
+  		select COUNT(*)
+		from estimate;
+  	]]>
+  		<where>
+			<if test="type == 'T'.toString()">
+				subject LIKE CONCAT('%',#{keyword},'%')
+			</if>
+			<if test="type == 'C'.toString()">
+				content LIKE CONCAT('%',#{keyword},'%')
+			</if>
+			<if test="type == 'W'.toString()">
+				mid LIKE CONCAT('%',#{keyword},'%')
+			</if>
+		</where> 	
+  </select>
+  
+  <select id="getList" resultType="listVO">
+  	<![CDATA[
+  		select *
+  		from estimate
+  		where est_num = #{estnum};
+  	]]>
+  </select>
+  
+  <delete id="deleteListByNum">
+  	<![CDATA[
+  		Delete
+  		from estimate
+  		where est_num = #{estnum};
+  	]]>	  
+  </delete>
+</mapper>	
