@@ -6,12 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.travel.domain.BoardVO;
-<<<<<<< HEAD
-//import com.travel.mapper.AttachMapper;
-import com.travel.domain.TourVO;
-import com.travel.mapper.AttachMapper;
-=======
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
+
 import com.travel.mapper.BoardMapper;
 
 @Service

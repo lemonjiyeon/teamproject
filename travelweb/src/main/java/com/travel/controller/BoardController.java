@@ -58,8 +58,8 @@ public class BoardController {
 
 	// 첨부파일 업로드, 글쓰기 처리
 	@PostMapping("/rewriteform")
-	public String rewriteform(BoardVO boardVO, 
-			HttpServletRequest request, RedirectAttributes rttr) throws IOException {
+	public String rewriteform(BoardVO boardVO 
+			) throws IOException {
 		
 		int boardnum = boardService.nextNum();
 		
@@ -88,9 +88,7 @@ public class BoardController {
 	}
 	
 
-<<<<<<< HEAD
-}
-=======
+
 //	@GetMapping("/booking")
 //	public String bookingGET(){
 //		
@@ -126,4 +124,3 @@ public class BoardController {
 	}
 
 }
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject

@@ -66,8 +66,8 @@
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 
 <script>
-	$('button#submit').on('click',function(){
-	 	if( $('input#subject').val() !=null && $('input#content').val() !=null ) {
+	/* $('button#submit').on('click',function(){
+	 	if( $('input#subject').val() !=null || $('input#content').val() !=null ) {
 			alert('등록이 완료 되었습니다.'); 		
 	 		$('button#submit').submit();
 	 	}else{
@@ -75,7 +75,16 @@
 	 		return;
 	 	}
 	 		
-	});
+	}); */
+	
+	  $('button#submit').on('click', function(){
+         if(($('input#subject').val().length==0) || ($('input#content').val().length==0)){
+            alert('내용을 모두 입력해주세요!');
+            return false;
+         }else{
+            alert('내용이 입력되었습니다!');
+            $('button#submit').submit;
+         } 
 </script>
 </body>
 </html>
