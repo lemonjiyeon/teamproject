@@ -22,5 +22,6 @@ public class UserVO {
 	private String uTel;
 	private String uBirth;
 	
+	
 
 }

@@ -11,9 +11,15 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.travel.domain.UserVO;
 import com.travel.service.UserService;
@@ -42,10 +48,10 @@ public class UserController {
      String hashedPw = BCrypt.hashpw(passwd, BCrypt.gensalt()); // 암호화된 비밀번호 리턴받음
      userVO.setUPwd(hashedPw); // 암호화된 비밀번호로 재설정
      
-		
-		  String birthday = userVO.getUBirth(); birthday = birthday.replace("-","");
-		  userVO.setUBirth(birthday);
-		 
+      
+        String birthday = userVO.getUBirth(); birthday = birthday.replace("-","");
+        userVO.setUBirth(birthday);
+       
      System.out.println(userVO); 
      userService.register(userVO); // 회원등록 처리
      
@@ -113,34 +119,70 @@ public class UserController {
    }//login
    
    @GetMapping("/logout")
-	public String logout(HttpSession session, HttpServletRequest request, HttpServletResponse response) {
-		// 세션 비우기
+   public String logout(HttpSession session, HttpServletRequest request, HttpServletResponse response) {
+      // 세션 비우기
+      session.invalidate();
+      
+      // 로그인 상태유지용 쿠키 있으면 삭제하기
+       Cookie[] cookies = request.getCookies();
+       
+       if(cookies != null) {
+          for(Cookie cookie : cookies) {
+             if(cookie.getName().equals("id")) {
+                cookie.setMaxAge(0); // 브라우저가 삭제할 수 있도록 0초로 설정
+                cookie.setPath("/");
+                
+                response.addCookie(cookie);
+             }
+          } //for
+       }
+      
+      
+      // 홈 화면으로 리다이렉트 이동
+      return "redirect:/";
+   }
+   
+//   @GetMapping("/modify")
+//   public String modify() {
+//      System.out.println("가고있는겐가 자네?");
+//      return "member/modify";
+//   }
+
+// ========================내 정보 수정 ======================
+	
+	//수정화
+	@RequestMapping(value = "/modify", method=RequestMethod.GET)
+	public String userModifyGET() throws Exception {
+		System.out.println("가고있는겐가 자네?");
+		
+		return "member/modify";
+	}
+
+	@RequestMapping(value="/modify",method=RequestMethod.POST)
+	public String userModifPOST(UserVO vo, HttpSession session) throws Exception{
+		
+		userService.userUpdate(vo);
+		
 		session.invalidate();
-		
-		// 로그인 상태유지용 쿠키 있으면 삭제하기
-		 Cookie[] cookies = request.getCookies();
-		 
-		 if(cookies != null) {
-			 for(Cookie cookie : cookies) {
-				 if(cookie.getName().equals("id")) {
-					 cookie.setMaxAge(0); // 브라우저가 삭제할 수 있도록 0초로 설정
-					 cookie.setPath("/");
-					 
-					 response.addCookie(cookie);
-				 }
-			 } //for
-		 }
-		
-		
-		// 홈 화면으로 리다이렉트 이동
+	
 		return "redirect:/";
 	}
-   
-   @GetMapping("/modify")
-   public String modify() {
-      System.out.println("가고있는겐가 자네?");
-      return "member/modify";
-   }
 
-
+	// ===================회원탈퇴===========================
+	
+//	@DeleteMapping(value="/delete")
+//	public String userDelete(@PathVariable UserVO vo) {
+//	
+//		userService.userDelete(vo);
+//		
+//		return "회원삭제";
+//	}
+	
+	@GetMapping("/delete")
+	   public String delete(@PathVariable UserVO vo) {
+	     userService.userDelete(vo);
+	      
+	      return "/";
+	         
+	   }
 }

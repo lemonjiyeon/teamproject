@@ -9,17 +9,23 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.travel.domain.AttachVO;
 import com.travel.domain.BoardVO;
+import com.travel.domain.TourVO;
 import com.travel.service.BoardService;
 
 import net.coobird.thumbnailator.Thumbnailator;
@@ -29,7 +35,7 @@ import net.coobird.thumbnailator.Thumbnailator;
 public class BoardController {
 	
 //	@Autowired
-//	private BoardService boardService;
+	private BoardService boardService;
 
 	// 새 글등록 화면 요청
 	@GetMapping("/rewriteform")
@@ -164,6 +170,38 @@ public class BoardController {
 	}
 	
 
+<<<<<<< HEAD
+=======
+//	@GetMapping("/booking")
+//	public String bookingGET(HttpServletRequest req,Model model,TourVO tourvo)throws Exception {
+//		
+//		HttpSession session=req.getSession();
+//		
+//		TourVO tour = (TourVO)session.getAttribute("Tour");
+//		TourVO bookingTour = boardService.bookingGET(tour.getTourid());
+//		
+//		model.addAttribute("tourId",bookingTour.getTourid());
+//		model.addAttribute("tourTitle",bookingTour.getToTitle());
+//		model.addAttribute("tourContent",bookingTour.getToContent());
+//		
+//		
+//		return "board/booking";
+//	}
+//
+//	@RequestMapping(value="/booking", method=RequestMethod.GET)
+//	public String bookingPOST(TourVO tourvo)throws Exception{
+//		
+//		
+//		
+//		
+//		return null;
+//	}
+	
+	
+	
+	
+
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 	@GetMapping("/confirm")
 	public String confirm() {
 		return "board/confirm";

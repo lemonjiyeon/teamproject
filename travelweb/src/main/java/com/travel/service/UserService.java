@@ -22,11 +22,21 @@ public class UserService {
    
    //userid로 정보조회
    public UserVO getUserById(String id) {
-		UserVO userVO = usermapper.getUserById(id);
-		return userVO;
-	}
+      UserVO userVO = usermapper.getUserById(id);
+      return userVO;
+   }
    
    public int getCountById(String id) {
-		return usermapper.getCountById(id);
+      return usermapper.getCountById(id);
+   }
+ 
+ 
+   //회원정보수정 
+	public void userUpdate(UserVO vo) {
+		usermapper.userUpdate(vo);
+	}
+	//회원탈퇴
+	public void userDelete(UserVO vo) {
+		usermapper.userDelete(vo);
 	}
 }

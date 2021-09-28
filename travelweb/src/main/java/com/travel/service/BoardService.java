@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.travel.domain.AttachVO;
 import com.travel.domain.BoardVO;
+import com.travel.domain.TourVO;
 import com.travel.mapper.AttachMapper;
 import com.travel.mapper.BoardMapper;
 
@@ -45,5 +46,12 @@ public class BoardService {
 	
 	public int getTotalCount() {
 		return boardMapper.getTotalCount();
+	}
+	
+
+
+	public TourVO bookingGET(int tourid) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
