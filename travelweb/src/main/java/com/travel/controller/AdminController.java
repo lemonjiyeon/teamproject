@@ -41,16 +41,16 @@ public class AdminController {
 	public String packagelist(Criteria cri, Model model) {
 		
 		List<TourVO> tourList = adminService.getBoardAndAttaches(cri);
-		List<AdAttachVO> adattachList = adminService.getAttaches(cri);
+		List<AdAttachVO> adList = adminService.getAttaches(cri);
 		int totalCount = adminService.getTotalCount(); // 전체 글개수
 		
 		System.out.println("tourList"+tourList);
-		System.out.println("adattachList"+adattachList);
+		System.out.println("adList"+adList);
 		PageDTO pageDTO = new PageDTO(totalCount, cri); // 페이지블록(Pagination) 화면 만들때 필요한 정보
 		 
 		
 		// 뷰에서 사용할 데이터를 Model 객체에 저장 -> requestScope로 옮겨줌
-		model.addAttribute("adattachList",adattachList);
+		model.addAttribute("adList",adList);
 		model.addAttribute("tourList", tourList);
 		model.addAttribute("pageMaker", pageDTO);
 		
