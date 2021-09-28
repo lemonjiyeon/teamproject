@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +33,7 @@
 					
 					<div class="input-group mb-2">
 						<label class="p-2" for="id">아이디</label> 
-						<input type="text" class="form-control in" id="id" name="mid"
+						<input type="text" class="form-control in" id="id" name="userid"
 							value="${ sessionScope.id }" readonly>
 					</div>
 
@@ -46,7 +47,7 @@
 					<div class="my-4 text-center">
 						<button type="button" class="btn btn-primary ml-3"
 							onclick="location.href = '/board/reboard';">
-							<i class="material-icons align-middle">list</i> 후기 게시판으로
+							<i class="material-icons align-middle">list</i> 후기 목록
 						</button>
 					</div>
 				</form>
@@ -55,6 +56,7 @@
 	
 	<%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+	
 	
 </body>
 </html>

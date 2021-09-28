@@ -21,7 +21,9 @@
 		</foreach>
 	</insert>
 	
-	
+	<select id="getAttachesByBoardnum" resultType="attachVO">
+		SELECT * FROM attach WHERE boardnum = #{boardnum}
+	</select>
 	
 
 </mapper>

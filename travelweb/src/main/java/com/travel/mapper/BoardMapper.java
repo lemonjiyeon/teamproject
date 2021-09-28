@@ -23,8 +23,8 @@ public interface BoardMapper {
 	int getTotalCount(); // 전체 글개수 가져오기
 
 	//int getTotalCountBySearch(Criteria cri); // 검색을 적용하여 전체 글개수 가져오기
-
-	BoardVO getBoard(int num); // 글번호에 해당하는 글 한개 가져오기
+// ====================================================================== rewrite부분
+	BoardVO getBoard(int num); // 글번호에 해당하는 글 한개 가져오기 
 
 	BoardVO getBoardAndAttaches(int num); // 글번호에 해당하는 글 한개와 첨부파일 모두 가져오기
 
