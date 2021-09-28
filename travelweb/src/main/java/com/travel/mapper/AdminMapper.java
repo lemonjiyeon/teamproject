@@ -1,5 +1,7 @@
 package com.travel.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -13,5 +15,5 @@ public interface AdminMapper {
 
 	@Select("SELECT IFNULL(MAX(tourid),0)+1 AS ntourid FROM tour")
 	int nextNum();
-	
+			
 }

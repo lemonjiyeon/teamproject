@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.mapper.HomeMapper">
+
+	<select id="getTourAddattach" resultType="TourVO">
+		<![CDATA[
+		select t.tourid, t.to_title, t.to_price, t.to_content, t.to_start, t.to_end, t.to_choice, a.filename
+		from tour t left outer join adattach a
+		on t.tourid = a.bno
+		where to_choice = #{toChoice}
+		 ]]>
+	</select>
+	
+<!-- 	<resultMap type="TourVO" id="tourAndAddAttach"> -->
+<!-- 		<id column="tourid" property="tourid"/> -->
+<!-- 		<result column="to_title" property="totitle"/> -->
+<!-- 		<result column="to_price" property="toprice"/> -->
+<!-- 		<result column="to_content" property="tocontent"/> -->
+<!-- 		<result column="to_start" property="tostart"/> -->
+<!-- 		<result column="to_end" property="toend"/> -->
+<!-- 		<result column="to_choice" property="tochoice"/> -->
+<!-- 		<collection property="addattachlist" javaType="list" ofType="AdAttachVO"> -->
+<!-- 			<id column="uuid" property="uuid"/> -->
+<!-- 			<id column="uploadpath" property="uploadpath"/> -->
+<!-- 			<id column="filename" property="filename"/> -->
+<!-- 			<id column="filetype" property="filetype"/> -->
+<!-- 			<id column="bno" property="bno"/>		 -->
+<!-- 		</collection>	 -->
+<!-- 	</resultMap> -->
+	
+	
+
+</mapper>
+
+
+
+

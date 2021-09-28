@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +32,7 @@
    .card{
       float:left;
       margin:0 auto;
+      height:380px;
    }
    #cardwrap{
       width:1200px;
@@ -48,7 +50,6 @@
     border-bottom: 1px solid #ecb807;
     margin:0 auto;
 }
-<<<<<<< HEAD
 	#dang{
 		width:1200px;
 		margin:0 auto;
@@ -58,7 +59,6 @@
 		width:600px;
 		margin:0 auto;
 	}
-=======
    #dang{
       width:1200px;
       margin:0 auto;
@@ -67,7 +67,9 @@
       width:600px;
       margin:0 auto;
    }
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
+   .card-text{
+   		font-size: 14px;
+   }
 </style>
 <body id="page-top">
 
@@ -111,95 +113,52 @@
    </div>
 
 <nav>
-  <div id="menuwrap">
+ <div id="menuwrap">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">내륙/섬</button>
     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">제주도</button>
   </div>
-  </div>
+ </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
 <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile">
 <!-- 내륙시작 -->
-<div id="cardwrap">
- <div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/in1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/in2.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/in3.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/in4.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+	<div id="cardwrap">	
+	<c:forEach var="tlist" items="${tourList }" end="3">
+		<c:if test="${tlist.toChoice eq 'island' }">
+		<div class="card" style="width: 18rem;">
+		  <img src="./resources/assets/images/in4.jpg" class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <h5 class="card-title">${tlist.toPrice }원</h5>
+		    <p class="card-text">${tlist.toTitle }</p>
+		    <a href="" class="btn btn-primary">예약 하러가기</a>
+		  </div>
+		</div>
+		</c:if>
+	</c:forEach>	
+	</div>		
 </div> <!-- end cardwrap --> 
-  </div><!-- 내륙카드 끝-->
-  <!-- 섬시작 -->
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact">
-  <div id="cardwrap">
- <div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/jeju1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
 
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/jeju2.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+  <!-- 제주도 -->
+<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact">
+    <div id="cardwrap">	
+	<c:forEach var="tlist" items="${tourList }">
+		<c:if test="${tlist.toChoice eq 'jeju' }">
+		<div class="card" style="width: 18rem;">
+		  <img src="./resources/assets/images/in4.jpg" class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <h5 class="card-title">${tlist.toPrice }원</h5>
+		    <p class="card-text">${tlist.toTitle }</p>
+		    <a href="" class="btn btn-primary">예약 하러가기</a>
+		  </div>
+		</div>
+		</c:if>
+	</c:forEach>	
+	</div>
+ </div>
 
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/jeju3.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+</div><!-- teb content 절때 지우지마시오 -->
 
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/jeju4.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div> <!-- end cardwrap -->   
-  </div>
-</div><!-- end tabcontent -->
 <p>
 <div class="content-section-heading text-center">
       <h3 class="text-secondary mb-0">Portfolio</h3>

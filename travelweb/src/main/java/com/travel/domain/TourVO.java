@@ -12,8 +12,7 @@ public class TourVO {
 	private int tourid;
 	private String toTitle;
 	private String toPrice;
-	private String toContent;
-	
+	private String toContent;	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date toStart; //출발일
 	@DateTimeFormat(pattern = "yyyy-MM-dd")	

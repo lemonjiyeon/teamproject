@@ -27,7 +27,6 @@ import net.coobird.thumbnailator.Thumbnailator;
 public class AdminController {
 	@Autowired
 	private AdminService adminService;
-	
 
 	@GetMapping("/packagelist")
 	public String packagelist() {
