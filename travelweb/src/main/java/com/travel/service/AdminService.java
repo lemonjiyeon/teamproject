@@ -43,4 +43,10 @@ public class AdminService {
 		return adminMapper.getTotalCount();
 	}
 	
+	
+	
+	  public List<AdAttachVO> getAttaches(Criteria cri) { return
+	  adminMapper.getAttaches(cri); // join 쿼리로 데이터 가져오기
+	  }
+	 
 }

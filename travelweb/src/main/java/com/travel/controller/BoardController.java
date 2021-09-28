@@ -88,4 +88,42 @@ public class BoardController {
 	}
 	
 
+<<<<<<< HEAD
 }
+=======
+//	@GetMapping("/booking")
+//	public String bookingGET(){
+//		
+//		HttpSession session=req.getSession();
+//		
+//		TourVO tour = (TourVO)session.getAttribute("Tour");
+//		TourVO bookingTour = boardService.bookingGET(tour.getTourid());
+//		
+//		model.addAttribute("tourId",bookingTour.getTourid());
+//		model.addAttribute("tourTitle",bookingTour.getToTitle());
+//		model.addAttribute("tourContent",bookingTour.getToContent());
+//		
+//		
+//		return "board/booking";
+//	}
+//
+//	@RequestMapping(value="/booking", method=RequestMethod.GET)
+//	public String bookingPOST(TourVO tourvo)throws Exception{
+//		
+//		
+//		
+//		
+//		return null;
+//	}
+	
+	
+	
+	
+
+	@GetMapping("/confirm")
+	public String confirm() {
+		return "board/confirm";
+	}
+
+}
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
