@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,9 +35,32 @@
 
 								<div class="card h-100">
 									<!-- Product image-->
-									<img class="card-img-top"
-										src="C:\jiyeon\project\${adattach.uploadpath}\${adattach.uuid}_${adattach.filename}.jpg"
-										alt="..." />
+									<c:choose>
+								<c:when test="${ fn:length(adattachList) > 0 }"><%-- 첨부파일 있으면 --%>
+									<ul>
+									
+									<c:forEach var="attach" items="${ adattachList }">
+										<c:if test="${ attach.filetype eq 'O' }">
+												<c:set var="fileCallPath" value="${ attach.uploadpath }/${ attach.uuid }_${ attach.filename }"/>
+												<a href="javascript:location.href= '/download?fileName=' + encodeURIComponent('${ fileCallPath }')">
+													${ attach.filename }
+												</a>
+										</c:if>
+										<c:if test="${ attach.filetype eq 'I' }">
+											<c:set var="fileCallPath" value="${ attach.uploadpath }/s_${ attach.uuid }_${ attach.filename }"/>
+											<c:set var="originPath" value="${ attach.uploadpath }/${ attach.uuid }_${ attach.filename }"/>
+												<a href="/display?fileName=${ originPath }">
+													<img src="/display?fileName=${ fileCallPath }">
+												</a>
+										</c:if>
+									</c:forEach>	
+									
+									</ul>							
+								</c:when>
+								<c:otherwise><%-- 첨부파일 없으면 --%>
+									<span>첨부파일 없음</span>
+								</c:otherwise>
+							</c:choose>
 									<!-- Product details-->
 									<div class="card-body p-4">
 										<div class="text-center">

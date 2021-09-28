@@ -171,7 +171,7 @@ public class BoardController {
 	
 
 //	@GetMapping("/booking")
-//	public String bookingGET(HttpServletRequest req,Model model,TourVO tourvo)throws Exception {
+//	public String bookingGET(){
 //		
 //		HttpSession session=req.getSession();
 //		

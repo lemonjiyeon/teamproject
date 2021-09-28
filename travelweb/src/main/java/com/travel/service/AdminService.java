@@ -44,8 +44,9 @@ public class AdminService {
 	}
 	
 	
-	/*
-	 * public List<AdAttachVO> getAttaches(Criteria cri) { return
-	 * adminMapper.getAttaches(cri); // join 쿼리로 데이터 가져오기 }
-	 */
+	
+	  public List<AdAttachVO> getAttaches(Criteria cri) { return
+	  adminMapper.getAttaches(cri); // join 쿼리로 데이터 가져오기
+	  }
+	 
 }

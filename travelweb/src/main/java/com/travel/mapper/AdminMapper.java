@@ -30,12 +30,12 @@ public interface AdminMapper {
 	@Select("SELECT COUNT(*) FROM tour")
 	int getTotalCount();
 	
-	/*
-	 * @Select("SELECT t.tourid, t.to_title, t.to_price,  t.to_content, t.to_start, t.to_end, t.to_choice,\"\r\n"
-	 * +
-	 * "			   +\" a.uuid, a.uploadpath, a.filename, a.filetype, a.bno \"\r\n"
-	 * + "		+\"FROM tour t LEFT OUTER JOIN adattach a\"\r\n" +
-	 * "		+\" ON t.tourid = a.bno\"\r\n" + "		+\" ORDER BY tourid DESC ")
-	 * List<AdAttachVO> getAttaches(Criteria cri);
-	 */
+	
+	  @Select("SELECT t.tourid, t.to_title, t.to_price,  t.to_content, t.to_start, t.to_end, t.to_choice,"
+	  + " a.uuid, a.uploadpath, a.filename, a.filetype, a.bno "
+	  + "FROM tour t LEFT OUTER JOIN adattach a" 
+	  + " ON t.tourid = a.bno" 
+	  +" ORDER BY tourid DESC ")
+	  List<AdAttachVO> getAttaches(Criteria cri);
+	 
 }
