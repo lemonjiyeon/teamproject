@@ -105,12 +105,12 @@
 	
 	<script>
 		$('button#submit').on('click', function(){
-			if($('input#subject').val()!=null && $('input#price').val()!=null && $('input#content').val()!=null){
+			if(($('input#subject').val().length==0) || ($('input#price').val().length==0) || ($('textarea#content').val().length==0)){
+				alert('상품정보를 모두 입력해주세요!');
+				return false;
+			}else{
 				alert('상품등록 완료!');
 				$('button#submit').submit;
-			}else{
-				alert('상품정보를 모두 입력해주세요!');
-				return;
 			}
 			
 		});

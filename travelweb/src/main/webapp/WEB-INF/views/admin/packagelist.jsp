@@ -30,32 +30,26 @@
 				<c:choose>
 					<c:when test="${ pageMaker.totalCount gt 0 }">
 
-						<c:forEach var="tour" items="${ tourList }">
+						<c:forEach var="tour" items="${ tourList }" varStatus="status">
 							<div class="col mb-5">
 
 								<div class="card h-100">
 									<!-- Product image-->
 									<c:choose>
-								<c:when test="${ fn:length(adattachList) > 0 }"><%-- 첨부파일 있으면 --%>
-									<ul>
-									
-									<c:forEach var="attach" items="${ adattachList }">
-										<c:if test="${ attach.filetype eq 'O' }">
-												<c:set var="fileCallPath" value="${ attach.uploadpath }/${ attach.uuid }_${ attach.filename }"/>
+								<c:when test="${ fn:length(adList) > 0 }"><%-- 첨부파일 있으면 --%>
+										<c:if test="${ adList[status.index].filetype eq 'O' }">
+												<c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/${ adList[status.index].uuid }_${adList[status.index].filename }"/>
 												<a href="javascript:location.href= '/download?fileName=' + encodeURIComponent('${ fileCallPath }')">
-													${ attach.filename }
+													${ adList[status.index].filename }
 												</a>
 										</c:if>
-										<c:if test="${ attach.filetype eq 'I' }">
-											<c:set var="fileCallPath" value="${ attach.uploadpath }/s_${ attach.uuid }_${ attach.filename }"/>
-											<c:set var="originPath" value="${ attach.uploadpath }/${ attach.uuid }_${ attach.filename }"/>
+										<c:if test="${ adList[status.index].filetype eq 'I' }">
+											<c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/s_${ adList[status.index].uuid }_${ adList[status.index].filename }"/>
+											<c:set var="originPath" value="${ adList[status.index].uploadpath }/${adList[status.index].uuid }_${ adList[status.index].filename }"/>
 												<a href="/display?fileName=${ originPath }">
 													<img src="/display?fileName=${ fileCallPath }">
 												</a>
 										</c:if>
-									</c:forEach>	
-									
-									</ul>							
 								</c:when>
 								<c:otherwise><%-- 첨부파일 없으면 --%>
 									<span>첨부파일 없음</span>
@@ -86,7 +80,7 @@
 						</c:forEach>
 					</c:when>
 					<c:otherwise>
-						<div class="col mb-5" style="width: 300px">
+						<div class="container">
 							<h3>등록된 상품이 없습니다.</h3>
 						</div>
 					</c:otherwise>
