@@ -85,7 +85,7 @@
 				</div>
 
 				<div class="my-4 text-center">
-					<button type="submit" class="btn btn-primary">
+					<button type="submit" id="submit" class="btn btn-primary">
 						<i class="material-icons align-middle">create</i> 상품등록
 					</button>
 					<button type="reset" class="btn btn-primary ml-3">
@@ -102,5 +102,18 @@
 
 	<%-- footer --%>
 	<jsp:include page="/WEB-INF/views/include/footer.jsp" />
+	
+	<script>
+		$('button#submit').on('click', function(){
+			if($('input#subject').val()!=null && $('input#price').val()!=null && $('input#content').val()!=null){
+				alert('상품등록 완료!');
+				$('button#submit').submit;
+			}else{
+				alert('상품정보를 모두 입력해주세요!');
+				return;
+			}
+			
+		});
+	</script>
 </body>
 </html>

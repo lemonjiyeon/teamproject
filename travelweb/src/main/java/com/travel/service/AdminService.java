@@ -29,4 +29,9 @@ public class AdminService {
 		}
 	}
 	
+	public TourVO getBoardAndAttaches(int tourid) {
+		
+		return adminMapper.getBoardAndAttaches(tourid); // join 쿼리로 데이터 가져오기
+	}
+	
 }

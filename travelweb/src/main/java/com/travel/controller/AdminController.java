@@ -11,11 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import com.travel.domain.AdAttachVO;
 import com.travel.domain.TourVO;
 import com.travel.service.AdminService;
@@ -36,6 +38,7 @@ public class AdminController {
 	
 	
 	
+	
 	@GetMapping("/packageadd")
 	public String packageadd(){
 		return "admin/packageadd";
@@ -45,15 +48,18 @@ public class AdminController {
 	public String tourpackageadd(MultipartFile toImg, TourVO tourVO, 
 		 RedirectAttributes rttr) throws IOException {
 
-		int num = adminService.nextNum();
+		int tourid = adminService.nextNum();
 		
-		AdAttachVO adattachVO = uploadFileAndGetAdAttach(toImg, num);
+		AdAttachVO adattachVO = uploadFileAndGetAdAttach(toImg, tourid);
 		
-		tourVO.setTourid(num);
+		tourVO.setTourid(tourid);
 		
 		adminService.insertPackageAndAttach(tourVO, adattachVO);
 		
-		return "redirect:/admin/packagecontent";
+		rttr.addAttribute("num", tourVO.getTourid());
+		rttr.addAttribute("pageNum", 1);
+		
+		return "redirect:/admin/packagelist";
 	}
 	
 	
@@ -117,13 +123,12 @@ public class AdminController {
 	}
 	/* end file upload method */
 	
+	
+	
 	@GetMapping("/packagecontent")
 	public String packagecontent() {
+		
 		return "admin/packagecontent";
 	}
 	
-	@RequestMapping()
-	public String contentview() {
-		return "";
-	}
 }
