@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+	
 
 <!DOCTYPE html>
 <html>
@@ -29,30 +33,20 @@
 
 		<div class="container">
 
-			<form action="/admin/packageadd" method="POST"
+			<form action="/admin/packagecontent" method="POST"
 				enctype="multipart/form-data">
+
 				<div class="input-group mt-3 mb-2">
 					<label class="p-3" for="subject">제목</label> <input type="text"
-						class="form-control in" id="subject" name="toTitle" autofocus>
+						class="form-control in" value="${tourVO.toTitle}" id="subject"
+						name="toTitle" autofocus>
 				</div>
 
 				<div class="input-group mt-4">
 
 					<label class="p-3" for="subject">종류</label> <span
 						class="rio_circle mt-3"><input type="radio" id="reten1"
-						name="toChoice" value="jeju"><label for="reten1"><span></span>제주도</label></span>
-
-					<span class="rio_circle mt-3"><input type="radio"
-						id="reten1" name="toChoice" value="island"><label
-						for="reten1"><span></span>내륙/섬</label></span> <span
-						class="rio_circle mt-3"><input type="radio" id="reten2"
-						name="toChoice" value="theme"><label for="reten2"><span></span>테마여행</label></span>
-
-					<span class="rio_circle mt-3"><input type="radio"
-						id="reten2" name="toChoice" value="today"><label
-						for="reten2"><span></span>당일</label></span> <span class="rio_circle mt-3"><input
-						type="radio" id="reten2" name="toChoice" value="fewdays"><label
-						for="reten2"><span></span>숙박</label></span>
+						name="toChoice" value="${tourVO.toChoice}"></span>
 				</div>
 
 				<div class="input-group mb-2">
@@ -63,26 +57,56 @@
 
 				<div class="input-group mb-2">
 					<label class="p-2" for="id">가격</label> <input type="text"
-						class="form-control in" id="price" name="toPrice">
+						class="form-control in" id="price" value="${tourVO.toPrice}"
+						name="toPrice">
 				</div>
 
 				<div class="input-group mb-2">
 					<label class="p-2" for="id">날짜</label> <input type="date"
-						class="form-control" id="date" name="toStart">&nbsp;&nbsp;&#126;&nbsp;&nbsp;
-					<input type="date" class="form-control" id="date" name="toEnd">
+						class="form-control" id="date" name="toStart"
+						value="${tourVO.toStart}">&nbsp;&nbsp;&#126;&nbsp;&nbsp; <input
+						type="date" class="form-control" id="date" name="toEnd"
+						value="${tourVO.toEnd}">
 				</div>
 
 				<div class="input-group mb-2">
 					<label class="p-3" for="content">내용</label>
 					<textarea class="form-control in" id="content" rows="10"
-						name="toContent"></textarea>
+						name="toContent">${tourVO.toContent}</textarea>
 				</div>
 
 				<div class="input-group mb-2" align="left">
-					<label class="p-3" for="content">첨부파일</label>
-					<div class="mt-3">
-						<input type="file" id="toImg" name="toImg" multiple>
-					</div>
+					<c:choose>
+						<c:when test="${ fn:length(attachList) > 0 }">
+							<%-- 첨부파일 있으면 --%>
+							<ul>
+
+								<c:forEach var="attach" items="${ attachList }">
+									<c:if test="${ attach.filetype eq 'O' }">
+										<li><c:set var="fileCallPath"
+												value="${ attach.uploadpath }/${ attach.uuid }_${ attach.filename }" />
+											<a
+											href="javascript:location.href= '/download?fileName=' + encodeURIComponent('${ fileCallPath }')">
+												${ attach.filename } </a></li>
+									</c:if>
+									<c:if test="${ attach.filetype eq 'I' }">
+										<c:set var="fileCallPath"
+											value="${ attach.uploadpath }/s_${ attach.uuid }_${ attach.filename }" />
+										<c:set var="originPath"
+											value="${ attach.uploadpath }/${ attach.uuid }_${ attach.filename }" />
+										<li><a href="/display?fileName=${ originPath }"> <img
+												src="/display?fileName=${ fileCallPath }">
+										</a></li>
+									</c:if>
+								</c:forEach>
+
+							</ul>
+						</c:when>
+						<c:otherwise>
+							<%-- 첨부파일 없으면 --%>
+							<span>첨부파일 없음</span>
+						</c:otherwise>
+					</c:choose>
 				</div>
 
 				<div class="my-4 text-center">

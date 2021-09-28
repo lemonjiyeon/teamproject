@@ -48,6 +48,17 @@
     border-bottom: 1px solid #ecb807;
     margin:0 auto;
 }
+<<<<<<< HEAD
+	#dang{
+		width:1200px;
+		margin:0 auto;
+	}
+	#dang ul li button{
+		color:black;
+		width:600px;
+		margin:0 auto;
+	}
+=======
    #dang{
       width:1200px;
       margin:0 auto;
@@ -56,6 +67,7 @@
       width:600px;
       margin:0 auto;
    }
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 </style>
 <body id="page-top">
 
@@ -354,6 +366,17 @@
 <%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 
+<<<<<<< HEAD
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top"><i
+		class="fas fa-angle-up"></i></a>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="./resources/js/scripts.js"></script>	
+</body>    
+=======
    <!-- Scroll to Top Button-->
    <a class="scroll-to-top rounded" href="#page-top"><i
       class="fas fa-angle-up"></i></a>
@@ -365,4 +388,5 @@
    
 </body>
     
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 </html>

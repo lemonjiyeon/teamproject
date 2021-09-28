@@ -1,5 +1,8 @@
 package com.travel.mapper;
 
+
+import com.travel.domain.BoardVO;
+
 import java.util.List;
 
 //import org.apache.ibatis.annotations.Param;
@@ -34,5 +37,6 @@ public interface BoardMapper {
 
 	// 매개변수가 2개 이상일 경우, 각 매개변수마다 SQL문에서 사용할 이름을 지정해야 함
 	//void updateReSeqPlusOne(@Param("reRef") int reRef, @Param("reSeq") int reSeq);
+
 
 }
