@@ -11,10 +11,8 @@ import java.util.Map;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
-<<<<<<< HEAD
-=======
 import javax.servlet.http.HttpSession;
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,17 +23,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.travel.domain.AttachVO;
 import com.travel.domain.BoardVO;
-<<<<<<< HEAD
 import com.travel.service.AdminService;
 import com.travel.service.AttachService;
-=======
 import com.travel.domain.TourVO;
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 import com.travel.service.BoardService;
 
 import net.coobird.thumbnailator.Thumbnailator;

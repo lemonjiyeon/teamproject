@@ -73,7 +73,7 @@
 	]]>
 	</select>
 	
-<<<<<<< HEAD
+
 	<select id="getBoard" resultType="boardVO">
 	<![CDATA[
 		SELECT * 
@@ -91,6 +91,3 @@
 	</update>
 	
 	</mapper>
-=======
-</mapper>
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
