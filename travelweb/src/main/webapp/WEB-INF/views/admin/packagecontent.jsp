@@ -29,7 +29,8 @@
 
 		<div class="container">
 
-			<form action="/admin/packageadd" method="POST" enctype="multipart/form-data">
+			<form action="/admin/packageadd" method="POST"
+				enctype="multipart/form-data">
 				<div class="input-group mt-3 mb-2">
 					<label class="p-3" for="subject">제목</label> <input type="text"
 						class="form-control in" id="subject" name="toTitle" autofocus>
@@ -41,23 +42,23 @@
 						class="rio_circle mt-3"><input type="radio" id="reten1"
 						name="toChoice" value="jeju"><label for="reten1"><span></span>제주도</label></span>
 
-					<span class="rio_circle mt-3"><input type="radio" id="reten1"
-						name="toChoice" value="island"><label for="reten1"><span></span>내륙/섬</label></span>
+					<span class="rio_circle mt-3"><input type="radio"
+						id="reten1" name="toChoice" value="island"><label
+						for="reten1"><span></span>내륙/섬</label></span> <span
+						class="rio_circle mt-3"><input type="radio" id="reten2"
+						name="toChoice" value="theme"><label for="reten2"><span></span>테마여행</label></span>
 
 					<span class="rio_circle mt-3"><input type="radio"
-						id="reten2" name="toChoice" value="theme"><label for="reten2"><span></span>테마여행</label></span>
-
-					<span class="rio_circle mt-3"><input type="radio"
-						id="reten2" name="toChoice" value="today"><label for="reten2"><span></span>당일</label></span>
-
-					<span class="rio_circle mt-3"><input type="radio"
-						id="reten2" name="toChoice" value="fewdays"><label for="reten2"><span></span>숙박</label></span>
+						id="reten2" name="toChoice" value="today"><label
+						for="reten2"><span></span>당일</label></span> <span class="rio_circle mt-3"><input
+						type="radio" id="reten2" name="toChoice" value="fewdays"><label
+						for="reten2"><span></span>숙박</label></span>
 				</div>
 
 				<div class="input-group mb-2">
 					<label class="p-2" for="id">아이디</label> <input type="text"
-						class="form-control in" id="id"
-						value="${ sessionScope.id }" readonly>
+						class="form-control in" id="id" value="${ sessionScope.id }"
+						readonly>
 				</div>
 
 				<div class="input-group mb-2">

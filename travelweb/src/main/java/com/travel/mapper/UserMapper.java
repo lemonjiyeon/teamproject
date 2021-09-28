@@ -1,5 +1,6 @@
 package com.travel.mapper;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -17,16 +18,14 @@ public interface UserMapper {
 
 	@Select("SELECT COUNT(*) FROM user WHERE userid = #{userid}")
 	int getCountById(String id);
+	
 
-	// 회원정보수정화면
-	@Select(" SELECT * FROM user WHERE userid = #{userid} ")
-	UserVO userModifyGET(String userid);
-
-	/// 회원정보수정 화면e
-
-	// 화면수정 기
-	@Update(" UPDATE user" + " SET u_name = #{nName}, "
-			+ "n_birth = #{nbirth}, n_gender = #{nGender}, n_Tel = #{nTel}")
-	void userModifyPOST(UserVO userVO);
+	// 화면수정
+	@Update(" UPDATE user" + " SET u_name = #{uName}, "
+			+ "u_birth = #{uBirth}, u_gender = #{uGender}, u_Tel = #{uTel} where userid = #{userid}")
+	void userUpdate(UserVO userVO);
 	  
+	//회원탈퇴
+	@Delete("DELETE FROM user WHERE userid = #{userid}")
+	void userDelete(UserVO vo);
 }

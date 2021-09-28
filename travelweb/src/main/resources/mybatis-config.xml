@@ -16,7 +16,7 @@
   	</settings>
   	<!-- xml import방식 -->
   	<typeAliases>
-  		<package name="com.example.domain"/>
+  		<package name="com.travel.domain"/>
   	</typeAliases>
   	
 </configuration>

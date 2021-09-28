@@ -11,11 +11,11 @@ public class BoardVO {
 	
 	private int boardnum;  
 	private String userid;
-	private String btitle;
-	private String bcontent;
-	private int readcount;
+	private String bTitle;
+	private String bContent;
 	private Date regDate;
-	private int breco;  //추천수
+	private int readcount;
+	private int bReco;  //추천수
 	
 	// private List<AttachVO> attachList;
 	
