@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
+import com.travel.domain.AdAttachVO;
 import com.travel.domain.Criteria;
 import com.travel.domain.TourVO;
 
@@ -29,4 +30,12 @@ public interface AdminMapper {
 	@Select("SELECT COUNT(*) FROM tour")
 	int getTotalCount();
 	
+	/*
+	 * @Select("SELECT t.tourid, t.to_title, t.to_price,  t.to_content, t.to_start, t.to_end, t.to_choice,\"\r\n"
+	 * +
+	 * "			   +\" a.uuid, a.uploadpath, a.filename, a.filetype, a.bno \"\r\n"
+	 * + "		+\"FROM tour t LEFT OUTER JOIN adattach a\"\r\n" +
+	 * "		+\" ON t.tourid = a.bno\"\r\n" + "		+\" ORDER BY tourid DESC ")
+	 * List<AdAttachVO> getAttaches(Criteria cri);
+	 */
 }

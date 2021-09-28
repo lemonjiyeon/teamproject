@@ -170,8 +170,6 @@ public class BoardController {
 	}
 	
 
-<<<<<<< HEAD
-=======
 //	@GetMapping("/booking")
 //	public String bookingGET(HttpServletRequest req,Model model,TourVO tourvo)throws Exception {
 //		
@@ -201,7 +199,6 @@ public class BoardController {
 	
 	
 
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 	@GetMapping("/confirm")
 	public String confirm() {
 		return "board/confirm";

@@ -36,6 +36,7 @@ public class AdminController {
 	public String packagelist(Criteria cri, Model model) {
 		
 		List<TourVO> tourList = adminService.getBoardAndAttaches(cri);
+		//List<AdAttachVO> adattachList = adminService.getAttaches(cri);
 		int totalCount = adminService.getTotalCount(); // 전체 글개수
 		
 		System.out.println("tourList"+tourList);
@@ -43,6 +44,7 @@ public class AdminController {
 		 
 		
 		// 뷰에서 사용할 데이터를 Model 객체에 저장 -> requestScope로 옮겨줌
+		//model.addAttribute("adattachList",adattachList);
 		model.addAttribute("tourList", tourList);
 		model.addAttribute("pageMaker", pageDTO);
 		
