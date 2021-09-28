@@ -50,8 +50,8 @@ public class BoardService {
 	
 
 
-	public TourVO bookingGET(int tourid) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	public TourVO bookingGET(int tourid) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 }
