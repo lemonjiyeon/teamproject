@@ -47,12 +47,12 @@
 				<h2 class="mb-5">제주도시 여행상품 보기</h2>
 			</div>
 	<div class="autoplay">
-  		<div><img src="../resources/assets/images/tour1.jpg"></div>
-  		<div><img src="../resources/assets/images/tour2.jpg"></div>
-  		<div><img src="../resources/assets/images/tour3.jpg"></div>
-  		<div><img src="../resources/assets/images/tour4.jpg"></div>
-  		<div><img src="../resources/assets/images/tour5.jpg"></div>
-  		<div><img src="../resources/assets/images/tour6.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju1.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju2.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju3.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju4.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju5.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju6.jpg"></div>
 	</div>
 	<p>
 	<div class="content-section-heading text-center">
