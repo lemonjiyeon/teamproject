@@ -36,8 +36,13 @@ public class BoardController {
 
 	// 글쓰기 처리
 	@PostMapping("/rewriteform")
+<<<<<<< HEAD
 	public String rewriteform(BoardVO boardVO, HttpServletRequest request, RedirectAttributes rttr) throws IOException {
 
+=======
+	public String rewriteform(BoardVO boardVO, 
+			HttpServletRequest request, RedirectAttributes rttr) throws IOException {
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 		int boardnum = boardService.nextNum();
 
 		boardVO.setBoardnum(boardnum);

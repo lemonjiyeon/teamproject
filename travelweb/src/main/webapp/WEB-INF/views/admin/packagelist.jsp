@@ -47,7 +47,7 @@
 											<c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/s_${ adList[status.index].uuid }_${ adList[status.index].filename }"/>
 											<c:set var="originPath" value="${ adList[status.index].uploadpath }/${adList[status.index].uuid }_${ adList[status.index].filename }"/>
 												<a href="/display?fileName=${ originPath }">
-													<img src="/display?fileName=${ fileCallPath }">
+													<img style="width:270px; height:100px"src="/display?fileName=${ fileCallPath }">
 												</a>
 										</c:if>
 								</c:when>
@@ -85,9 +85,37 @@
 						</div>
 					</c:otherwise>
 				</c:choose>
-
-
 			</div>
+			
+			<!-- pagination area -->
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-center my-4">
+
+							<%-- 이전 --%>
+							<li class="page-item ${ (pageMaker.prev) ? '' : 'disabled' }">
+								<a class="page-link"
+								href="${ (pageMaker.prev) ? '/board/list?pageNum=' += (pageMaker.startPage - 1) += '&type=' += pageMaker.cri.type:'' }#board">이전</a>
+							</li>
+
+							<%-- 시작페이지 번호 ~ 끝페이지 번호 --%>
+							<c:forEach var="i" begin="${ pageMaker.startPage }"
+								end="${ pageMaker.endPage }" step="1">
+								<li
+									class="page-item ${ (pageMaker.cri.pageNum eq i) ? 'active' : '' }">
+									<a class="page-link"
+									href="/admin/packagelist?pageNum=${ i }&type=${ pageMaker.cri.type }&keyword=${ pageMaker.cri.keyword }#board">${ i }</a>
+								</li>
+							</c:forEach>
+
+							<%-- 다음 --%>
+							<li class="page-item ${ (pageMaker.next) ? '' : 'disabled' }">
+								<a class="page-link"
+								href="${ (pageMaker.next) ? '/board/list?pageNum=' += (pageMaker.endPage + 1) += '&type=' += pageMaker.cri.type:'' }#board">다음</a>
+							</li>
+
+						</ul>
+					</nav>
+					<!-- end of pagination area -->
 		</div>
 	</section>
 
