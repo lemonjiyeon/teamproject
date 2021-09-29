@@ -14,7 +14,7 @@
 
 	<select id="nextNum" resultType="int">
 	<![CDATA[
-		SELECT IFNULL(MAX(num), 0) + 1 AS bnum 
+		SELECT IFNULL(MAX(boardnum), 0) + 1 AS bnum 
 		FROM board
 	]]>
 	</select>
@@ -29,16 +29,15 @@
 
 	<delete id="deleteBoardByNum">
 	<![CDATA[
-		DELETE FROM board WHERE num = #{num}
+		DELETE FROM board WHERE num = #{boardnum}
 	]]>
 	</delete>
 
 
-	<select id="getBoards" resultType="boardVO">
+	<select id="getBoards" resultType="BoardVO">
 	<![CDATA[
 		SELECT * 
 		FROM board
-		ORDER BY reg_date DESC 
 	]]>
 	</select>
 
@@ -72,5 +71,17 @@
 		FROM board
 	]]>
 	</select>
+	
+
+	<select id="getBoard" resultType="boardVO">
+	<![CDATA[
+		SELECT * 
+		FROM board
+		where boardnum = #{boardnum}
+	]]>
+	</select>
+	
+	
+	
 	
 </mapper>

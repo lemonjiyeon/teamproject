@@ -10,4 +10,8 @@ public interface AttachMapper {
 	
 	int insertAttaches(List<AttachVO> attachList);
 	
+	List<AttachVO> getAttachesByBoardnum(int boardnum);
+
+	List<AttachVO> getAttachesByUuids(List<String> uuidList);
+	
 }

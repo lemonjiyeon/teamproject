@@ -50,6 +50,10 @@
     border-bottom: 1px solid #ecb807;
     margin:0 auto;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
    #dang{
       width:1200px;
       margin:0 auto;
@@ -63,6 +67,10 @@
    .card-text{
    		font-size: 14px;
    }
+<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 </style>
 <body id="page-top">
 
