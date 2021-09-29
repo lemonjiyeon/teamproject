@@ -28,6 +28,7 @@
 	<select id="getAdattach" resultType="AttachVO">
 		select *
 		from adattach
+		order by bno;
 	</select>
 	
 

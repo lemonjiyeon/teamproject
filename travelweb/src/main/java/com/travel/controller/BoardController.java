@@ -45,7 +45,6 @@ public class BoardController {
 	@PostMapping("/rewriteform")
 	public String rewriteform(BoardVO boardVO, 
 			HttpServletRequest request, RedirectAttributes rttr) throws IOException {
-		
 		int boardnum = boardService.nextNum();
 		
 		boardVO.setBoardnum(boardnum);

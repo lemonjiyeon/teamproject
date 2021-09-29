@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -46,7 +47,6 @@ public class AdminController {
 		System.out.println("tourList"+tourList);
 		System.out.println("adList"+adList);
 		PageDTO pageDTO = new PageDTO(totalCount, cri); // 페이지블록(Pagination) 화면 만들때 필요한 정보
-		 
 		
 		// 뷰에서 사용할 데이터를 Model 객체에 저장 -> requestScope로 옮겨줌
 		model.addAttribute("adList",adList);

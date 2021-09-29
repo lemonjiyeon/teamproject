@@ -50,10 +50,6 @@
     border-bottom: 1px solid #ecb807;
     margin:0 auto;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
    #dang{
       width:1200px;
       margin:0 auto;
@@ -67,10 +63,6 @@
    .card-text{
    		font-size: 14px;
    }
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 </style>
 <body id="page-top">
 
@@ -84,21 +76,21 @@
       <header class="masthead1 d-flex align-items-center">
          <div class="container px-4 px-lg-5 text-center">       
             <h3 class="mb-5">
-               <em>A Free Bootstrap Theme by Start Bootstrap</em>
+               <em></em>
             </h3>
          </div>
       </header>
       <header class="masthead2 d-flex align-items-center">
          <div class="container px-4 px-lg-5 text-center">           
             <h3 class="mb-5">
-               <em>A Free Bootstrap Theme by Start Bootstrap</em>
+               <em></em>
             </h3>
          </div>
       </header>
       <header class="masthead3 d-flex align-items-center">
          <div class="container px-4 px-lg-5 text-center">         
             <h3 class="mb-5">
-               <em>A Free Bootstrap Theme by Start Bootstrap</em>
+               <em></em>
             </h3>
          </div>
       </header>
@@ -227,55 +219,27 @@
             <h2 class="mb-5">테마 여행지</h2>
          </div>
          <div class="row gx-0">
+            
+          <c:forEach var="tlist" items="${tourList }" varStatus="status">
+          <c:if test="${tlist.toChoice eq 'theme' }">  
             <div class="col-lg-6">
                <a class="portfolio-item" href="#!">
                   <div class="caption">
                      <div class="caption-content">
-                        <div class="h2">Stationary</div>
-                        <p class="mb-0">A yellow pencil with envelopes on a clean,
-                           blue backdrop!</p>
+                        <div class="h2">꼭 맞는 테마여행</div>
+                        <p class="mb-0">${tlist.toTitle }</p>
                      </div>
-                  </div> <img class="img-fluid"
-                  src="./resources/assets/images/gaya2.jpg" alt="..." />
+                  </div>
+                  <c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/s_${ adList[status.index].uuid }_${ adList[status.index].filename }"/>
+		  		 <c:set var="originPath" value="${ adList[status.index].uploadpath }/${adList[status.index].uuid }_${ adList[status.index].filename }"/> 
+                  <img src="/display?fileName=${originPath }" class="card-img-top" alt="...">
                </a>
             </div>
-            <div class="col-lg-6">
-               <a class="portfolio-item" href="#!">
-                  <div class="caption">
-                     <div class="caption-content">
-                        <div class="h2">Ice Cream</div>
-                        <p class="mb-0">A dark blue background with a colored
-                           pencil, a clip, and a tiny ice cream cone!</p>
-                     </div>
-                  </div> <img class="img-fluid"
-                  src="./resources/assets/images/geyu1.jpg" alt="..." />
-               </a>
-            </div>
-            <div class="col-lg-6">
-               <a class="portfolio-item" href="#!">
-                  <div class="caption">
-                     <div class="caption-content">
-                        <div class="h2">Strawberries</div>
-                        <p class="mb-0">Strawberries are such a tasty snack,
-                           especially with a little sugar on top!</p>
-                     </div>
-                  </div> <img class="img-fluid"
-                  src="./resources/assets/images/backje.png" alt="..." />
-               </a>
-            </div>
-            <div class="col-lg-6">
-               <a class="portfolio-item" href="#!">
-                  <div class="caption">
-                     <div class="caption-content">
-                        <div class="h2">Workspace</div>
-                        <p class="mb-0">A yellow workspace with some scissors,
-                           pencils, and other objects.</p>
-                     </div>
-                  </div> <img class="img-fluid"
-                  src="./resources/assets/images/backje2.jpg" alt="..." />
-               </a>
-            </div>
-         </div>
+            </c:if>
+           </c:forEach>
+            
+            
+         </div><!-- end row gx-0-->
       </div>
    </section>
    <nav>
