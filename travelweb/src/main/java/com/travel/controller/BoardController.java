@@ -36,13 +36,9 @@ public class BoardController {
 
 	// 글쓰기 처리
 	@PostMapping("/rewriteform")
-<<<<<<< HEAD
-	public String rewriteform(BoardVO boardVO, HttpServletRequest request, RedirectAttributes rttr) throws IOException {
-
-=======
 	public String rewriteform(BoardVO boardVO, 
 			HttpServletRequest request, RedirectAttributes rttr) throws IOException {
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
+
 		int boardnum = boardService.nextNum();
 
 		boardVO.setBoardnum(boardnum);
@@ -54,7 +50,7 @@ public class BoardController {
 
 		System.out.println("테스트" + boardVO);
 
-		return "redirect:/board/reboard";
+		return "redirect:/board/rewritemodify";
 	}
 
 	/*
@@ -113,7 +109,7 @@ public class BoardController {
 
 	
 	@RequestMapping(value = "/rewritemodify", method = RequestMethod.GET)
-	public String userModifyGET(@ModelAttribute("boardVO") BoardVO boardVO, Model model, HttpServletRequest request)
+	public String boardModifyGET(@ModelAttribute("boardVO") BoardVO boardVO, Model model, HttpServletRequest request)
 	throws Exception {
 		System.out.println("후기 수정");
 
@@ -136,15 +132,15 @@ public class BoardController {
 	 
      // ===== update할 BoardVO 객체 데이터 설정 ====== 
 	  boardVO.setRegdate(new Date());
-	  boardVO.setBtitle();
-	  boardVO.setBcontent();
+	  boardVO.getBtitle();
+	  boardVO.getBcontent();
 	  
 	  // 글번호에 해당하는 글정보 수정.(insert, delete) - 트랜잭션 단위 처리
-	  boardService.updateBoard(boardVO, delUuidList); System.out.
+	  boardService.updateBoard(boardVO); System.out.
 	  println("================ POST modify - 테이블 수정 완료 ================");
 	  
 	 // 리다이렉트 쿼리스트링 정보 설정 
-	  rttr.addAttribute("num", boardVO.getNum());
+	  rttr.addAttribute("boardnum", boardVO.getBoardnum());
 	  
 	  
 	  // 상세보기 화면으로 리다이렉트 이동 
