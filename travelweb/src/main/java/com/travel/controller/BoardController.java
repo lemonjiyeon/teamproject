@@ -1,45 +1,26 @@
 package com.travel.controller;
 
-import java.io.File;
+
+
 import java.io.IOException;
-import java.nio.file.Files;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.travel.domain.AttachVO;
 import com.travel.domain.BoardVO;
-import com.travel.service.AdminService;
-import com.travel.service.AttachService;
-import com.travel.domain.TourVO;
 import com.travel.service.BoardService;
-
-import net.coobird.thumbnailator.Thumbnailator;
 
 @Controller
 @RequestMapping("/board/*")
 public class BoardController {
 	
 
-//	@Autowired
+	@Autowired
 	private BoardService boardService;
 
 
@@ -58,8 +39,7 @@ public class BoardController {
 
 	// 첨부파일 업로드, 글쓰기 처리
 	@PostMapping("/rewriteform")
-	public String rewriteform(BoardVO boardVO 
-			) throws IOException {
+	public String rewriteform(BoardVO boardVO) throws IOException {
 		
 		int boardnum = boardService.nextNum();
 		

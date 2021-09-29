@@ -14,7 +14,7 @@
 
 	<select id="nextNum" resultType="int">
 	<![CDATA[
-		SELECT IFNULL(MAX(boardnum), 0) + 1 AS bnum 
+		SELECT IFNULL(MAX(boardnum),0) + 1 AS bnum
 		FROM board
 	]]>
 	</select>

@@ -17,7 +17,7 @@ public class Criteria {
 	private String keyword ="";//검색어
 			
 	public Criteria() {
-		this(1,10); //기본값은 1페이지 요청, 한페이지당 글 10개씩 가져옴
+		this(1,8); //기본값은 1페이지 요청, 한페이지당 글 10개씩 가져옴
 	}
 
 	public Criteria(int pageNum, int amount) {
