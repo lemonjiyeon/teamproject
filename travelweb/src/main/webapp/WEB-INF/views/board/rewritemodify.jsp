@@ -20,7 +20,7 @@
 	<section class="content-section text-black
 		text-center" id="services">
 			<h1 class="tit_head">
-				<strong>여행 후기 내용</strong>
+				<strong>여행 후기 수정</strong>
 			</h1>
 
 			<div class="container">
@@ -45,7 +45,7 @@
 
 
 					<div class="my-4 text-center">
-					<button type="submit" class="btn btn-primary" id="submit" onclick="location.href = '/board/rewritemodify';">
+					<button type="submit" class="btn btn-primary" id="submit" onclick="location.href = '/board/rewriteform';">
 							<i class="material-icons align-middle">create</i> 후기 수정
 						</button>
 						<button type="reset" class="btn btn-primary ml-3">

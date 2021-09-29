@@ -30,9 +30,8 @@ public interface BoardMapper {
 
 	BoardVO getBoardAndAttaches(int num); // 글번호에 해당하는 글 한개와 첨부파일 모두 가져오기
 
-	void updateReadcount(int num); // 글번호에 해당하는 글의 조회수를 1 증가시키기
+	//void updateReadcount(int num); // 글번호에 해당하는 글의 조회수를 1 증가시키기
 
-	void updateBoard(BoardVO boardVO); // 글번호에 해당하는 글의 글제목, 글내용, 날짜, IP주소 수정하기
 
 	// 매개변수가 2개 이상일 경우, 각 매개변수마다 SQL문에서 사용할 이름을 지정해야 함
 	//void updateReSeqPlusOne(@Param("reRef") int reRef, @Param("reSeq") int reSeq);
@@ -41,6 +40,7 @@ public interface BoardMapper {
 	
 	List<BoardVO> getBoards(); // 전체 게시글 내용 가져오기
 	
+	void updateBoard(BoardVO boardVO); // 글번호에 해당하는 글의 글제목, 글내용, 날짜, IP주소 수정하기
 
 
 		

@@ -7,7 +7,7 @@
 	<insert id="insert">
 	<![CDATA[
 		INSERT INTO board (boardnum, userid, b_title, b_content, reg_date, readcount, b_reco)
-		VALUES (#{boardnum}, #{userid}, #{bTitle}, #{bContent}, #{regDate}, #{readcount}, #{bReco})
+		VALUES (#{boardnum}, #{userid}, #{btitle}, #{bcontent}, #{regdate}, #{readcount}, #{breco})
 	]]>
 	</insert>
 

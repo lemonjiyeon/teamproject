@@ -1,6 +1,7 @@
 package com.travel.controller;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,39 +23,31 @@ import com.travel.service.BoardService;
 @Controller
 @RequestMapping("/board/*")
 public class BoardController {
-	
 
 	@Autowired
 	private BoardService boardService;
-
 
 	// 새 글등록 화면 요청
 	@GetMapping("/rewriteform")
 	public String rewriteform(@ModelAttribute("pageNum") String pageNum) {
 		return "board/rewriteform";
 
-	}			
-	@GetMapping("/booking")
-	public String booking() {
-		return "board/booking";
-
 	}
 
-
-	// 첨부파일 업로드, 글쓰기 처리
+	// 글쓰기 처리
 	@PostMapping("/rewriteform")
-	public String rewriteform(BoardVO boardVO, 
-			HttpServletRequest request, RedirectAttributes rttr) throws IOException {
-		
+	public String rewriteform(BoardVO boardVO, HttpServletRequest request, RedirectAttributes rttr) throws IOException {
+
 		int boardnum = boardService.nextNum();
-		
+
 		boardVO.setBoardnum(boardnum);
-		
-		rttr.addAttribute("boardnum",boardVO.getBoardnum());
-		
+		boardVO.setRegdate(new Date());
+
+		rttr.addAttribute("boardnum", boardVO.getBoardnum());
+
 		boardService.register(boardVO);
-		
-		System.out.println("테스트" + boardVO );
+
+		System.out.println("테스트" + boardVO);
 
 		return "redirect:/board/reboard";
 	}
@@ -69,18 +62,19 @@ public class BoardController {
 	 * 
 	 * return "board/rewrite"; }
 	 */
-	
-	@RequestMapping(value = "/rewrite", method=RequestMethod.GET )
-	public String userModifyGET(@ModelAttribute("boardVO") BoardVO boardVO, Model model, HttpServletRequest request) throws Exception {
+
+	@RequestMapping(value = "/rewrite", method = RequestMethod.GET)
+	public String userModifyGET(@ModelAttribute("boardVO") BoardVO boardVO, Model model, HttpServletRequest request)
+			throws Exception {
 		System.out.println("글 후기?");
-		
-		 int boardnum = Integer.parseInt(request.getParameter("boardnum"));
-	     boardVO.setBoardnum(boardnum);
-	        
-	     BoardVO resultVO = boardService.boardcontent(boardVO);
-	        
-	     model.addAttribute("result", resultVO);
-		
+
+		int boardnum = Integer.parseInt(request.getParameter("boardnum"));
+		boardVO.setBoardnum(boardnum);
+
+		BoardVO resultVO = boardService.boardcontent(boardVO);
+
+		model.addAttribute("resultVO", resultVO);
+
 		return "board/rewrite";
 	}
 
@@ -92,61 +86,66 @@ public class BoardController {
 	 * 
 	 * return "board/reboard"; }
 	 */
-	
+
 	@GetMapping("/reboard")
 	public String list(Criteria cri, Model model) {
 		System.out.println("list 호출...");
-		
+
 		List<BoardVO> boardList = boardService.getBoards(cri);
-		
-		//int totalCount = boardService.getTotalCount(); // 전체 글개수
-		//int totalCount = boardService.getTotalCountBySearch(cri); // 검색이 적용된 전체 글개수
-		
-		//PageDTO pageDTO = new PageDTO(totalCount, cri); // 페이지블록(Pagination) 화면 만들때 필요한 정보
-		
+
+		// int totalCount = boardService.getTotalCount(); // 전체 글개수
+		// int totalCount = boardService.getTotalCountBySearch(cri); // 검색이 적용된 전체 글개수
+
+		// PageDTO pageDTO = new PageDTO(totalCount, cri); // 페이지블록(Pagination) 화면 만들때
+		// 필요한 정보
+
 		// 뷰에서 사용할 데이터를 Model 객체에 저장 -> requestScope로 옮겨줌
 		model.addAttribute("boardList", boardList);
-		//model.addAttribute("pageMaker", pageDTO);
+		// model.addAttribute("pageMaker", pageDTO);
 		System.out.println("rebored : " + boardList);
 		return "board/reboard";
 	}
-	
-	
 
+	
+	@RequestMapping(value = "/rewritemodify", method = RequestMethod.GET)
+	public String userModifyGET(@ModelAttribute("boardVO") BoardVO boardVO, Model model, HttpServletRequest request)
+	throws Exception {
+		System.out.println("후기 수정");
 
-//	@GetMapping("/booking")
-//	public String bookingGET(){
-//		
-//		HttpSession session=req.getSession();
-//		
-//		TourVO tour = (TourVO)session.getAttribute("Tour");
-//		TourVO bookingTour = boardService.bookingGET(tour.getTourid());
-//		
-//		model.addAttribute("tourId",bookingTour.getTourid());
-//		model.addAttribute("tourTitle",bookingTour.getToTitle());
-//		model.addAttribute("tourContent",bookingTour.getToContent());
-//		
-//		
-//		return "board/booking";
-//	}
-//
-//	@RequestMapping(value="/booking", method=RequestMethod.GET)
-//	public String bookingPOST(TourVO tourvo)throws Exception{
-//		
-//		
-//		
-//		
-//		return null;
-//	}
-	
-	
-	
-	
+		int boardnum = Integer.parseInt(request.getParameter("boardnum"));
+		boardVO.setBoardnum(boardnum);
 
-	@GetMapping("/confirm")
-	public String confirm() {
-		return "board/confirm";
+		BoardVO resultVO = boardService.boardcontent(boardVO);
+
+		model.addAttribute("resultVO", resultVO);
+
+		return "board/rewrite";
 	}
+	 
+	  
+	  @PostMapping("/rewritemodify") 
+	  public String modify(BoardVO boardVO,
+	  HttpServletRequest request, RedirectAttributes rttr) throws IOException {
+	  
+	  // 3) boardVO 준비해서 첨부파일 신규리스트, 삭제리스트와 함께 // 테이블 글 수정(update)을 트랜잭션 단위로 처리
+	 
+     // ===== update할 BoardVO 객체 데이터 설정 ====== 
+	  boardVO.setRegdate(new Date());
+	  boardVO.setBtitle();
+	  boardVO.setBcontent();
+	  
+	  // 글번호에 해당하는 글정보 수정.(insert, delete) - 트랜잭션 단위 처리
+	  boardService.updateBoard(boardVO, delUuidList); System.out.
+	  println("================ POST modify - 테이블 수정 완료 ================");
+	  
+	 // 리다이렉트 쿼리스트링 정보 설정 
+	  rttr.addAttribute("num", boardVO.getNum());
+	  
+	  
+	  // 상세보기 화면으로 리다이렉트 이동 
+	  return "redirect:/board/reboard"; 
+	  
+	  } // modify
+	 
 
 }
-
