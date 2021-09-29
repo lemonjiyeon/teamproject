@@ -47,7 +47,7 @@
 
 
 					<div class="my-4 text-center">
-						<button type="submit" class="btn btn-primary" id="submit">
+						<button type="submit" class="btn btn-primary" id="submit" onclick="location.href = '/board/rewrite';">
 							<i class="material-icons align-middle">create</i> 새글등록
 						</button>
 						<button type="reset" class="btn btn-primary ml-3">
