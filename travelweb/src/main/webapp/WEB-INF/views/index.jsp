@@ -239,11 +239,10 @@
            </c:forEach>
             
             
-         </div><!-- end row gx-0-->
+         </div><!-- end row gx-0ㄴㅇㅁㄴ-->
       </div>
    </section>
    <nav>
-  
 </nav>
 <%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
