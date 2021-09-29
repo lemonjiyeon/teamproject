@@ -26,7 +26,7 @@
 		<div class="container px-4 px-lg-5 mt-5">
 			<div
 				class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-				<c:forEach var="list" items="${ boardList }">
+				<c:forEach var="list" items="${boardList}">
 				<div class="col mb-5">
 					<div class="card h-100">
 						<!-- Product image-->
@@ -36,7 +36,12 @@
 						<div class="card-body p-4">
 							<div class="text-center">
 								<!-- Product name-->
+<<<<<<< HEAD
 								<h5 class="fw-bolder" > ${ list.btitle} </h5>
+=======
+								<h5 class="fw-bolder" >주인장 ${list.userid} </h5>
+  							<h5 class="fw-bolder" >후기 제목 ${list.btitle} </h5>
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 								<!-- Product price-->
 							</div>
 						</div>
