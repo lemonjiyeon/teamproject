@@ -53,10 +53,12 @@
    #dang{
       width:1200px;
       margin:0 auto;
+      color: black;
    }
    #dang ul li button{
       width:600px;
       margin:0 auto;
+      color:black;
    }
    .card-text{
    		font-size: 14px;
@@ -72,24 +74,21 @@
    
    <div class="slider">
       <header class="masthead1 d-flex align-items-center">
-         <div class="container px-4 px-lg-5 text-center">
-            <h1 class="mb-1">welcome to 경주 its your world</h1>
+         <div class="container px-4 px-lg-5 text-center">       
             <h3 class="mb-5">
                <em>A Free Bootstrap Theme by Start Bootstrap</em>
             </h3>
          </div>
       </header>
       <header class="masthead2 d-flex align-items-center">
-         <div class="container px-4 px-lg-5 text-center">
-            <h1 class="mb-1">hello nice to meet ya</h1>
+         <div class="container px-4 px-lg-5 text-center">           
             <h3 class="mb-5">
                <em>A Free Bootstrap Theme by Start Bootstrap</em>
             </h3>
          </div>
       </header>
       <header class="masthead3 d-flex align-items-center">
-         <div class="container px-4 px-lg-5 text-center">
-            <h1 class="mb-1">와 여기 정말 좋은 곳이구나</h1>
+         <div class="container px-4 px-lg-5 text-center">         
             <h3 class="mb-5">
                <em>A Free Bootstrap Theme by Start Bootstrap</em>
             </h3>
@@ -135,10 +134,12 @@
   <!-- 제주도 -->
 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact">
     <div id="cardwrap">	
-	<c:forEach var="tlist" items="${tourList }">
+	<c:forEach var="tlist" items="${tourList }" varStatus="status">
 		<c:if test="${tlist.toChoice eq 'jeju' }">
 		<div class="card" style="width: 18rem;">
-		  <img src="./resources/assets/images/in4.jpg" class="card-img-top" alt="...">
+		  <c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/s_${ adList[status.index].uuid }_${ adList[status.index].filename }"/>
+		  	<c:set var="originPath" value="${ adList[status.index].uploadpath }/${adList[status.index].uuid }_${ adList[status.index].filename }"/>		  				  	
+		  	<img src="/display?fileName=${originPath }" class="card-img-top" alt="...">	
 		  <div class="card-body">
 		    <h5 class="card-title">${tlist.toPrice }원</h5>
 		    <p class="card-text">${tlist.toTitle }</p>
@@ -172,87 +173,44 @@
   <!-- 당일치기카드 -->
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
   <!-- 당일시자악 -->
-<div id="cardwrap">
- <div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/anja1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/anja2.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/anja3.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/anja4.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
+<div id="cardwrap">	
+	<c:forEach var="tlist" items="${tourList }" varStatus="status">
+		<c:if test="${tlist.toChoice eq 'fewdays' }">
+		<div class="card" style="width: 18rem;">
+		  <c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/s_${ adList[status.index].uuid }_${ adList[status.index].filename }"/>
+		  	<c:set var="originPath" value="${ adList[status.index].uploadpath }/${adList[status.index].uuid }_${ adList[status.index].filename }"/>		  				  	
+		  	<img src="/display?fileName=${originPath }" class="card-img-top" alt="...">	
+		  <div class="card-body">
+		    <h5 class="card-title">${tlist.toPrice }원</h5>
+		    <p class="card-text">${tlist.toTitle }</p>
+		    <a href="" class="btn btn-primary">예약 하러가기</a>
+		  </div>
+		</div>
+		</c:if>
+	</c:forEach>	
 </div>
 </div> <!-- end cardwrap -->   
-  </div>
 <!-- 1박2일카드 -->  
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
      <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile">
 <div id="cardwrap">
- <div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/ja1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/ja2.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/ja3.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="./resources/assets/images/ja4.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+ 	<c:forEach var="tlist" items="${tourList }" varStatus="status">
+		<c:if test="${tlist.toChoice eq 'today' }">
+		<div class="card" style="width: 18rem;">
+		  <c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/s_${ adList[status.index].uuid }_${ adList[status.index].filename }"/>
+		  	<c:set var="originPath" value="${ adList[status.index].uploadpath }/${adList[status.index].uuid }_${ adList[status.index].filename }"/>		  				  	
+		  	<img src="/display?fileName=${originPath }" class="card-img-top" alt="...">	
+		  <div class="card-body">
+		    <h5 class="card-title">${tlist.toPrice }원</h5>
+		    <p class="card-text">${tlist.toTitle }</p>
+		    <a href="" class="btn btn-primary">예약 하러가기</a>
+		  </div>
+		</div>
+		</c:if>
+	</c:forEach>
 </div> <!-- end cardwrap --> 
   </div>  
-  </div>
-</div>      
+ </div>     
    <!-- Portfolio-->
    <section class="content-section" id="portfolio">
       <div class="container px-4 px-lg-5">
