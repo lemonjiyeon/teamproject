@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.travel.domain.BoardVO;
-
+import com.travel.domain.Criteria;
 import com.travel.mapper.BoardMapper;
 
 @Service
@@ -40,5 +40,12 @@ public class BoardService {
 		return boardMapper.getTotalCount();
 	}
 	
+	public BoardVO boardcontent (BoardVO boardVO) {
+		return boardMapper.getBoard(boardVO);
+	}
 
+	public List<BoardVO> getBoards(Criteria cri) {
+		// TODO Auto-generated method stub
+		return boardMapper.getBoards();
+	}
 }

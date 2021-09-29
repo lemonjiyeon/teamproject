@@ -28,7 +28,7 @@
 				<form action="/board/rewriteform" method="POST" enctype="multipart/form-data">
 					<div class="input-group mt-3 mb-2">
 						<label class="p-3" for="subject">제목</label> <input type="text"
-							class="form-control in" id="subject" name="subject" autofocus value="${ board.bTitle }">
+							class="form-control in" id="subject" name="bTitle" autofocus value="${ board.bTitle }">
 					</div>
 					
 					<div class="input-group mb-2">
@@ -40,7 +40,7 @@
 					<div class="input-group mb-2">
 						<label class="p-3" for="content">내용</label>
 						<textarea class="form-control in" id="content" rows="10"
-							name="content" value= "${ board.bContent }"></textarea>
+							name="bContent" value= "${ board.bContent }"></textarea>
 					</div>
 
 

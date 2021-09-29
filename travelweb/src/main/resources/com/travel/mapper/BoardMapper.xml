@@ -34,11 +34,10 @@
 	</delete>
 
 
-	<select id="getBoards" resultType="boardVO">
+	<select id="getBoards" resultType="BoardVO">
 	<![CDATA[
 		SELECT * 
 		FROM board
-		ORDER BY reg_date DESC 
 	]]>
 	</select>
 
@@ -82,12 +81,7 @@
 	]]>
 	</select>
 	
-	<update id="">
-	<![CDATA[
-		UPDATE board 
-		SET readcount = readcount + 1
-		WHERE boardnum = #{boardnum}
-	]]>
-	</update>
+	
+	
 	
 </mapper>

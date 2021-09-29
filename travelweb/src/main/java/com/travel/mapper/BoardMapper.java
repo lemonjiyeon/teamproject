@@ -19,7 +19,6 @@ public interface BoardMapper {
 
 	int deleteBoardByNum(int num); // 글번호에 해당하는 글 한개 삭제하기
 
-	List<BoardVO> getBoards(); // 전체 게시글 내용 가져오기
 
 	//List<BoardVO> getBoardsWithPaging(Criteria cri); // 페이징으로 게시글 내용 가져오기
 
@@ -37,6 +36,14 @@ public interface BoardMapper {
 
 	// 매개변수가 2개 이상일 경우, 각 매개변수마다 SQL문에서 사용할 이름을 지정해야 함
 	//void updateReSeqPlusOne(@Param("reRef") int reRef, @Param("reSeq") int reSeq);
+//===================================================================================================	
+	BoardVO getBoard(BoardVO boardVO);
+	
+	List<BoardVO> getBoards(); // 전체 게시글 내용 가져오기
+	
+
+
+		
 
 
 }
