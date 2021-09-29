@@ -4,32 +4,31 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.travel.mapper.HomeMapper">
 
-	<select id="getTourAddattach" resultType="TourVO">
+	<select id="getTourAddattach" resultType="tourVO">
 		<![CDATA[
 		select t.tourid, t.to_title, t.to_price, t.to_content, t.to_start, t.to_end, t.to_choice, a.filename
 		from tour t left outer join adattach a
 		on t.tourid = a.bno
-		where to_choice = #{toChoice}
 		 ]]>
 	</select>
 	
 <!-- 	<resultMap type="TourVO" id="tourAndAddAttach"> -->
 <!-- 		<id column="tourid" property="tourid"/> -->
-<!-- 		<result column="to_title" property="totitle"/> -->
-<!-- 		<result column="to_price" property="toprice"/> -->
-<!-- 		<result column="to_content" property="tocontent"/> -->
-<!-- 		<result column="to_start" property="tostart"/> -->
-<!-- 		<result column="to_end" property="toend"/> -->
-<!-- 		<result column="to_choice" property="tochoice"/> -->
-<!-- 		<collection property="addattachlist" javaType="list" ofType="AdAttachVO"> -->
-<!-- 			<id column="uuid" property="uuid"/> -->
-<!-- 			<id column="uploadpath" property="uploadpath"/> -->
-<!-- 			<id column="filename" property="filename"/> -->
-<!-- 			<id column="filetype" property="filetype"/> -->
-<!-- 			<id column="bno" property="bno"/>		 -->
+<!-- 		<result column="to_title" property="toTitle"/> -->
+<!-- 		<result column="to_price" property="toPrice"/> -->
+<!-- 		<result column="to_content" property="toContent"/> -->
+<!-- 		<result column="to_start" property="toStart"/> -->
+<!-- 		<result column="to_end" property="toEnd"/> -->
+<!-- 		<result column="to_choice" property="toChoice"/> -->
+<!-- 		<collection property="adattachlist" javaType="list" ofType="AdAttachVO"> -->
+<!-- 			<id column="filename" property="filename"/>	 -->
 <!-- 		</collection>	 -->
 <!-- 	</resultMap> -->
 	
+	<select id="getAdattach" resultType="AttachVO">
+		select *
+		from adattach
+	</select>
 	
 
 </mapper>

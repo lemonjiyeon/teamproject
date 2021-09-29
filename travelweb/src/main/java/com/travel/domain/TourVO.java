@@ -1,6 +1,7 @@
 package com.travel.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -20,4 +21,6 @@ public class TourVO {
 	private String toChoice;
 	
 	private AdAttachVO adattachVO;
+	
+	private List<AdAttachVO> adattachlist;
 }

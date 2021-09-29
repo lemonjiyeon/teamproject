@@ -4,11 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.travel.domain.AttachVO;
 import com.travel.domain.BoardVO;
-import com.travel.mapper.AttachMapper;
 import com.travel.mapper.BoardMapper;
 
 @Service
@@ -46,4 +43,11 @@ public class BoardService {
 	public int getTotalCount() {
 		return boardMapper.getTotalCount();
 	}
+	
+
+
+//	public TourVO bookingGET(int tourid) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 }

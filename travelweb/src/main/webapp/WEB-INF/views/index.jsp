@@ -50,15 +50,6 @@
     border-bottom: 1px solid #ecb807;
     margin:0 auto;
 }
-	#dang{
-		width:1200px;
-		margin:0 auto;
-	}
-	#dang ul li button{
-		color:black;
-		width:600px;
-		margin:0 auto;
-	}
    #dang{
       width:1200px;
       margin:0 auto;
@@ -123,11 +114,14 @@
 <div class="tab-content" id="nav-tabContent">
 <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile">
 <!-- 내륙시작 -->
-	<div id="cardwrap">	
-	<c:forEach var="tlist" items="${tourList }" end="3">
-		<c:if test="${tlist.toChoice eq 'island' }">
-		<div class="card" style="width: 18rem;">
-		  <img src="./resources/assets/images/in4.jpg" class="card-img-top" alt="...">
+	<div id="cardwrap">
+	
+	<c:forEach var="tlist" items="${tourList }" end="3" varStatus="status">
+		<c:if test="${tlist.toChoice eq 'island' }">		
+		<div class="card" style="width: 18rem;">		  		  		  	
+		  	<c:set var="fileCallPath" value="${ adList[status.index].uploadpath }/s_${ adList[status.index].uuid }_${ adList[status.index].filename }"/>
+		  	<c:set var="originPath" value="${ adList[status.index].uploadpath }/${adList[status.index].uuid }_${ adList[status.index].filename }"/>		  				  	
+		  	<img src="/display?fileName=${originPath }" class="card-img-top" alt="...">		  
 		  <div class="card-body">
 		    <h5 class="card-title">${tlist.toPrice }원</h5>
 		    <p class="card-text">${tlist.toTitle }</p>
@@ -138,7 +132,6 @@
 	</c:forEach>	
 	</div>		
 </div> <!-- end cardwrap --> 
-
   <!-- 제주도 -->
 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact">
     <div id="cardwrap">	
@@ -325,17 +318,6 @@
 <%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 
-<<<<<<< HEAD
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top"><i
-		class="fas fa-angle-up"></i></a>
-	<!-- Bootstrap core JS-->
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- Core theme JS-->
-	<script src="./resources/js/scripts.js"></script>	
-</body>    
-=======
    <!-- Scroll to Top Button-->
    <a class="scroll-to-top rounded" href="#page-top"><i
       class="fas fa-angle-up"></i></a>
@@ -347,5 +329,4 @@
    
 </body>
     
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject.git
 </html>
