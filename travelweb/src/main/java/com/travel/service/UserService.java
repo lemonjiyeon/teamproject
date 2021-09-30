@@ -36,7 +36,7 @@ public class UserService {
 		usermapper.userUpdate(vo);
 	}
 	//회원탈퇴
-	public void userDelete(UserVO vo) {
-		usermapper.userDelete(vo);
+	public void userDelete(String userid) {
+		usermapper.userDelete(userid);
 	}
 }

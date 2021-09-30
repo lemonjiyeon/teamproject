@@ -27,5 +27,5 @@ public interface UserMapper {
 	  
 	//회원탈퇴
 	@Delete("DELETE FROM user WHERE userid = #{userid}")
-	void userDelete(UserVO vo);
+	void userDelete(String userid);
 }

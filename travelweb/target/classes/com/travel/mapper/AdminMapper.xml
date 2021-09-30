@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.mapper.AdminMapper">
+<resultMap type="TourVO" id="tourMap">
+		<id column="tourid" property="tourid"/>
+		<result column="to_title" property="toTitle"/>
+		<result column="to_price" property="toPrice"/>
+		<result column="to_content" property="toContent"/>
+		<result column="to_start" property="toStart"/>
+		<result column="to_end" property="toEnd"/>
+		<result column="to_choice" property="toChoice"/>
+		<collection property="adattachVO" ofType="AdAttachVO">
+			<id column="uuid" property="uuid"/>
+			<result column="uploadpath" property="uploadpath"/>
+			<result column="filename" property="filename"/>
+			<result column="filetype" property="filetype"/>
+			<result column="bno" property="bno"/>
+		</collection>
+	</resultMap>
+	</mapper>
+

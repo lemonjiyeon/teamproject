@@ -175,10 +175,13 @@ public class UserController {
 //	}
 	
 	@GetMapping("/delete")
-	   public String delete(UserVO vo) {
-	     userService.userDelete(vo);
-	      
-	      return "/";
+	   public String delete(String userid, HttpSession session) {
+	     
+		userService.userDelete(userid);
+	     
+	     session.invalidate();
+	   System.out.println("======= 회원탈퇴완료 =======");
+	      return "redirect:/";
 	         
 	   }
 }
