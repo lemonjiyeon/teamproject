@@ -47,12 +47,12 @@
 				<h2 class="mb-5">제주도시 여행상품 보기</h2>
 			</div>
 	<div class="autoplay">
-  		<div><img src="../resources/assets/images/newjeju1.jpg"></div>
-  		<div><img src="../resources/assets/images/newjeju2.jpg"></div>
+  		<!-- <div><img src="../resources/assets/images/newjeju1.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju2.jpg"></div> -->
   		<div><img src="../resources/assets/images/newjeju3.jpg"></div>
   		<div><img src="../resources/assets/images/newjeju4.jpg"></div>
-  		<div><img src="../resources/assets/images/newjeju5.jpg"></div>
-  		<div><img src="../resources/assets/images/newjeju6.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju55.jpg"></div>
+  		<div><img src="../resources/assets/images/newjeju66.jpg"></div>
 	</div>
 	<p>
 	<div class="content-section-heading text-center">
@@ -63,10 +63,10 @@
 		<div><img src="../resources/assets/images/jeju_map.jpg" usemap="#Map"></div>
 		<map name="Map">
 			<area shape="rect" coords="319,74,396,127" href="제주 국제공항">
-			<area shape="rect" coords="347,165,440,264" href="한라산">
-			<area shape="rect" coords="204,247,265,307" href="카멜리아힐">
-			<area shape="rect" coords="686,133,822,181" href="성산일출봉">
-			<area shape="rect" coords="655,177,731,220" href="섭지코지">									
+			<area shape="rect" coords="347,165,440,264" href="/board/booking">
+			<area shape="rect" coords="204,247,265,307" href="/board/booking">
+			<area shape="rect" coords="686,133,822,181" href="/board/booking">
+			<area shape="rect" coords="655,177,731,220" href="/board/booking">									
 		</map>	
 	</div>
 	</div>
