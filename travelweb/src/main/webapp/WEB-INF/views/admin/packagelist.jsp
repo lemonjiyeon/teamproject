@@ -67,10 +67,10 @@
 									<!-- Product actions-->
 									<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
 										<div class="text-center">
-											<button type="submit" class="btn btn-primary">
+											<button type="submit" id="update" class="btn btn-primary" onclick="location.href = '/admin/packagecontent?tourid=${ tour.tourid }&pageNum=${ pageNum }'">
 												<i class="material-icons align-middle">create</i> 수정
 											</button>
-											<button type="button" class="btn btn-warning delete-file">
+											<button type="button" class="btn btn-warning delete-file" id="delete" onclick="location.href = '/admin/delete?bno=${ adList[status.index].bno }'">
 												<i class="material-icons align-middle">clear</i> 삭제
 											</button>
 										</div>
@@ -103,7 +103,7 @@
 								<li
 									class="page-item ${ (pageMaker.cri.pageNum eq i) ? 'active' : '' }">
 									<a class="page-link"
-									href="/admin/packagelist?pageNum=${ i }&type=${ pageMaker.cri.type }&keyword=${ pageMaker.cri.keyword }#board">${ i }</a>
+									href="/admin/packagelist?pageNum=${ i }&type=${ pageMaker.cri.type }#board">${ i }</a>
 								</li>
 							</c:forEach>
 
@@ -122,5 +122,16 @@
 	<%-- footer --%>
 	<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 
+<script>
+$('button#delete').on('click', function(){
+	let cf = confirm('정말삭제하시겠습니까?')
+	if(cf==true){
+		$('button#delete').submit();
+	}else{
+		return false;
+	}
+	
+});
+</script>
 </body>
 </html>

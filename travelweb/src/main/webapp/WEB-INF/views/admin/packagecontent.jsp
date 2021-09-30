@@ -28,7 +28,7 @@
 		text-center"
 		id="services">
 		<h1 class="tit_head">
-			<strong>패키지 상품등록</strong>
+			<strong>패키지 상품수정</strong>
 		</h1>
 
 		<div class="container">
@@ -45,7 +45,7 @@
 				<div class="input-group mt-4">
 
 					<label class="p-3" for="subject">종류</label> <span
-						class="rio_circle mt-3"><input type="radio" id="reten1"
+						class="rio_circle"><input type="text" class="form-control in" id="reten1"
 						name="toChoice" value="${tourVO.toChoice}"></span>
 				</div>
 
@@ -77,11 +77,11 @@
 
 				<div class="input-group mb-2" align="left">
 					<c:choose>
-						<c:when test="${ fn:length(attachList) > 0 }">
+						<c:when test="${ fn:length(adattachVO) > 0 }">
 							<%-- 첨부파일 있으면 --%>
 							<ul>
 
-								<c:forEach var="attach" items="${ attachList }">
+								<c:forEach var="attach" items="${ adattachVO }">
 									<c:if test="${ attach.filetype eq 'O' }">
 										<li><c:set var="fileCallPath"
 												value="${ attach.uploadpath }/${ attach.uuid }_${ attach.filename }" />
@@ -117,7 +117,7 @@
 						<i class="material-icons align-middle">clear</i> 초기화
 					</button>
 					<button type="button" class="btn btn-primary ml-3"
-						onclick="location.href = '/board/list?pageNum=${ pageNum }';">
+						onclick="location.href = '/admin/packagelist?pageNum=${ pageNum }';">
 						<i class="material-icons align-middle">list</i> 상품목록
 					</button>
 				</div>

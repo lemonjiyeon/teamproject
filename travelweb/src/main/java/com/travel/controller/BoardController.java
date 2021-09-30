@@ -33,7 +33,12 @@ public class BoardController {
 	public String rewriteform(@ModelAttribute("pageNum") String pageNum) {
 		return "board/rewriteform";
 
+<<<<<<< HEAD
 	}
+=======
+	}			
+	
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 
 	// 글쓰기 처리
 	@PostMapping("/rewriteform")
@@ -107,15 +112,51 @@ public class BoardController {
 		System.out.println("rebored : " + boardList);
 		return "board/reboard";
 	}
+<<<<<<< HEAD
 
 	
 	@GetMapping("/board/rewritemodify")
 	public String boardModifyGET(@ModelAttribute("boardnum") BoardVO boardVO, Model model, HttpServletRequest request)
 	throws Exception {
 		System.out.println("후기 수정");
+=======
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 
+<<<<<<< HEAD
 		int boardnum = Integer.parseInt(request.getParameter("boardnum"));
 		boardVO.setBoardnum(boardnum);
+=======
+//	@GetMapping("/booking")
+//	public String bookingGET(){
+//		
+//		HttpSession session=req.getSession();
+//		
+//		TourVO tour = (TourVO)session.getAttribute("Tour");
+//		TourVO bookingTour = boardService.bookingGET(tour.getTourid());
+//		
+//		model.addAttribute("tourId",bookingTour.getTourid());
+//		model.addAttribute("tourTitle",bookingTour.getToTitle());
+//		model.addAttribute("tourContent",bookingTour.getToContent());
+//		
+//		
+//		return "board/booking";
+//	}
+//
+//	@RequestMapping(value="/booking", method=RequestMethod.GET)
+//	public String bookingPOST(TourVO tourvo)throws Exception{
+//		
+//		
+//		
+//		
+//		return null;
+//	}
+	@GetMapping("/booking")
+	public String booking() {
+		return "board/booking";
+
+	}
+	
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 
 		BoardVO resultVO = boardService.boardcontent(boardVO);
 
