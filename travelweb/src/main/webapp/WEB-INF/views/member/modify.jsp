@@ -92,10 +92,11 @@
 						<i class="material-icons align-middle">create</i> 수정
 					</button>
 
-					<button type="button" class="btn btn-primary ml-3"
-						onclick="deleteUser(event)">
-						<i class="material-icons align-middle"></i> 글삭제
+					<button type="button" class="btn btn-primary ml-3" id="delete"
+						onclick="location.href = '/member/delete?userid=${sessionScope.id}'">
+						<i class="material-icons align-middle"></i> 탈퇴
 					</button>
+
 					<!-- <button role="form" action="/delete" type="submit" class="btn btn-warning delete-file">
 					<i class="material-icons align-middle">clear</i> 탈퇴
 				</button> -->
@@ -117,21 +118,32 @@
       }
    }
    </script>
-   
-   <script>
-   
+
+	<script>
+$('button#delete').on('click', function(){
+	let cf = confirm('정말삭제하시겠습니까?')
+	if(cf==true){
+		$('button#delete').submit();
+	}else{
+		return false;
+	}
+	
+});
+</script>
+
+	<!--    <script>
       function deleteUser(event){
           event.preventDefault();
           
-          let isRemove = confirm("이 글을 삭제하시겠습니까?")
+          let isRemove = confirm("회원탈퇴를 하시겠습니까?")
           if(isRemove == true){
              location.href = '/member/delete?num=${sessionScope.id}';
           }         
       }
-    
-    
-      
-   </script>
+   </script> -->
+
+
+
 
 	<%-- footer --%>
 	<jsp:include page="/WEB-INF/views/include/footer.jsp" />

@@ -12,9 +12,9 @@ public class BoardVO {
 	private String userid;
 	private String btitle;
 	private String bcontent;
-	private Date regDate;
+	private Date regdate;
 	private int readcount;
-	private int bReco;  //추천수
+	private int breco;  //추천수
 	
 	// private List<AttachVO> attachList;
 	

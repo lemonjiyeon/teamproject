@@ -154,6 +154,8 @@ public class AdminController {
 	 * return "admin/packagelist"; }
 	 */
 
+	
+	
 	@GetMapping("/delete")
 	public String remove(int bno) {
 
