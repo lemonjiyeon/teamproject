@@ -132,7 +132,17 @@ public class AdminController {
 	public String packagecontent(int tourid, @ModelAttribute("pageNum") String pageNum, Model model) {
 
 		TourVO tourVO = adminService.getTourAndAttach(tourid);
+		Date dates = tourVO.getToStart();
+		Date datee = tourVO.getToEnd();
 
+		SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+		String datenews = transFormat.format(dates);
+		String datenewe = transFormat.format(datee);
+
+
+		model.addAttribute("datenews",datenews);
+		model.addAttribute("datenewe",datenewe);
 		model.addAttribute("tourVO", tourVO);
 		model.addAttribute("adattachVO", tourVO.getAdattachVO());
 		return "admin/packagecontent";
