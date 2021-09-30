@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -108,8 +109,8 @@ public class BoardController {
 	}
 
 	
-	@RequestMapping(value = "/rewritemodify", method = RequestMethod.GET)
-	public String boardModifyGET(@ModelAttribute("boardVO") BoardVO boardVO, Model model, HttpServletRequest request)
+	@GetMapping("/board/rewritemodify")
+	public String boardModifyGET(@ModelAttribute("boardnum") BoardVO boardVO, Model model, HttpServletRequest request)
 	throws Exception {
 		System.out.println("후기 수정");
 
@@ -119,8 +120,8 @@ public class BoardController {
 		BoardVO resultVO = boardService.boardcontent(boardVO);
 
 		model.addAttribute("resultVO", resultVO);
-
-		return "board/rewrite";
+		System.out.println("수정?" + resultVO);
+		return "board/rewritemodify";
 	}
 	 
 	  
@@ -129,24 +130,40 @@ public class BoardController {
 	  HttpServletRequest request, RedirectAttributes rttr) throws IOException {
 	  
 	  // 3) boardVO 준비해서 첨부파일 신규리스트, 삭제리스트와 함께 // 테이블 글 수정(update)을 트랜잭션 단위로 처리
-	 
-     // ===== update할 BoardVO 객체 데이터 설정 ====== 
-	  boardVO.setRegdate(new Date());
-	  boardVO.getBtitle();
-	  boardVO.getBcontent();
+		 String title = boardVO.getBtitle();
+		 String content = boardVO.getBcontent();
+     // ===== update할 BoardVO 객체 데이터 설정 ======
 	  
-	  // 글번호에 해당하는 글정보 수정.(insert, delete) - 트랜잭션 단위 처리
-	  boardService.updateBoard(boardVO); System.out.
-	  println("================ POST modify - 테이블 수정 완료 ================");
+	  boardVO.setRegdate(new Date());
+	  boardVO.setBtitle(title);
+	  boardVO.setBcontent(content);
+	  
+	  // boardnum에 해당하는 후기 수정.
+	  boardService.updateBoard(boardVO); 
+	  System.out.println("boardVO" + boardVO);
+	  System.out.println("================ POST modify - 테이블 수정 완료 ================");
+	  
+//	  //boardnum에 해당하는 후기 삭제
+//	  int boardnum = Integer.parseInt(request.getParameter("boardnum"));
+//	  boardVO = boardService.getBoard(boardnum);
+//	  boardService.deleteByboardnum(boardVO);
 	  
 	 // 리다이렉트 쿼리스트링 정보 설정 
-	  rttr.addAttribute("boardnum", boardVO.getBoardnum());
+	 rttr.addAttribute("boardnum", boardVO.getBoardnum());
 	  
 	  
 	  // 상세보기 화면으로 리다이렉트 이동 
 	  return "redirect:/board/reboard"; 
 	  
 	  } // modify
-	 
+	  
+	 @GetMapping("/delete")
+	 public String delete(BoardVO boardVO) {
+		 boardService.deleteByboardnum(boardVO);
+		 
+		 System.out.println("후기 삭제 완료!");
+		 
+		 return "/";
+	 }
 
 }

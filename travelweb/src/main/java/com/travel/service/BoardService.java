@@ -48,9 +48,13 @@ public class BoardService {
 		// TODO Auto-generated method stub
 		return boardMapper.getBoards();
 	}
-
-	public List<BoardVO> updateBoard(BoardVO boardVO) {
+    //rewritemodify
+	public void updateBoard(BoardVO boardVO) {
 		// TODO Auto-generated method stub
-		return boardMapper.getBoards();
+		boardMapper.updateBoard(boardVO);
+	}
+	
+	public void deleteByboardnum(BoardVO boardVO) {
+		boardMapper.deleteByboardnum(boardVO);
 	}
 }

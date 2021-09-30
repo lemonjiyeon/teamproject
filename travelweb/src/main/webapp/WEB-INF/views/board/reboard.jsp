@@ -36,19 +36,15 @@
 						<div class="card-body p-4">
 							<div class="text-center">
 								<!-- Product name-->
-<<<<<<< HEAD
-								<h5 class="fw-bolder" > ${ list.btitle} </h5>
-=======
-								<h5 class="fw-bolder" >주인장 ${list.userid} </h5>
-  							<h5 class="fw-bolder" >후기 제목 ${list.btitle} </h5>
->>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
+
+  							<h5 class="fw-bolder" >${list.btitle} </h5>
 								<!-- Product price-->
 							</div>
 						</div>
 						<!-- Product actions-->
 						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
 							<div class="text-center">
-								<a class="btn btn-outline-dark mt-auto" href="/board/rewrite?boardnum=${ list.boardnum }">후기 보기${ list.boardnum }</a>
+								<a class="btn btn-outline-dark mt-auto" href="/board/rewrite?boardnum=${ list.boardnum }">후기 보기</a>
 							</div>
 						</div>
 					</div>

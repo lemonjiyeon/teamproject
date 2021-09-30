@@ -27,9 +27,9 @@
 	</delete>
 
 
-	<delete id="deleteBoardByNum">
+	<delete id="deleteByboardnum">
 	<![CDATA[
-		DELETE FROM board WHERE num = #{boardnum}
+		DELETE FROM board WHERE boardnum = #{boardnum}
 	]]>
 	</delete>
 
@@ -80,6 +80,14 @@
 		where boardnum = #{boardnum}
 	]]>
 	</select>
+	
+	<update id="updateBoard">
+	<![CDATA[
+		UPDATE board
+		SET b_title = #{btitle}, b_content = #{bcontent}, reg_date = #{regdate} 
+		WHERE boardnum = #{boardnum}
+	]]>
+	</update>
 	
 	
 	

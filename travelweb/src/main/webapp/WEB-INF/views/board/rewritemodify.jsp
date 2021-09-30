@@ -25,10 +25,11 @@
 
 			<div class="container">
 
-				<form action="/board/rewriteform" method="POST" enctype="multipart/form-data">
+				<form action="/board/rewritemodify" method="POST" enctype="multipart/form-data">
+				<input type="hidden" name="boardnum" value="${ resultVO.boardnum }">
 					<div class="input-group mt-3 mb-2">
 						<label class="p-3" for="subject">제목</label> <input type="text"
-							class="form-control in" id="subject" name="bTitle" autofocus value="${ resultVO.btitle }" readonly>
+							class="form-control in" id="subject" name="btitle" autofocus value="${ resultVO.btitle }" >
 					</div>
 					
 					<div class="input-group mb-2">
@@ -40,21 +41,18 @@
 					<div class="input-group mb-2">
 						<label class="p-3" for="content">내용</label>
 						<textarea class="form-control in" id="content" rows="10"
-							name="bContent" readonly>${ resultVO.bcontent }</textarea>
+							name="bcontent" >${ resultVO.bcontent }</textarea>
 					</div>
 
 
 					<div class="my-4 text-center">
-					<button type="submit" class="btn btn-primary" id="submit" onclick="location.href = '/board/rewriteform';">
-							<i class="material-icons align-middle">create</i> 후기 수정
+					<button type="submit" class="btn btn-primary"  onclick="location.href = '';">
+							<i class="material-icons align-middle">create</i> 수정 완료
 						</button>
-						<button type="reset" class="btn btn-primary ml-3">
+						<button type="submit" class="btn btn-primary ml-3" onclick="deleteboardnum(event)">
 							<i class="material-icons align-middle">clear</i> 후기 삭제
 						</button>
-						<button type="button" class="btn btn-primary ml-3"
-							onclick="location.href = '/board/reboard?pageNum=${ pageNum }';">
-							<i class="material-icons align-middle">list</i> 후기 목록
-						</button>
+						
 					</div>
 				</form>
 			</div>
@@ -62,7 +60,17 @@
 	
 	<%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+<script>
 	
+	function deleteboardnum(event){
+		event.preventDefault();
+		
+		let isRemove = confirm("후기를 삭제하시겠습니까?")
+		if(isRemove == true){
+			location.href = '/board/delete?num=$(resultVO.boardnum)';
+		}
+	}
+</script>	
 	
 </body>
 </html>
