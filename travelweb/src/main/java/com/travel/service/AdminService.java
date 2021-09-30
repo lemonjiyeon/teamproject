@@ -32,7 +32,8 @@ public class AdminService {
 		}
 	}
 	
-	public List<TourVO> getBoardAndAttaches(Criteria cri) {
+	/* 패키지 상품리스트, 페이징 설정 */
+	public List<TourVO> getTours(Criteria cri) {
 		int startRow = (cri.getPageNum()-1) * cri.getAmount();
 		cri.setStartRow(startRow); // 시작행번호 설정
 		
@@ -43,10 +44,22 @@ public class AdminService {
 		return adminMapper.getTotalCount();
 	}
 	
-	
-	
 	  public List<AdAttachVO> getAttaches(Criteria cri) { return
 	  adminMapper.getAttaches(cri); // join 쿼리로 데이터 가져오기
 	  }
+	  
+	  public TourVO getTourAndAttach(int tourid) {
+			return adminMapper.getTourAndAttach(tourid);
+		}
+
+	  public AdAttachVO getAttach(int bno) {
+		  return adminMapper.getAttach(bno);
+	  }
+	  
+	  public void deleteTourAttachFile(int bno) {
+			adminMapper.deleteTourAttachFile(bno);
+			adminMapper.deleteTour(bno);
+		}
+		
 	 
 }
