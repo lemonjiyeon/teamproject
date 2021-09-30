@@ -42,7 +42,7 @@
 			</div>
 			<div class="row gx-0">
 				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
+					<a class="portfolio-item" href="/board/booking">
 						<div class="caption">
 							<div class="caption-content">
 							
@@ -52,7 +52,7 @@
 					</a>
 				</div>
 				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
+					<a class="portfolio-item" href="/board/booking">
 						<div class="caption">
 							<div class="caption-content">
 							
@@ -62,7 +62,7 @@
 					</a>
 				</div>
 				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
+					<a class="portfolio-item" href="/board/booking">
 						<div class="caption">
 							<div class="caption-content">
 								
@@ -72,7 +72,7 @@
 					</a>
 				</div>
 				<div class="col-lg-6">
-					<a class="portfolio-item" href="#!">
+					<a class="portfolio-item" href="/board/booking">
 						<div class="caption">
 							<div class="caption-content">
 								

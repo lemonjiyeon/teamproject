@@ -10,8 +10,8 @@ public class BoardVO {
 	
 	private int boardnum;  
 	private String userid;
-	private String bTitle;
-	private String bContent;
+	private String btitle;
+	private String bcontent;
 	private Date regDate;
 	private int readcount;
 	private int bReco;  //추천수
