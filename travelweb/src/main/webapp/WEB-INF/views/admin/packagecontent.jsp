@@ -62,11 +62,11 @@
 				</div>
 
 				<div class="input-group mb-2">
-					<label class="p-2" for="id">날짜</label> <input type="date"
+					<label class="p-2" for="id">날짜</label> <input type="text"
 						class="form-control" id="date" name="toStart"
-						value="${tourVO.toStart}">&nbsp;&nbsp;&#126;&nbsp;&nbsp; <input
-						type="date" class="form-control" id="date" name="toEnd"
-						value="${tourVO.toEnd}">
+						value="${datenews}">&nbsp;&nbsp;&#126;&nbsp;&nbsp; <input
+						type="text" class="form-control" id="date" name="toEnd"
+						value="${datenewe}">
 				</div>
 
 				<div class="input-group mb-2">
