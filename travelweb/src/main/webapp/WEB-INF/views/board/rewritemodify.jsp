@@ -49,7 +49,8 @@
 					<button type="submit" class="btn btn-primary"  onclick="location.href = '';">
 							<i class="material-icons align-middle">create</i> 수정 완료
 						</button>
-						<button type="submit" class="btn btn-primary ml-3" onclick="deleteboardnum(event)">
+						<button type="submit" class="btn btn-primary ml-3" id="delete"
+						onclick="location.href = '/board/delete?boardnum=${ resultVO.boardnum }'">
 							<i class="material-icons align-middle">clear</i> 후기 삭제
 						</button>
 						
@@ -61,15 +62,15 @@
 	<%-- footer --%>
 <jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 <script>
-	
-	function deleteboardnum(event){
-		event.preventDefault();
-		
-		let isRemove = confirm("후기를 삭제하시겠습니까?")
-		if(isRemove == true){
-			location.href = '/board/delete?num=$(resultVO.boardnum)';
+	$('button#delete').on('click', function(){
+		let cf = confirm('삭제하시겠습니까?')
+		if(cf == true){
+			$('button#delete').submit();
+		}else{
+			return false;
 		}
-	}
+	});
+	
 </script>	
 	
 </body>

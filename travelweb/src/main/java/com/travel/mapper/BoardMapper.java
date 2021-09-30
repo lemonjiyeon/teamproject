@@ -40,7 +40,7 @@ public interface BoardMapper {
 
 	//int deleteByboardnum(int num); // 글번호에 해당하는 글 한개 삭제하기
 
-	void deleteByboardnum(BoardVO boardVO);
+	int deleteByboardnum(int boardnum);
 
 		
 

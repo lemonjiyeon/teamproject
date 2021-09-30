@@ -54,7 +54,7 @@ public class BoardService {
 		boardMapper.updateBoard(boardVO);
 	}
 	
-	public void deleteByboardnum(BoardVO boardVO) {
-		boardMapper.deleteByboardnum(boardVO);
+	public void deleteByboardnum(int boardnum) {
+		boardMapper.deleteByboardnum(boardnum);
 	}
 }
