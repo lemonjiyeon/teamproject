@@ -70,10 +70,10 @@
 				<h2 class="mb-5">테마별 여행지</h2>
 			</div>
 	<div class="autoplay">
-  		<div><img src="../resources/assets/images/geyu1.jpg"></div>
-  		<div><img src="../resources/assets/images/geyu2.jpg"></div>
-  		<div><img src="../resources/assets/images/gaya1.jpg"></div>
-  		<div><img src="../resources/assets/images/gaya2.jpg"></div>
+  		<div><img src="../resources/assets/images/thm1.png"></div>
+  		<div><img src="../resources/assets/images/thm2.png"></div>
+  		<div><img src="../resources/assets/images/thm3.png"></div>
+  		<div><img src="../resources/assets/images/thm4.png"></div>
   		<div><img src="../resources/assets/images/backje.png"></div>
   		<div><img src="../resources/assets/images/backje2.jpg"></div>
 	</div>
@@ -85,9 +85,9 @@
 	<div id="thememap">
 		<div><img src="../resources/assets/images/thememap.png" usemap="#Map"></div>
 		<map name="Map">
-			<area shape="rect" coords="507,304,705,430" href="신라약사">
-			<area shape="rect" coords="371,449,586,576" href="가야역사">
-			<area shape="rect" coords="186,252,371,392" href="백제역사">
+			<area shape="rect" coords="507,304,705,430" href="/board/booking">
+			<area shape="rect" coords="371,449,586,576" href="/board/booking">
+			<area shape="rect" coords="186,252,371,392" href="/board/booking">
 											
 		</map>	
 	</div>

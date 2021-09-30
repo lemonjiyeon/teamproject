@@ -34,11 +34,7 @@ public class BoardController {
 		return "board/rewriteform";
 
 	}			
-	@GetMapping("/booking")
-	public String booking() {
-		return "board/booking";
-
-	}
+	
 
 
 	// 첨부파일 업로드, 글쓰기 처리
@@ -109,9 +105,6 @@ public class BoardController {
 		System.out.println("rebored : " + boardList);
 		return "board/reboard";
 	}
-	
-	
-
 
 //	@GetMapping("/booking")
 //	public String bookingGET(){
@@ -137,9 +130,11 @@ public class BoardController {
 //		
 //		return null;
 //	}
-	
-	
-	
+	@GetMapping("/booking")
+	public String booking() {
+		return "board/booking";
+
+	}
 	
 
 	@GetMapping("/confirm")
