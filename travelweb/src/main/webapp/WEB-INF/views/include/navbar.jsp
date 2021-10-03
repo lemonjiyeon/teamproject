@@ -21,8 +21,8 @@
          <li class="nav-item active" id="action"><a class="nav-link"
             href="#">국내여행 <span class="sr-only">(current)</span></a></li>
          <li class="nav-item"><a class="nav-link" href="/tour/theme">테마여행</a></li>
-         <li class="nav-item"><a class="nav-link" href="/board/reboard">여행
-               후기</a></li>
+         <li class="nav-item"><a class="nav-link" href="/board/reboard">여행후기</a></li>
+         <li class="nav-item"><a class="nav-link" href="/board/list">문의하기</a></li>
       </ul>
    </div>
    <!-- end main navbar -->

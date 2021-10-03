@@ -10,5 +10,4 @@ public class AttachVO {
 	private String uploadpath;
 	private String filename;
 	private String filetype;
-	
 }

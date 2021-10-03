@@ -34,10 +34,7 @@ public class BoardController {
 		return "board/rewriteform";
 
 
-	}			
-	
-
-
+	}				
 	// 글쓰기 처리
 	@PostMapping("/rewriteform")
 	public String rewriteform(BoardVO boardVO, 
