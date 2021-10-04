@@ -33,7 +33,6 @@ public class BoardController {
 	public String rewriteform(@ModelAttribute("pageNum") String pageNum) {
 		return "board/rewriteform";
 
-
 	}			
 	
 
