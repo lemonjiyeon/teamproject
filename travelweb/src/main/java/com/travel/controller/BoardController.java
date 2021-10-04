@@ -33,10 +33,15 @@ public class BoardController {
 	public String rewriteform(@ModelAttribute("pageNum") String pageNum) {
 		return "board/rewriteform";
 
+<<<<<<< HEAD
 	}			
 	
 
 
+=======
+
+	}				
+>>>>>>> branch 'main' of https://github.com/lemonjiyeon/teamproject
 	// 글쓰기 처리
 	@PostMapping("/rewriteform")
 	public String rewriteform(BoardVO boardVO, 

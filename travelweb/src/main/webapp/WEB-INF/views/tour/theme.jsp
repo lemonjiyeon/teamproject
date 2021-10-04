@@ -140,9 +140,9 @@
 				<img src="../resources/assets/images/thememap.png" usemap="#Map">
 			</div>
 			<map name="Map">
-				<area shape="rect" coords="507,304,705,430" href="/board/booking">
-				<area shape="rect" coords="371,449,586,576" href="/board/booking">
-				<area shape="rect" coords="186,252,371,392" href="/board/booking">
+				<area shape="rect" coords="507,304,705,430" href="/rsv/booking=신라"><!-- 신라 -->
+				<area shape="rect" coords="371,449,586,576" href="/rsv/booking?tourid=19"><!-- 가야 -->
+				<area shape="rect" coords="186,252,371,392" href="/rsv/booking?tourid=17"><!-- 백제 -->
 
 			</map>
 		</div>

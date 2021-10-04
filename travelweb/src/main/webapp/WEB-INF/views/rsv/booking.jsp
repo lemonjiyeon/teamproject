@@ -100,14 +100,13 @@
 								<table class="tbl_basic margin">
 									<tr>
 										<th>패키지명</th>
-										<td><span>"{$tour.toTitile}"</span></td>
+										<td><span>${tlist.toTitle }</span></td>
 									</tr>
 									<tr>
 										<th>여행날짜</th>
-										<td><span class="txt_at">출발일</span> <input type="date"
-											title="출발일선택" class="insert_calendar" value="" id="startDt"
-											name="startDt"> <span class="txt_at">~&nbsp;&nbsp;
-												도착일</span> <input type="date" title="도착일 선택"
+										<td><span class="txt_at">출발일 ${tlist.toStart }</span> <input type="hidden" title="출발일선택" class="insert_calendar" value="" id="startDt" name="startDt"> 
+										<span class="txt_at">~&nbsp;&nbsp;
+												도착일 ${ tlist.toEnd}</span> <input type="hidden" title="도착일 선택"
 											class="insert_calendar" value="" id="endDt" name="endDt"></td>
 									</tr>
 									<tr>
@@ -115,12 +114,12 @@
 										<td><span class="txt_at">버스</span></td>
 									</tr>
 									<tr>
-										<th>패키지 상품</th>
-										<td><span class="txt_at">출발일</span>"{$tour.toContent}"</td>
+										<th>패키지 종류</th>
+										<td><span class="txt_at"></span>${tlist.toChoice }</td>
 									</tr>
 									<tr>
 										<th>가격</th>
-										<td><span class="txt_at">"{$tour.toPrice}"</span></td>
+										<td><span class="txt_at">${tlist.toPrice}원</span></td>
 									</tr>
 								</table>
 							</div>

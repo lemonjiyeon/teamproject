@@ -63,7 +63,7 @@
 		<div><img src="../resources/assets/images/jeju_map.jpg" usemap="#Map"></div>
 		<map name="Map">
 			<area shape="rect" coords="319,74,396,127" href="제주 국제공항">
-			<area shape="rect" coords="347,165,440,264" href="/board/booking">
+			<area shape="rect" coords="347,165,440,264" href="/rsv/booking?tourid=24">
 			<area shape="rect" coords="204,247,265,307" href="/board/booking">
 			<area shape="rect" coords="686,133,822,181" href="/board/booking">
 			<area shape="rect" coords="655,177,731,220" href="/board/booking">									

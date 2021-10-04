@@ -113,9 +113,8 @@
 											</select> <input name="text" type="text" /> <input type="submit"
 												id="btnAdd" class="btn btn-primary " value="검색 " />
 											</td>
-											<td width="100%" align="right"><a href="#"
-												onclick="checkForm(); return false;" class="btn btn-primary"
-												style="width: 90;">&laquo;글쓰기</a></td>
+											<td width="100%" align="right"><a href="/board/listform" class="btn btn-primary"
+												style="width: 90;">글쓰기</a></td>
 										</tr>
 									</table>
 								</div>
